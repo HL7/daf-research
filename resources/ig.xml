@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="daf"/>
+	<url value="http://hl7.org/fhir/us/daf-research/ImplementationGuide/daf"/>
+	<version value="1"/>
+	<name value="Data Access Framework"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<publisher value="ONC"/>
+	<!--
+<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+		</coding>
+	</jurisdiction>
+-->
+	<package>
+		<name value="base"/>
+		<!--  value sets 
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="ValueSet/problem-severity"/>
+			</sourceReference>
+		</resource>
+		-->
+		
+		<resource>
+			<example value="true"/>
+			<name value="DAF-Research Data Source"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/capabilitystatement-daf-datasource"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="DAF-Research Query Requester"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/capabilitystatement-daf-research-queryrequester"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="DAF-Research Query Responder"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/capabilitystatement-daf-research-queryresponder"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="true"/>
+			<name value="DAF-Research Data Mart"/>
+			<sourceReference>
+				<reference value="CapabilityStatement/capabilitystatement-daf-datamart"/>
+			</sourceReference>
+		</resource>
+
+		<!--daf-core-core valuesets-->
+		<!-- **************************Operations OPERATIONS  OPERATIONs  OPERATIONS ************************************-->
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="OperationDefinition/daf-load-operation"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="OperationDefinition/daf-extract-operation"/>
+			</sourceReference>
+		</resource>
+		<resource>
+			<example value="false"/>
+			<sourceReference>
+				<reference value="OperationDefinition/daf-execute-query"/>
+			</sourceReference>
+		</resource>
+	</package>
+	<!-- 
+  <acronym target="daf-resultobsquantity" id="daf-qty"/>
+  <acronym target="daf-resultobsratio" id="daf-rto"/>
+  <acronym target="daf-resultobsother" id="daf-oth"/>
+  <acronym target="daf-diagnosticreport" id="daf-dir"/>
+  <acronym target="daf-diagnosticrequest" id="daf-dio"/>
+  <acronym target="daf-resultobservationcode" id="daf-cod"/>
+ -->
+	<binary value="daf-actors-and-interactions.png"/>
+	<binary value="daf-fhir-query-stack.png"/>
+	<page>
+		<source value="daf.html"/>
+		<title value="Home Page"/>
+		<kind value="page"/>
+		<page>
+			<source value="daf-toc.html"/>
+			<title value="Table of Contents"/>
+			<kind value="toc"/>
+		</page>
+	</page>
+	<page>
+		<source value="capabilitystatement-daf-query-responder.html"/>
+		<title value="DAF-Core Query Responder"/>
+		<kind value="resource"/>
+		<format value="generated"/>
+	</page>
+	<page>
+		<source value="capabilitystatement-daf-query-requestor.html"/>
+		<title value="DAF-Core Query Requestor"/>
+		<kind value="resource"/>
+		<format value="generated"/>
+	</page>
+	<page>
+		<source value="capabilitystatement-daf-datasource.html"/>
+		<title value="DAF-Research Data Source"/>
+		<kind value="resource"/>
+		<format value="generated"/>
+	</page>
+	<page>
+		<source value="capabilitystatement-daf-datamart.html"/>
+		<title value="DAF-Research Data Mart"/>
+		<kind value="resource"/>
+		<format value="generated"/>
+	</page>
+	<page>
+		<source value="capabilitystatement-daf-research-queryrequester.html"/>
+		<title value="DAF-Research Query Requester"/>
+		<kind value="resource"/>
+		<format value="generated"/>
+	</page>
+	<page>
+		<source value="capabilitystatement-daf-research-queryresponder.html"/>
+		<title value="DAF-Research Query Responder"/>
+		<kind value="resource"/>
+		<format value="generated"/>
+	</page>
+</ImplementationGuide>
