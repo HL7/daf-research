@@ -385,7 +385,7 @@
     <reference value="http://hl7.org/fhir/current/daf/daf-core-medication.html"/>
   </profile>
   <profile>
-    <reference value="http://hl7.org/fhir/current/daf/daf-core-medicationorder.html"/>
+    <reference value="http://hl7.org/fhir/current/daf/daf-core-medicationrequest.html"/>
   </profile>
   <profile>
     <reference value="http://hl7.org/fhir/current/daf/daf-core-vitalsigns.html"/>
