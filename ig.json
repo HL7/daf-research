@@ -7,7 +7,7 @@
 		"output": "output",
 		"qa": "qa",
 		"txCache": "txCache",
-		"specification":  "http://hl7.org/fhir/2016Sep"
+		"specification":  "http://build.fhir.org"
 },
 "version": "1.7.0",
 	"defaults": {
