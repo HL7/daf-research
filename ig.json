@@ -22,7 +22,7 @@
 	"dependencyList": [
 		{
 			"name": "uscore",
-			"location": "http://ig.fhir.me/Healthedata1/stu3-daf",
+			"location": "http://ig.fhir.me/Healthedata1/US-Core",
 			"source": "resources"
 		}
 	],	"spreadsheets": [
