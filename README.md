@@ -10,7 +10,7 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-### Currently the CI build is not working a current version of the IG is avaiable here: 
+### Currently the CI build is not working a current version of the IG is avaiable here: http://healthedatainc.com/go-ftp/DAF-Research/
 
 http://ig.fhir.me/Healthedata1/daf-research
 
