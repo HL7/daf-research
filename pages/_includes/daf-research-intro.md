@@ -48,7 +48,7 @@ The following are some real-world example implementations of the actors in the P
 * Data Sources: EMRs from vendors such as Cerner, Epic, e-ClinicalWorks etc.
 * Data Marts: CDRN's hosting databases using PCORnet Common Data Model (CDM)
 * Research Query Composer: PopMedNet Portal.
-Research Query Responder: PopMedNet Data Mart Client. 
+* Research Query Responder: PopMedNet Data Mart Client. 
 
 Although these actors exist in the PCORnet environment, the DAF-Research IG defines the following capabilities which can add value and improve the data infrastructure for the network and beyond.
 Each of these capabilities have been identified based on discussions with PCORnet pilot sites and with participants from PCORnet community.
