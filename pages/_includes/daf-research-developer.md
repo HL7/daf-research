@@ -1,4 +1,4 @@
-# Implementation Guidance for DAF-Research IG
+# DAF-Research Implementation Guidance
 
 [DAF-Research] IG describes four capabilities [C1, C2, C3, C4], each one of which is intended to help improve the data infrastructure for PCORnet and in the larger context a Learning Health System.
 This part of the IG provides additional guidance for the implementation of each of the four capabilities. This section is not normative and is only intended to provide guidance to implementers.
@@ -46,7 +46,7 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 
 1. Extract data for each patient using the 2015 Edition CCDS APIs that are supported by vendors which are outlined in the [DAF-Core] IG. For each patient, the extraction program may have to invoke multiple APIs to construct the full patient record.
 2. Extract data for each patient using the Patient/$everything operation if the vendor system supports it.
-3. Extract data for each patient using a native query to the database if allowed. 
+3. Extract data for each patient using a native API or query if available. 
 
 * Add the data for each patient to a Bundle which contains all the data along with the linkages.
 * Set Task.output.type - Reference. (This is the bundle that contains the data for a desired number of patients)
@@ -54,10 +54,10 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 * Set Task.status as completed if everything completes normally.
 * In case of exception, Set Task.status as Failed and Set Task.output.type as Reference but Task.output.valueReference will point to the OperationOutcome resource instance.
 
-#### Guidance on the profiles to be used to map FHIR Resources to PCORnet Common Data Model
+#### Guidance on the profiles to be used to map FHIR Resources to PCORnet CDM
 
 The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated. 
-However data extraction programs have to be aware that vendors may be supporting just DAF-Core or a subset of DAF-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available.
+However data extraction programs have to be aware that vendors may be supporting just DAF-Core or a subset of DAF-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
 As one can see there are a few new resources that would be proposed and created for an effective mapping of [PCORnet CDM] to FHIR and vice versa. These New Resources will be proposed to the appropriate HL7 WGs based on pilot implementations and feedback. Similarly extensions required will be proposed and added to the profiles after pilot implementations are completed. Profiles which are not DAF-Core are annotated accordingly in the table below.
 
@@ -82,9 +82,9 @@ As one can see there are a few new resources that would be proposed and created 
 
 (*) Indicate DAF-Research specific profiles which are created from DAF-Core profiles.
 
-#### Guidance on the profiles to be used to map FHIR Resources to OMOP
+#### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
-Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping from FHIR to [OMOP CDM]would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Profiles which are not DAF-Core are annotated accordingly in the table below.
+Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not DAF-Core are annotated accordingly in the table below.
 
 |OMOP Table Name            |Recommended Profile for Data Extraction|
 |----------------------------------|----------------------------------------|
@@ -124,8 +124,7 @@ Note: If this is a task that is set up to repeat at a regular frequency, this st
 
 #### Pre-Processing the Bundle returned from the extract operation 
 
-A Bundle returned from Step 2 will conform to FHIR and DAF-Core or other specific IG requirements. This Bundle may have to go through additional transformations, mappings and other processing before 
-it is loaded into a destination Data Mart. One of these processing steps is "De-Identifying the data".
+A Bundle returned from Step 2 will conform to FHIR and DAF-Core or other specific IG requirements. This Bundle may have to go through additional transformations, mappings and other processing before it is loaded into a destination Data Mart.  These additional actions include de-identifying the data discussed next as well as other steps beyond the scope of this IG, such as pseudo anonymization and patient matching following incremental updates.
 
 ##### De-Identification of data 
 
@@ -133,13 +132,13 @@ It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or t
 
 ##### Mapping to be used
 
-One of the value propositions of the data extract standardization is the need to eliminate mappings from each Data Source. As long as a Data Source has performed the right mapping to its FHIR Resources and profiles, 
-the extracted data can be directly mapped to a destination model of choice such as the PCORnet CDM. The following is a mapping of FHIR to PCORnet CDM developed by DAF working with PCORnet community and data experts.
+One of the value propositions of the data extract standardization is the need to eliminate mappings from each Data Source. As long as a Data Source has performed the right mapping to its FHIR Resources and profiles, the extracted data can be directly mapped to a destination model of choice such as the PCORnet CDM. Conformance of a Data Source to US-Core can be verified by using automated open source automated test tools and the US-Core conformance statements. The [FHIR wiki] provides a listing of many of these tools.
+The following is a mapping of FHIR to PCORnet CDM developed by DAF working with PCORnet community and data experts.
 This mapping can be followed to load the appropriate tables within the PCORnet CDM.
 
-[PCORnet CDM to FHIR mapping](https://docs.google.com/spreadsheets/d/1Gw-j7GSlDA0rxJqpSRI6g9ZPRk7LHPnE5-AJuWd1ry0/edit#gid=1928349566)
+[FHIR to PCORnet CDM mapping](https://docs.google.com/spreadsheets/d/1Gw-j7GSlDA0rxJqpSRI6g9ZPRk7LHPnE5-AJuWd1ry0/edit#gid=1928349566)
 
-For systems loading to from OMOP to FHIR the following mapping developed by DAF pilots can be used.
+For systems loading to from OMOP to FHIR and then to PCORnet CDM the following mapping developed by DAF pilots can be used.
 
 [OMOP to FHIR mapping](https://docs.google.com/spreadsheets/d/11ZmwGxnXViLkTVdX5Vi0FP-Gh4AD2HZEfYOhzZptZfw/edit#gid=0)
 
@@ -301,7 +300,7 @@ Optionally the query can indicate the type of data expected as part of the resul
 In order for the Researcher to execute the query against multiple Data Marts, the Research Query Composer system has to create an instance of the Root Task created in Step 1 for 
 each Data Mart. In order to make Tasks specific to a Data Mart, the following Task data elements would be set.
 
-* Task.owner - Should be populated with the organization that owns the query. This is normally the CDRN.
+* Task.owner - Should be populated with the organization that owns the query. This is normally a person, organization or a device belonging to the CDRN.
 * Task.status - Should be set to "Requested" state for each instance.
 
 All the other data elements would be replicated from the root task. 
@@ -388,4 +387,4 @@ These results would then be made available for the Researcher for further analys
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
-
+[FHIR wiki]: http://wiki.hl7.org/index.php?title=FHIR

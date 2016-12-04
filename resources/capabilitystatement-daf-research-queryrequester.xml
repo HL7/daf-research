@@ -71,27 +71,27 @@
             <th>Resource(Profile Name)</th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Search</a>
+              <a href="http://hl7.org/fhir/http.html">Search</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Read</a>
+              <a href="http://hl7.org/fhir/http.html">Read</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Version Read</a>
+              <a href="http://hl7.org/fhir/http.html">Version Read</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Instance History</a>
+              <a href="http://hl7.org/fhir/http.html">Instance History</a>
             </th>
           
 			<th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Create</a>
+              <a href="http://hl7.org/fhir/http.html">Create</a>
             </th>
 			
 			<th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Update</a>
+              <a href="http://hl7.org/fhir/http.html">Update</a>
             </th>
 			
           </tr>
