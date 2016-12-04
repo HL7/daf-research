@@ -23,3 +23,31 @@ The following table outlines the various DAF-Research Capabilities specified as 
 |C2: Publish Metadata about data sources useful for Researchers to access data.|Data Mart|[Data Mart Conformance](capabilitystatement-daf-datamart.html)|
 |C3: Standardize Query Distribution mechanism from Researchers to Data Marts facilitating workflows.|Research Query Requester|[Research Query Requester Conformance](capabilitystatement-daf-research-queryrequester.html)|
 |C4: Standardize Aggregate Query Results return from Data Marts back to Researchers in response to a C3 query.|Research Query Responder|[Research Query Responder Conformance](capabilitystatement-daf-research-queryresponder.html)|
+
+
+[DAF-Core]: daf-core.html
+[US-Core]: us-core.html
+[DAF-Research]: daf-research.html
+[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
+[ONC]: http://www.healthit.gov/newsroom/about-onc
+[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[PCORI]:  http://www.pcori.org
+[PCORnet]: http://www.pcornet.org/
+[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
+[ASPE]: https://aspe.hhs.gov/
+[DAF-Research-intro]: daf-research-intro.html
+[C1, C2, C3, C4]: daf-research-intro.html
+[Data Source Conformance]: capabilitystatement-daf-datasource.html
+[Data Mart Conformance]: capabilitystatement-daf-datamart.html
+[Research Query Composer Conformance]: capabilitystatement-daf-datasource.html
+[Research Query Responder Conformance]: capabilitystatement-daf-datasource.html
+[DAF-Task]: daf-task.html
+[DAF-Provenance]: daf-provenance.html
+[DAF-OperationDefinition]: daf-operationdefinition.html
+[DAF-Conformance]: daf-conformance.html
+[DAF-QueryResults]: daf-queryresults.html
+[PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
+[OMOP CDM]: http://omop.org/CDM
+[PCORnet]: http://www.pcornet.org/
+[HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/

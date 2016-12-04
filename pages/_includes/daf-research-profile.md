@@ -41,7 +41,7 @@ The next few sections identify the [US-Core] profiles used by DAF-Research, prof
 |HARVEST|New Resource - TBD|
 
 
-(*) Indicate DAF-Research specific profiles which are created from DAF-Core profiles.
+(*) Indicate DAF-Research specific profiles which are created from US-Core profiles.
 
 
 ## Mappings from FHIR to OMOP CDM
@@ -66,10 +66,17 @@ The next few sections identify the [US-Core] profiles used by DAF-Research, prof
 (***) Base FHIR Resources without any specific profiles, (**) DAF-Research specific profiles
 
 
-
 [DAF-Core]: daf-core.html
 [US-Core]: us-core.html
 [DAF-Research]: daf-research.html
+[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
+[ONC]: http://www.healthit.gov/newsroom/about-onc
+[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[PCORI]:  http://www.pcori.org
+[PCORnet]: http://www.pcornet.org/
+[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
+[ASPE]: https://aspe.hhs.gov/
 [DAF-Research-intro]: daf-research-intro.html
 [C1, C2, C3, C4]: daf-research-intro.html
 [Data Source Conformance]: capabilitystatement-daf-datasource.html
@@ -81,13 +88,8 @@ The next few sections identify the [US-Core] profiles used by DAF-Research, prof
 [DAF-OperationDefinition]: daf-operationdefinition.html
 [DAF-Conformance]: daf-conformance.html
 [DAF-QueryResults]: daf-queryresults.html
-[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
-[ONC]: http://www.healthit.gov/newsroom/about-onc
-[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
-[DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
-[PCORI]:  http://www.pcori.org
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/
-[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
+[HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 

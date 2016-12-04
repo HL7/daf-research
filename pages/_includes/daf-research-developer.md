@@ -8,9 +8,9 @@ This part of the IG provides additional guidance for the implementation of each 
 
 Implementing C1 capability involves four steps. 
 
-1. Instantiation of a Task for Extraction at the Data Source
+1. Instantiation of a Task for extraction at the Data Source
 2. Execution of the Task to extract data from the Data Source
-3. Instantiation of a Task for Loading of data at the Data Mart
+3. Instantiation of a Task for loading of data at the Data Mart
 4. Execution of the Task to load data into the Data Mart
 
 Note: Data Source actor can be implemented by system like an EMR natively or alternately it can be implemented as a layer (additional software module) on top of an EMR system.
@@ -18,7 +18,7 @@ In either case the implementation has to meet the [Data Source Conformance] requ
 The next few paragraphs will provide details for each step above.
 
 
-### C1:Step 1: Instantiation of a Task for Extraction at the Data Source
+### C1:Step 1: Instantiation of a Task for extraction at the Data Source
 
 The Data Source actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using the POST operation specified by FHIR.  This task instance has to have the following data:
 
@@ -28,7 +28,7 @@ The Data Source actor has to support the creation of a [DAF-Task] resource insta
 * Task.input.type - dateTime (This corresponds to the timereference parameter in the daf-extract-operation)
 * Task.input.valuedateTime - Value from when the extract has to be performed. (For e.g 20160812050000)
 * Task.input.type - Reference (This corresponds to the patient parameter in the daf-extract-operation)
-* Task.input.valueReference - Patient for whom data has to be extracted. (For e.g Patient/134234, This is an identifier/reference that is known to the DataSource implementing the FHIR API).
+* Task.input.valueReference - This parameter is typically used for incremental extraction and is not used when a bulk extraction is performed. In cases where the parameter is used, it provides the ability to specify one or more Patient(s) for whom data has to be extracted. (For e.g Patient/134234, This is an identifier/reference that is known to the Data Source implementing the FHIR API). In the case of bulk extraction, the data for all consented patients would be extracted.
 
 This Task instance would then be persisted for execution. The actual execution of the task can be controlled using a scheduled timer or a manual kick off.
 Note: If this is a task that is set up to repeat at a regular frequency, this step can be skipped after the first time.
@@ -44,11 +44,13 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 * Set the Task.status to In-progress.
 * Start extraction of data which can be accomplished in multiple ways, some of which are elaborated below based on likelihood of support from vendors.
 
-1. Extract data for each patient using the 2015 Edition CCDS APIs that are supported by vendors which are outlined in the [DAF-Core] IG. For each patient, the extraction program may have to invoke multiple APIs to construct the full patient record.
+1. Extract data for each patient using the 2015 Edition CCDS APIs that are supported by vendors which are outlined in the [US-Core] IG. For each patient, the extraction program may have to invoke multiple APIs to construct the full patient record.
 2. Extract data for each patient using the Patient/$everything operation if the vendor system supports it.
 3. Extract data for each patient using a native API or query if available. 
 
-* Add the data for each patient to a Bundle which contains all the data along with the linkages.
+NOTE: Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
+
+* Add the data for all consented patients in the case of bulk extraction or for each patient in the case of incremental extraction to a Bundle which contains the extracted data along with the linkages.
 * Set Task.output.type - Reference. (This is the bundle that contains the data for a desired number of patients)
 * Populate Task.output.valueReference (This should point to the Bundle reference created).
 * Set Task.status as completed if everything completes normally.
@@ -57,12 +59,12 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 #### Guidance on the profiles to be used to map FHIR Resources to PCORnet CDM
 
 The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated. 
-However data extraction programs have to be aware that vendors may be supporting just DAF-Core or a subset of DAF-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
+However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
-As one can see there are a few new resources that would be proposed and created for an effective mapping of [PCORnet CDM] to FHIR and vice versa. These New Resources will be proposed to the appropriate HL7 WGs based on pilot implementations and feedback. Similarly extensions required will be proposed and added to the profiles after pilot implementations are completed. Profiles which are not DAF-Core are annotated accordingly in the table below.
+As one can see there are a few new resources that would be proposed and created for an effective mapping of [PCORnet CDM] to FHIR and vice versa. These New Resources will be proposed to the appropriate HL7 WGs based on pilot implementations and feedback. Similarly extensions required will be proposed and added to the profiles after pilot implementations are completed. Profiles which are not US-Core are annotated accordingly in the table below.
 
 
-|PCORnet CDM Table Name            |Recommended Profile for Data Extraction|
+|PCORnet CDM Table Name            |Recommended Profile for Data extraction|
 |----------------------------------|----------------------------------------|
 |DIAGNOSIS, CONDITION|[Condition](daf-condition.html)*|
 |LAB_RESULT_CM|[DiagnosticReport-Results](us-core-diagnosticreport.html)|
@@ -80,13 +82,13 @@ As one can see there are a few new resources that would be proposed and created 
 |DEATH_CAUSE|Potential New Resource/Profile - TBD|
 |HARVEST|New Resource - TBD|
 
-(*) Indicate DAF-Research specific profiles which are created from DAF-Core profiles.
+(*) Indicate DAF-Research specific profiles which are created from US-Core profiles.
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
-Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not DAF-Core are annotated accordingly in the table below.
+Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below.
 
-|OMOP Table Name            |Recommended Profile for Data Extraction|
+|OMOP Table Name            |Recommended Profile for Data extraction|
 |----------------------------------|----------------------------------------|
 |Concept,Vocabulary,Domain,Concept_Synonym,Concept_Ancestor|ValueSet **|
 |Concept_Class|Concept **|
@@ -105,7 +107,7 @@ Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a m
 (**) Base FHIR Resources without any specific profiles 
 (*) DAF Research specific profiles
 
-### C1: Step 3: Instantiation of a Task for Loading of data at the Data Mart
+### C1: Step 3: Instantiation of a Task for loading of data at the Data Mart
 
 The Data Mart actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using a FHIR API using the POST operation or using a graphical user interface which allows 
 an end user to create the Task instance. This task instance has to have the following data:
@@ -124,11 +126,11 @@ Note: If this is a task that is set up to repeat at a regular frequency, this st
 
 #### Pre-Processing the Bundle returned from the extract operation 
 
-A Bundle returned from Step 2 will conform to FHIR and DAF-Core or other specific IG requirements. This Bundle may have to go through additional transformations, mappings and other processing before it is loaded into a destination Data Mart.  These additional actions include de-identifying the data discussed next as well as other steps beyond the scope of this IG, such as pseudo anonymization and patient matching following incremental updates.
+A Bundle returned from Step 2 will conform to FHIR and US-Core or other specific IG requirements. This Bundle may have to go through additional transformations, mappings and other processing before it is loaded into a destination Data Mart.  These additional actions may include de-identifying the data discussed next as well as other steps beyond the scope of this IG, such as pseudo anonymization, data standardization and patient matching as needed. Also implementers need to be aware that the data extraction task must have been completed for the data loading to start to ensure integrity of the data extracted. The status of the Task instance can be used to verify if a Task has been completed or if it is pending.
 
 ##### De-Identification of data 
 
-It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API.Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
+In cases where the data extracted from a Data Source contains identifiable patient information, an external process has to de-identify the data prior to loading the data mart with the extracted data.It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API.Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
 
 ##### Mapping to be used
 
@@ -364,8 +366,18 @@ Once these task instances are retrieved then the Task.output would contain the r
 These results would then be made available for the Researcher for further analysis.
 
 
+
 [DAF-Core]: daf-core.html
+[US-Core]: us-core.html
 [DAF-Research]: daf-research.html
+[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
+[ONC]: http://www.healthit.gov/newsroom/about-onc
+[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[PCORI]:  http://www.pcori.org
+[PCORnet]: http://www.pcornet.org/
+[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
+[ASPE]: https://aspe.hhs.gov/
 [DAF-Research-intro]: daf-research-intro.html
 [C1, C2, C3, C4]: daf-research-intro.html
 [Data Source Conformance]: capabilitystatement-daf-datasource.html
@@ -377,14 +389,7 @@ These results would then be made available for the Researcher for further analys
 [DAF-OperationDefinition]: daf-operationdefinition.html
 [DAF-Conformance]: daf-conformance.html
 [DAF-QueryResults]: daf-queryresults.html
-[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
-[ONC]: http://www.healthit.gov/newsroom/about-onc
-[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
-[DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
-[PCORI]:  http://www.pcori.org
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/
-[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
-[FHIR wiki]: http://wiki.hl7.org/index.php?title=FHIR

@@ -48,7 +48,7 @@
 	  
 	  <h2>REST  behavior</h2>
       
-      <p>The Data Mart SHALL implement REST behavior according to the <a href="http://hl7-fhir.github.io/http.html">FHIR</a> specification. The Data Mart SHALL use either DAF-Core or DAF-Research profiles as needed to load data. The Data Mart SHALL support both json and xml resource formats for all DAF interactions. The Data Mart SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Mart SHALL declare a Capability statement and identify the list of profiles, operations, search parameters supported.
+      <p>The Data Mart SHALL implement REST behavior according to the <a href="http://hl7-fhir.github.io/http.html">FHIR</a> specification. The Data Mart SHALL use either US-Core or DAF-Research profiles as needed to load data. The Data Mart SHALL support both json and xml resource formats for all DAF interactions. The Data Mart SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Mart SHALL declare a Capability statement and identify the list of profiles, operations, search parameters supported.
       </p>
       
       <p>
