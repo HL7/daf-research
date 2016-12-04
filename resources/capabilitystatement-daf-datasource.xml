@@ -31,7 +31,7 @@
           <tr>
             
             <th>FHIR Version:</th>
-            <td>$ver$</td>
+            <td>STU3</td>
           
           </tr>
           
@@ -57,7 +57,8 @@
       
       </p>
       
-      <p>Data Sources are advised to implement security requirements according to their existing protocols for data extraction purposes. However Data Sources implementing DAF-Core IG can reuse their security protocols for data extraction purposes as applicable.
+      <p>Data Sources are advised to implement security requirements according to their existing protocols for data extraction purposes. 
+	  However Data Sources implementing US-Core IG SHOULD reuse US-Core security protocols for data extraction purposes as applicable. Data Sources SHOULD honour patient's data disclosure polices.
       </p>
 	  
 	  <h3>RESTful Operations Summary</h3>
@@ -114,31 +115,31 @@
             
             <td>
               
-              <a title="Allows retrieval of a specific DAF-Task by resource id">SHALL</a>
+              <p title="Allows retrieval of a specific DAF-Task by resource id">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows retrieval of a historical version of a DAF-Task">SHALL</a>
+              <p title="Allows retrieval of a historical version of a DAF-Task">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows review of changes to DAF-Task over time">SHALL</a>
+              <p title="Allows review of changes to DAF-Task over time">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows creation of DAF-Task">SHALL</a>
+              <p title="Allows creation of DAF-Task">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows updates to DAF-Task">SHALL</a>
+              <p title="Allows updates to DAF-Task">SHALL</p>
             
             </td>
           
@@ -152,37 +153,37 @@
             
             <td>
               
-              <a title="Allows discovery of DAF-Core resources based on different search criteria">SHALL</a>
+              <p title="Allows discovery of DAF-Core resources based on different search criteria">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows retrieval of a specific DAF-Core resources by resource id">SHALL</a>
+              <p title="Allows retrieval of a specific DAF-Core resources by resource id">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows retrieval of a historical version of a DAF-Core">SHOULD</a>
+              <p title="Allows retrieval of a historical version of a DAF-Core">SHOULD</p>
             
             </td>
             
             <td>
               
-              <a title="Allows review of changes to DAF-Core over time">SHOULD</a>
+              <p title="Allows review of changes to DAF-Core over time">SHOULD</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows creation of DAF-Core">MAY</a>
+              <p title="Allows creation of DAF-Core">MAY</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows updates to DAF-Core">MAY</a>
+              <p title="Allows updates to DAF-Core">MAY</p>
             
             </td>
           

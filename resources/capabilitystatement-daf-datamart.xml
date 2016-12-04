@@ -31,7 +31,7 @@
           <tr>
             
             <th>FHIR Version:</th>
-            <td>$ver$</td>
+            <td>STU3</td>
           
           </tr>
           
@@ -57,7 +57,8 @@
       
       </p>
       
-      <p>Data Marts are advised to implement security requirements according to their existing protocols for data translation and loading purposes. However Data Marts implementing DAF-Core IG can reuse their security protocols for data translation and loading purposes as applicable.
+      <p>Data Marts are advised to implement security requirements according to their existing protocols for data translation and loading purposes. 
+	  However Data Marts implementing US-Core IG SHOULD reuse US-Core security protocols for data translation, data loading and data access as applicable. Data Marts SHOULD honour patient's data disclosure polices. Datamarts SHOULD de-identify patient identifiable data in accordance with <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/">HHS de-identification guidelines</a> for de-identification.
       </p>
 	  
 	  <h3>RESTful Operations Summary</h3>
@@ -114,31 +115,31 @@
             
             <td>
               
-              <a title="Allows retrieval of a specific DAF-Task by resource id">SHALL</a>
+              <p title="Allows retrieval of a specific DAF-Task by resource id">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows retrieval of a historical version of a DAF-Task">SHALL</a>
+              <p title="Allows retrieval of a historical version of a DAF-Task">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows review of changes to DAF-Task over time">SHALL</a>
+              <p title="Allows review of changes to DAF-Task over time">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows creation of DAF-Task">SHALL</a>
+              <p title="Allows creation of DAF-Task">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows updates to DAF-Task">SHALL</a>
+              <p title="Allows updates to DAF-Task">SHALL</p>
             
             </td>
           
@@ -158,31 +159,31 @@
             
             <td>
               
-              <a title="Allows retrieval of a specific DAF-Provenance by resource id">SHALL</a>
+              <p title="Allows retrieval of a specific DAF-Provenance by resource id">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows retrieval of a historical version of a DAF-Provenance">SHALL</a>
+              <p title="Allows retrieval of a historical version of a DAF-Provenance">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows review of changes to DAF-Provenance over time">SHALL</a>
+              <p title="Allows review of changes to DAF-Provenance over time">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows creation of DAF-Provenance">SHALL</a>
+              <p title="Allows creation of DAF-Provenance">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows updates to DAF-Provenance">SHALL</a>
+              <p title="Allows updates to DAF-Provenance">SHALL</p>
             
             </td>
           
@@ -202,31 +203,31 @@
             
             <td>
               
-              <a title="Allows retrieval of a specific DAF-OperationDefinition by resource id">SHALL</a>
+              <p title="Allows retrieval of a specific DAF-OperationDefinition by resource id">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows retrieval of a historical version of a DAF-OperationDefinition">SHALL</a>
+              <p title="Allows retrieval of a historical version of a DAF-OperationDefinition">SHALL</p>
             
             </td>
             
             <td>
               
-              <a title="Allows review of changes to DAF-OperationDefinition over time">SHALL</a>
+              <p title="Allows review of changes to DAF-OperationDefinition over time">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows creation of DAF-OperationDefinition">SHALL</a>
+              <p title="Allows creation of DAF-OperationDefinition">SHALL</p>
             
             </td>
 			
 			<td>
               
-              <a title="Allows updates to DAF-OperationDefinition">SHALL</a>
+              <p title="Allows updates to DAF-OperationDefinition">SHALL</p>
             
             </td>
           

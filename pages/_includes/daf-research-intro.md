@@ -4,19 +4,11 @@ The nation is reaching a critical mass of HealthIT systems (EHRs, Data Warehouse
 
 [DAF-Core] IG focuses on specifying standard Application Programming Interfaces (APIs) for accessing data about individual patients for treatment and payment purposes. The [Argonaut] project has been invaluable in providing feedback on implementing FHIR in the real-world and the use of DAF profiles that were balloted as part of DSTU2. This feedback is now incorporated into DAF-Core and the profiles that were previously balloted are now updated based on the Argonaut feedback. 
 
-[DAF-Research] IG on the other hand will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). The capabilities created as part of [DAF-Research] are intended to be leveraged to build our nation's data infrastructure for a Learning Health System. [DAF-Research] IG will leverage work that has been completed and tested as part of the [DAF-Core] IG.
+DAF-Research IG on the other hand will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). The capabilities created as part of DAF-Research are intended to be leveraged to build our nation's data infrastructure for a Learning Health System. DAF-Research IG will leverage work that has been completed and tested as part of the [US-Core] IG.
 
 # DAF applicability to a Learning Health System (LHS)
 
-The Institute of Medicine (IOM) defines a Learning Health System as “one that is designed to generate and apply the best evidence for the collaborative healthcare choices of each patient and provider; to drive the process of discovery as a natural outgrowth of patient care; and to ensure innovation, quality, safety, and value in health care.” IOM has conducted a series of workshops on Learning Health System and published a number of resources which are listed below and will provide additional context for readers.
-
-* [http://iom.nationalacademies.org/~/media/Files/Activity%20Files/Quality/VSRT/Core%20Documents/LearningHealthSystem.pdf](http://iom.nationalacademies.org/~/media/Files/Activity%20Files/Quality/VSRT/Core%20Documents/LearningHealthSystem.pdf)
-* [http://iom.nationalacademies.org/reports/2011/digital-infrastructure-for-a-learning-health-system.aspx](http://iom.nationalacademies.org/reports/2011/digital-infrastructure-for-a-learning-health-system.aspx)
-* [http://iom.nationalacademies.org/reports/2011/engineering-a-learning-healthcare-system.aspx](http://iom.nationalacademies.org/reports/2011/engineering-a-learning-healthcare-system.aspx)
-* [http://iom.edu/Reports/2011/Clinical-Data-as-the-Basic-Staple-for-Health-Learning.aspx](http://iom.edu/Reports/2011/Clinical-Data-as-the-Basic-Staple-for-Health-Learning.aspx)
-* [http://nam.edu/perspectives-2013-making-the-case-for-continuous-learning-from-routinely-collected-data/](http://nam.edu/perspectives-2013-making-the-case-for-continuous-learning-from-routinely-collected-data/)
-
-Fundamental to the LHS vision is a data infrastructure that allows definition, collection, access and use of health data from one or more data sources with the appropriate privacy and security safeguards. DAF aims to provide some of the building blocks necessary to build the LHS data infrastructure.
+The Institute of Medicine (IOM) defines a Learning Health System as “one that is designed to generate and apply the best evidence for the collaborative healthcare choices of each patient and provider; to drive the process of discovery as a natural outgrowth of patient care; and to ensure innovation, quality, safety, and value in health care.” IOM has conducted a series of workshops on Learning Health System and published a number of resources which are listed below in the appendix and will provide additional context for readers. Fundamental to the LHS vision is a data infrastructure that allows definition, collection, access and use of health data from one or more data sources with the appropriate privacy and security safeguards. DAF aims to provide some of the building blocks necessary to build the LHS data infrastructure.
 
 # Relationship between Patient Centered Outcome Research Institute (PCORI), PCORNet and DAF
 
@@ -28,16 +20,16 @@ Collaboratively with PCORI and PCORnet the role of DAF is to identify capabiliti
 
 The DAF-Research IG has identified the following actors based on the PCORnet abstract reference model described further below.
 
-Data Source: Data Source is a Health IT system that collects data as part of healthcare workflows. The data collected in these workflows can then accessed or extracted for treatment, operations or research purposes.
-Examples of Data Sources include EMRs, Claims Data Repositories,  etc.
+**Data Source**: In the context of PCORnet, a Data Source is defined as a Health IT system that collects data as part of healthcare workflows. The data collected in these workflows can then accessed or extracted for treatment, operations or research purposes. This definition of the Data Source is specific to the PCORnet context and is not intended to limit other definitions or uses of Data Sources in a broader healthcare IT ecosystem.
+Examples of Data Sources include EMRs, Claims Data Repositories etc.
 
-Data Mart: A Health IT system that gathers data from one or more Data Sources and enables researchers to access data. A Data Source can also be a Data Mart. 
+**Data Mart**: In the context of PCORnet, a Data Mart is defined as a Health IT system that gathers data from one or more Data Sources and enables researchers to access data. A Data Source can also be a Data Mart. This definition of the Data Mart is specific to the PCORnet context and is not intended to limit other definitions or uses of Data Marts in a broader healthcare IT ecosystem.
 Examples of Data Marts include Data Warehouses, Registries etc.
 
-Research Query Requester (also known as Research Query Composer): A Health IT system that enables Researchers to compose queries and submit queries to one or more Data Marts. 
+**Research Query Requester (also known as Research Query Composer)**: In the context of PCORnet, a Research Query Requester is defined as a Health IT system that enables Researchers to compose queries and submit queries to one or more Data Marts. This definition of the Research Query Requester is specific to the PCORnet context and is not intended to limit other definitions or uses of Research Query Requesters in a broader healthcare IT ecosystem.
 Examples of Research Query Composers include web portals.
 
-Research Query Responder: A Health IT system that provides responses to queries submitted by the Research Query Requester.  
+**Research Query Responder**: In the context of PCORnet, a Research Query Responder is defined as a Health IT system that provides responses to queries submitted by the Research Query Requester.  This definition of the Research Query Responder is specific to the PCORnet context and is not intended to limit other definitions or uses of Research Query Responders in a broader healthcare IT ecosystem.
 Examples of Research Query Responders include software that translates queries to local dialects if required, runs the queries on databases and returns the results back to the requester.
 
 The interaction between these actors is shown in the PCORnet abstract model below
@@ -61,7 +53,13 @@ In addition to the above C1 through C4 capabilities, C5 and C6 have been identif
 * C6 capability deals with standardizing the query semantics (query language) for research based queries. This is an area which is evolving and is not mature enough for us to standardize at this point.
 
  
+# Appendix: Additional Resources about a Learning Health System
 
+* [http://iom.nationalacademies.org/~/media/Files/Activity%20Files/Quality/VSRT/Core%20Documents/LearningHealthSystem.pdf](http://iom.nationalacademies.org/~/media/Files/Activity%20Files/Quality/VSRT/Core%20Documents/LearningHealthSystem.pdf)
+* [http://iom.nationalacademies.org/reports/2011/digital-infrastructure-for-a-learning-health-system.aspx](http://iom.nationalacademies.org/reports/2011/digital-infrastructure-for-a-learning-health-system.aspx)
+* [http://iom.nationalacademies.org/reports/2011/engineering-a-learning-healthcare-system.aspx](http://iom.nationalacademies.org/reports/2011/engineering-a-learning-healthcare-system.aspx)
+* [http://iom.edu/Reports/2011/Clinical-Data-as-the-Basic-Staple-for-Health-Learning.aspx](http://iom.edu/Reports/2011/Clinical-Data-as-the-Basic-Staple-for-Health-Learning.aspx)
+* [http://nam.edu/perspectives-2013-making-the-case-for-continuous-learning-from-routinely-collected-data/](http://nam.edu/perspectives-2013-making-the-case-for-continuous-learning-from-routinely-collected-data/)
 
 
 

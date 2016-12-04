@@ -20,8 +20,7 @@ The next few paragraphs will provide details for each step above.
 
 ### C1:Step 1: Instantiation of a Task for Extraction at the Data Source
 
-The Data Source actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using a FHIR API using the POST operation or using a graphical user interface which allows 
-an end user to create the Task instance. This task instance has to have the following data
+The Data Source actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using the POST operation specified by FHIR.  This task instance has to have the following data:
 
 * Task.status - Should be set to "Ready" state since this would only be created after appropriate approvals are in place.
 * Task.code - Should be populated with the daf-extract-operation
@@ -57,23 +56,23 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 
 #### Guidance on the profiles to be used to map FHIR Resources to PCORnet Common Data Model
 
-The PCORnet CDM is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated. 
+The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated. 
 However data extraction programs have to be aware that vendors may be supporting just DAF-Core or a subset of DAF-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available.
 
-As one can see there are a few new resources that would be proposed and created for an effective mapping of PCORnet CDM to FHIR and vice versa. These New Resources will be proposed to the appropriate HL7 WGs based on pilot implementations and feedback. Similarly extensions required will be proposed and added to the profiles after pilot implementations are completed. Profiles which are not DAF-Core are annotated accordingly in the table below.
+As one can see there are a few new resources that would be proposed and created for an effective mapping of [PCORnet CDM] to FHIR and vice versa. These New Resources will be proposed to the appropriate HL7 WGs based on pilot implementations and feedback. Similarly extensions required will be proposed and added to the profiles after pilot implementations are completed. Profiles which are not DAF-Core are annotated accordingly in the table below.
 
 
 |PCORnet CDM Table Name            |Recommended Profile for Data Extraction|
 |----------------------------------|----------------------------------------|
 |DIAGNOSIS, CONDITION|[Condition](daf-condition.html)*|
-|LAB_RESULT_CM|[DiagnosticReport-Results](daf-core-diagnosticreport.html)|
-|ENCOUNTER|[Encounter](daf-encounter.html)*|
-|Prescribing|[MedicationOrder](daf-core-medicationorder.html)|
+|LAB_RESULT_CM|[DiagnosticReport-Results](us-core-diagnosticreport.html)|
+|ENCOUNTER|[Encounter](daf-encounter.html)|
+|Prescribing|[MedicationOrder](us-core-medicationorder.html)|
 |DISPENSING|[MedicationDispense](daf-medicationdispense.html)*|
-|LAB_RESULT_CM|[Observation](daf-core-resultobs.html)|
-|VITALS|[Observation-Vitalsigns](daf-core-vitalsigns.html)|
+|LAB_RESULT_CM|[Observation](us-core-resultobs.html)|
+|VITALS|[Observation-Vitalsigns](us-core-vitalsigns.html)|
 |DEMOGRAPHIC|[Patient](daf-patient.html)*|
-|PROCEDURES|[Procedure](daf-core-procedure.html)|
+|PROCEDURES|[Procedure](us-core-procedure.html)|
 |PRO CM|Questionaire Profile - TBD|
 |ENROLLMENT|Potential New Resource - TBD|
 |PCORNET_TRIAL|Potential New Resource - TBD|
@@ -81,11 +80,11 @@ As one can see there are a few new resources that would be proposed and created 
 |DEATH_CAUSE|Potential New Resource/Profile - TBD|
 |HARVEST|New Resource - TBD|
 
-* Indicate DAF-Research specific profiles which are created from DAF-Core profiles.
+(*) Indicate DAF-Research specific profiles which are created from DAF-Core profiles.
 
 #### Guidance on the profiles to be used to map FHIR Resources to OMOP
 
-Some PCORnet sites are using OMOP model as a source or destination and hence a mapping from FHIR to OMOP would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Profiles which are not DAF-Core are annotated accordingly in the table below.
+Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping from FHIR to [OMOP CDM]would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Profiles which are not DAF-Core are annotated accordingly in the table below.
 
 |OMOP Table Name            |Recommended Profile for Data Extraction|
 |----------------------------------|----------------------------------------|
@@ -94,21 +93,22 @@ Some PCORnet sites are using OMOP model as a source or destination and hence a m
 |Concept_Relationship, Relationship|ConceptMap **|
 |Cohort_Definition, Attribute_Definition|Group **|
 |Specimen|Specimen **|
-|Drug_Strength|[Medication](daf-core-medication.html)|
-|Procedure_Occurence|[Procedure](daf-core-procedure.html)|
-|Drug_Exposure|[MedicationOrder](daf-core-medicationorder.html),[MedicationStatement](daf-core-medicationstatement.html),[Immunization](daf-core-immunization.html)|
-|Device_Exposure|[Procedure](daf-core-procedure.html),[Device](daf-core-device.html)|
-|Measurement,Note,Observation|[Observation](daf-core-resultobs.html)|
+|Drug_Strength|[Medication](us-core-medication.html)|
+|Procedure_Occurence|[Procedure](us-core-procedure.html)|
+|Drug_Exposure|[MedicationOrder](us-core-medicationorder.html),[MedicationStatement](us-core-medicationstatement.html),[Immunization](us-core-immunization.html)|
+|Device_Exposure|[Procedure](us-core-procedure.html),[Device](us-core-device.html)|
+|Measurement,Note,Observation|[Observation](us-core-resultobs.html)|
 |Person|[Patient](daf-patient.html)*|
-|Observation_Period, Visit_Occurence|[Encounter](daf-encounter.html)*|
+|Observation_Period, Visit_Occurence|[Encounter](daf-encounter.html)|
 |Condition_Occurence|[Condition](daf-condition.html)*|
 
-** Base FHIR Resources without any specific profiles, * DAF Research specific profiles
+(**) Base FHIR Resources without any specific profiles 
+(*) DAF Research specific profiles
 
 ### C1: Step 3: Instantiation of a Task for Loading of data at the Data Mart
 
 The Data Mart actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using a FHIR API using the POST operation or using a graphical user interface which allows 
-an end user to create the Task instance. This task instance has to have the following data
+an end user to create the Task instance. This task instance has to have the following data:
 
 * Task.status - Should be set to "Ready" state since this would only be created after appropriate approvals are in place.
 * Task.code - Should be populated with the daf-load-operation
@@ -129,8 +129,7 @@ it is loaded into a destination Data Mart. One of these processing steps is "De-
 
 ##### De-Identification of data 
 
-It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API.
-Since PCORnet required de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms for de-identifying the data and populating the PCORnet CDM.
+It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API.Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
 
 ##### Mapping to be used
 
@@ -163,7 +162,7 @@ Using the above mapping the task to load the data would be executed as follows.
 Implementing C2 capability involves three steps. 
 
 1. Instantiation of the Conformance profile
-2. Population and Updation of the Conformance profile
+2. Population and updating of the Conformance profile
 3. Making the Conformance profile available to Researchers
 
 The next few paragraphs will provide details for each step above.
@@ -384,6 +383,9 @@ These results would then be made available for the Researcher for further analys
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [PCORI]:  http://www.pcori.org
+[PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
+[OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
+[HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 
