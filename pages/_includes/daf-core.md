@@ -43,10 +43,10 @@ The following table lists the [profiles] and the base FHIR Resources from which 
 |[Goal](daf-core-goal.html)|Goal|
 |[Immunization](daf-core-immunization.html)|Immunization|
 |[Lab DiagnosticReport](daf-core-diagnosticreport.html)|DiagnosticReport|
-|[Lab Observation](daf-core-resultobs.html)|Observation|
+|[Lab Observation](daf-core-observationresults.html)|Observation|
 |[Location](daf-core-location.html)|Location|
 |[Medication](daf-core-medication.html)|Medication|
-|[MedicationOrder](daf-core-medicationorder.html)|MedicationOrder|
+|[MedicationOrder](daf-core-medicationrequest.html)|MedicationOrder|
 |[MedicationStatement](daf-core-medicationstatement.html)|MedicationStatement|
 |[Observation-Smokingstatus](daf-core-smokingstatus.html)|Observation|
 |[Observation-Vitalsigns](daf-core-vitalsigns.html)|Observation|

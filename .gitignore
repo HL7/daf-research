@@ -6,7 +6,8 @@
 *.exe
 *.o
 *.so
-*.sh
+*.s
+*.py
 
 # Packages #
 ############
@@ -65,5 +66,3 @@ Log-FHIR.xlsx
 ####################
 ~*.docx
 ~*.xlsx
-
-

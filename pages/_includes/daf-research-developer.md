@@ -6,7 +6,7 @@ This part of the IG provides additional guidance for the implementation of each 
 
 ## Capability C1: Extracting data from a Data Source and population of a Data Mart
 
-Implementing C1 capability involves four steps. 
+Implementing C1 capability involves four steps.
 
 1. Instantiation of a Task for extraction at the Data Source
 2. Execution of the Task to extract data from the Data Source
@@ -39,14 +39,14 @@ Note: If this is a task that is set up to repeat at a regular frequency, this st
 The Task created earlier is Step 1 is executed at some point of time automatically or manually and the following actions are expected to happen.
 
 * Create a new [DAF-Task] instance for each execution of the task. For example, if the task is run nightly, a new task instance is created every night when the task runs.
-* Populate the new Task with the same details as the Task created in Step 1. 
-* Set the parent for the task instance created in this step to be Task from Step 1. 
+* Populate the new Task with the same details as the Task created in Step 1.
+* Set the parent for the task instance created in this step to be Task from Step 1.
 * Set the Task.status to In-progress.
 * Start extraction of data which can be accomplished in multiple ways, some of which are elaborated below based on likelihood of support from vendors.
 
 1. Extract data for each patient using the 2015 Edition CCDS APIs that are supported by vendors which are outlined in the [US-Core] IG. For each patient, the extraction program may have to invoke multiple APIs to construct the full patient record.
 2. Extract data for each patient using the Patient/$everything operation if the vendor system supports it.
-3. Extract data for each patient using a native API or query if available. 
+3. Extract data for each patient using a native API or query if available.
 
 NOTE: Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
 
@@ -61,7 +61,7 @@ NOTE: Also in the case of mappings from one data model to another such as FHIR t
 
 #### Guidance on the profiles to be used to map FHIR Resources to PCORnet CDM
 
-The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated. 
+The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated.
 However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
 The [DAF-Research profile] page provides the necessary mapping between FHIR Resources and PCORnet CDM.
@@ -73,26 +73,26 @@ Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a m
 
 ### C1: Step 3: Instantiation of a Task for loading of data at the Data Mart
 
-The Data Mart actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using a FHIR API using the POST operation or using a graphical user interface which allows 
+The Data Mart actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using a FHIR API using the POST operation or using a graphical user interface which allows
 an end user to create the Task instance. This task instance has to have the following data:
 
 * Task.status - Should be set to "Ready" state since this would only be created after appropriate approvals are in place.
 * Task.code - Should be populated with the daf-load-operation
 * Task.fulfillment - Should be setup according to the frequency at which this is expected to run
-* Task.input.type - Reference 
+* Task.input.type - Reference
 * Task.input.valueReference - Points to the Bundle that was extracted in Step 2.
 
 This Task instance would then be persisted for execution. The actual execution of the task can be controlled using a scheduled timer or a manual kick off.
 Note: If this is a task that is set up to repeat at a regular frequency, this step can be skipped after the first time.
 
 
-### C1:Step 4: Population of the Data Mart with the extracted data 
+### C1:Step 4: Population of the Data Mart with the extracted data
 
-#### Pre-Processing the Bundle returned from the extract operation 
+#### Pre-Processing the Bundle returned from the extract operation
 
 A Bundle returned from Step 2 will conform to FHIR and US-Core or other specific IG requirements. This Bundle may have to go through additional transformations, mappings and other processing before it is loaded into a destination Data Mart.  These additional actions may include de-identifying the data discussed next as well as other steps beyond the scope of this IG, such as pseudo anonymization, data standardization and patient matching as needed. Also implementers need to be aware that the data extraction task must have been completed for the data loading to start to ensure integrity of the data extracted. The status of the Task instance can be used to verify if a Task has been completed or if it is pending.
 
-##### De-Identification of data 
+##### De-Identification of data
 
 In cases where the data extracted from a Data Source contains identifiable patient information, an external process has to de-identify the data prior to loading the data mart with the extracted data.It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API.Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
 
@@ -104,23 +104,23 @@ The following is a mapping of FHIR to PCORnet CDM and from OMOP to FHIR develope
 
 [DAF-Research Mappings between data models](daf-research-profile.html)
 
-Using the above mapping the task to load the data would be executed as follows. 
+Using the above mapping the task to load the data would be executed as follows.
 
 * Create a new [DAF-Task] instance for each execution of the task. For example, if the task is run nightly, a new task instance is created every night when the task runs.
-* Populate the new Task with the same details as the Task created in Step 3. 
-* Set the parent for the task instance created in this step to be Task from Step 3. 
+* Populate the new Task with the same details as the Task created in Step 3.
+* Set the parent for the task instance created in this step to be Task from Step 3.
 * Set the Task.status to In-progress. Set the parent Task.status to In-progress.
 * Start loading of data for each patient into the database using the PCORnet CDM to FHIR mapping provided.
 * Create [DAF-Provenance] instance for each run of the task pointing back to all the Resources that were updated in this execution.
 * Update [DAF-Conformance] as needed to reflect the latest data changes.
-* Set Task.status as completed if everything completes normally. The parent Task will remain In-progress for ever until the parent Task is Completed or Rejected. 
+* Set Task.status as completed if everything completes normally. The parent Task will remain In-progress for ever until the parent Task is Completed or Rejected.
 * In case of exception, Set Task.status as Failed and Set Task.output.type as Reference but Task.output.valueReference will point to the OperationOutcome resource instance.
 
 
 
 ## C2: Publishing Data Mart Meta data
 
-Implementing C2 capability involves three steps. 
+Implementing C2 capability involves three steps.
 
 1. Instantiation of the Conformance profile
 2. Population and updating of the Conformance profile
@@ -131,9 +131,9 @@ The next few paragraphs will provide details for each step above.
 
 ### C2:Step 1: Instantiation of the Conformance profile
 
-The Data Mart has to instantiate a Conformance Resource instance to declare its characteristics that would help a Researcher to compose queries. 
-In addition the Conformance Resource should also help a Data Mart administrator to manage the data within the Data Mart. 
-The Conformance Resource declares the various profiles, operations and other specifics about the implementation. 
+The Data Mart has to instantiate a Conformance Resource instance to declare its characteristics that would help a Researcher to compose queries.
+In addition the Conformance Resource should also help a Data Mart administrator to manage the data within the Data Mart.
+The Conformance Resource declares the various profiles, operations and other specifics about the implementation.
 For the DAF Data Mart actor the following data is expected to be present within the DAF-Conformance resource instance.
 
 * Conformance.url provides the unique identifier for the Resource. The URL is a web-accessible address to determine the server capabilities.
@@ -147,19 +147,19 @@ For the DAF Data Mart actor the following data is expected to be present within 
 * Conformance.fhirVersion - Populate with "STU3".
 * Conformance.format - Populate two entries (one with "xml" and other with "json")
 * Conformance.profile - Declare the list of profiles supported by the instantiation. For DAF Data Mart this would be DAF-Conformance, DAF-Task, DAF-Provenance, DAF-OperationDefinition at a minimum.
-* Conformance.rest.mode - Populate with "Server" 
+* Conformance.rest.mode - Populate with "Server"
 
-* For each Resource supported by the Server populate the Conformance.rest segment with 
+* For each Resource supported by the Server populate the Conformance.rest segment with
 
 1. Resource Type (e.g Task)
 2. Resource Profile (DAF specific profiles, e.g DAF-Task)
 3. Search Param Name for each search parameter supported
 4. Interaction.code (Multiple interactions would be supported typically, for e.g READ, SEARCH, vREAD, POST )
 5. Operation.name for each operation supported by the Data Mart (These include daf-load-operation, daf-execute-query etc)
-6. Operation.definition points back to the instance of the Operation Definitions that the Server supports. 
+6. Operation.definition points back to the instance of the Operation Definitions that the Server supports.
 
-For each Operation that is supported by the Server, a DAF-OperationDefinition instance should be created with the appropriate data 
-and then the Conformance.Operation.defintion should point to the instance that has been created. 
+For each Operation that is supported by the Server, a DAF-OperationDefinition instance should be created with the appropriate data
+and then the Conformance.Operation.defintion should point to the instance that has been created.
 
 The following extensions should be populated for the Conformance resource instance
 *  PCORnet Data Mart Active Flag - This indicates if the Data Mart is still active and is accepting queries.
@@ -186,7 +186,7 @@ The following Extensions have to be populated as part of the OperationDefinition
 
 ### C2: Step 2. Population and Updation of the Conformance profile
 
-The Conformance profile once published gets updated less frequently as compared to other clinical resources. 
+The Conformance profile once published gets updated less frequently as compared to other clinical resources.
 However updates to the Conformance profile will be performed due to changes in the following data elements
 
 * URL of the overall conformance resource
@@ -200,7 +200,7 @@ However updates to the Conformance profile will be performed due to changes in t
 ### C2: Step 3. Making the Conformance profile available to Researchers
 
 The Conformance resource just like other FHIR resources can be queried by researchers.
-Conformance resources should be available for querying without requiring additional authorization. 
+Conformance resources should be available for querying without requiring additional authorization.
 The Conformance resource will be published at the well known FHIR URL <base URL>/Conformance.
 There can only be one instance of the Conformance resource per server implementation.
 Conformance resource should support the historical version (vREAD) retrieval to identify the changes over a period of time.
@@ -218,7 +218,7 @@ Capability C3 implementation involves two steps
 ### C3: Step 1: Instantiation of a Task for executing a query
 
 In PCORnet and most research environments, queries submitted to access data are asynchronous in nature, repeated frequently and may involve humans in the work flow performing approvals, rejections etc.
-In order to support these requirements an instantiation of a Task is performed. In order to track the Tasks across multiple Data Marts and states the following Task hierarchy is implemented. 
+In order to support these requirements an instantiation of a Task is performed. In order to track the Tasks across multiple Data Marts and states the following Task hierarchy is implemented.
 
 A Task (this is known as the Root Task) would be created based on the query composed by the Researcher.
 For each Data Mart that the query will be sent to, a new Task instance (Data Mart specific task) would be created using the data from the Root Task. The parent of the Data Mart specific Task would be Root Task.
@@ -227,7 +227,7 @@ This hierarchical nature would facilitate the Researcher to retrieve data specif
 
 This Root Task instances created will have the following data
 
-* Task.status - Should be set to "Requested" state 
+* Task.status - Should be set to "Requested" state
 * Task.code - Should be populated with the daf-execute-query
 * Task.requester - Should be populated with the requesting organization and their name. This is the Researcher's organization.
 * Task.description - Description of the query
@@ -242,16 +242,16 @@ The following extensions need to be populated on the Task
 The following are the list of inputs to the daf-execute-query operation which would be populated on the Task.input data element.
 
 * Task.input.name - queryFormat
-* Task.input.type - CodeableConcept 
+* Task.input.type - CodeableConcept
 * Task.input.valueCodeableConcept - Value which would indicate the queryFormat such as SAS/SQL.
 * Task.input.name - dataModel
-* Task.input.type - CodeableConcept 
+* Task.input.type - CodeableConcept
 * Task.input.valueCodeableConcept - Value which would indicate the dataModel such as PCORnet CDM / i2b2 / OMOP
 * Task.input.name - instructions
-* Task.input.type - string 
+* Task.input.type - string
 * Task.input.valueString - Instructions for execution of the query
 * Task.input.name - queryPackage
-* Task.input.type - string 
+* Task.input.type - string
 * Task.input.valueString - Value which contains the actual query composed using SAS/SQL/Json etc.
 
 Optionally the query can indicate the type of data expected as part of the results as part of the queryResultsPhiDisclosureLevel.
@@ -259,30 +259,30 @@ Optionally the query can indicate the type of data expected as part of the resul
 
 ### C3: Step 2: Submitting the query to multiple Data Marts
 
-In order for the Researcher to execute the query against multiple Data Marts, the Research Query Composer system has to create an instance of the Root Task created in Step 1 for 
+In order for the Researcher to execute the query against multiple Data Marts, the Research Query Composer system has to create an instance of the Root Task created in Step 1 for
 each Data Mart. In order to make Tasks specific to a Data Mart, the following Task data elements would be set.
 
 * Task.owner - Should be populated with the organization that owns the query. This is normally a person, organization or a device belonging to the CDRN.
 * Task.status - Should be set to "Requested" state for each instance.
 
-All the other data elements would be replicated from the root task. 
+All the other data elements would be replicated from the root task.
 Once the Data Mart specific Tasks are created, Research Query Responders can access these tasks via the search mechanism on the Task.owner data element.
 
 
 
-## C4: Execution of the Query, Creation of query results and returning the resulting data 
+## C4: Execution of the Query, Creation of query results and returning the resulting data
 
 Implementing C4 capability involves the following three steps
 
 1. Retrieving the query specific to the Data Mart
 2. Executing the query and returning the query results
-3. Retrieving query results from multiple Data Marts 
+3. Retrieving query results from multiple Data Marts
 
 
 ### C4: Step 1: Retrieving the query specific to the Data Mart
 
 Each Research Query Responder can access the queries that it needs to execute by performing a GET on the Task where Task.owner would be itself.
-This GET operation on the Task resource may cross firewall boundaries and might require appropriate authorization before the resources can be accessed. 
+This GET operation on the Task resource may cross firewall boundaries and might require appropriate authorization before the resources can be accessed.
 
 The Research Query Responder would then duplicate the task with all the data for the specific execution. This new Task instance would have the Data Mart specific Task as its parent.
 The Research Query Responder would set the Task.status to "Received", "Accepted" and "Ready" as appropriate.
@@ -295,7 +295,7 @@ The Research Query Responder would then translate the incoming query to native e
 
 * queryFormat
 * queryFormatVersion
-* dataModel 
+* dataModel
 * queryPackage
 * instructions.
 
@@ -307,7 +307,7 @@ The query would then be executed and the results would be created using the DAF-
 * For each measurement create an Observation.component entry with the following
 
 * Observation.component.code - Set this to the actual property being measured. (For e.g Height, Weight etc)
-* Observation.component.value - Set this to the aggregate value 
+* Observation.component.value - Set this to the aggregate value
 * Observation.component.interpretation - Set this to Count, Average etc.
 * Observation.component.referenceRange - Set this to the Low and High values that are the boundaries used for value calculation.
 
@@ -315,7 +315,7 @@ One Observation.component should be created for each stratified data element.
 Once these results are created the Research Query Responder should create the Bundle and set the execution specific Task.output to the Bundle instance.
 The Task.status should be set to "Completed".
 In case of failures the data is returned as part of the OperationOutcome element.
-These execution specific Task instances are now available for retrieval by the Researcher. 
+These execution specific Task instances are now available for retrieval by the Researcher.
 
 
 ### C4: Step 3: Retrieving query results from multiple Data Marts
@@ -329,14 +329,14 @@ These results would then be made available for the Researcher for further analys
 
 [DAF-Core]: daf-core.html
 [US-Core]: http://hl7.org/fhir/us/core/index.html
-[DAF-Research]: daf-research.html
-[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
+[DAF-Research]: index.html
+[Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [PCORI]:  http://www.pcori.org
 [PCORnet]: http://www.pcornet.org/
-[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page* 
+[Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page*
 [ASPE]: https://aspe.hhs.gov/
 [DAF-Research-intro]: daf-research-intro.html
 [C1, C2, C3, C4]: daf-research-intro.html
@@ -344,11 +344,11 @@ These results would then be made available for the Researcher for further analys
 [Data Mart Conformance]: capabilitystatement-daf-datamart.html
 [Research Query Composer Conformance]: capabilitystatement-daf-datasource.html
 [Research Query Responder Conformance]: capabilitystatement-daf-datasource.html
-[DAF-Task]: daf-task.html
-[DAF-Provenance]: daf-provenance.html
-[DAF-OperationDefinition]: daf-operationdefinition.html
-[DAF-Conformance]: daf-conformance.html
-[DAF-QueryResults]: daf-queryresults.html
+[DAF-Task]: structuredefinition-daf-task.html
+[DAF-Provenance]: structuredefinition-daf-provenance.html
+[DAF-OperationDefinition]: structuredefinition-daf-operationdefinition.html
+[DAF-Conformance]: structuredefinition-daf-capabilitystatement.html
+[DAF-QueryResults]: structuredefinition-daf-queryresults.html
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/

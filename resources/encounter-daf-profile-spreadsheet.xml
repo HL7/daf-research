@@ -8711,7 +8711,7 @@
     <Cell ss:StyleID="s97"><Data ss:Type="String">Encounter type Value set to describe the type of encounter.</Data></Cell>
     <Cell ss:StyleID="s134"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s134"><Data ss:Type="String">preferred</Data></Cell>
-    <Cell ss:StyleID="s134"><Data ss:Type="String">valueset-daf-encounter-type</Data></Cell>
+    <Cell ss:StyleID="s134"><Data ss:Type="String">http://hl7.org/fhir/us/daf-research/ValueSet/daf-encounter-type</Data></Cell>
     <Cell ss:StyleID="s134"><Data ss:Type="String">Concept allowed for encounter type</Data></Cell>
     <Cell ss:StyleID="s134"/>
     <Cell ss:StyleID="s134"/>
@@ -8726,7 +8726,7 @@
     <Cell ss:StyleID="s108"><Data ss:Type="String">Encounter Diagnoses Value set to describe the specific encounter code.</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:StyleID="s137"><Data ss:Type="String">valueset-daf-encounter-reason</Data></Cell>
+    <Cell ss:StyleID="s137"><Data ss:Type="String">http://hl7.org/fhir/us/daf-research/ValueSet/daf-encounter-reason</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">Concept for encounter reason</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s137"/>
@@ -8741,7 +8741,7 @@
     <Cell ss:StyleID="s108"><Data ss:Type="String">Value set to describe kind of location or category of discharge.</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s137"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:StyleID="s137"><Data ss:Type="String">valueset-daf-encounter-dischargedisposition</Data></Cell>
+    <Cell ss:StyleID="s137"><Data ss:Type="String">http://hl7.org/fhir/us/daf-research/ValueSet/daf-encounter-dischargedisposition</Data></Cell>
     <Cell ss:StyleID="s137"/>
     <Cell ss:StyleID="s137"/>
     <Cell ss:StyleID="s137"/>

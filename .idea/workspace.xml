@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65b2695a-73b9-497c-8cf6-decaae36f8d7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/allergyintolerance-example.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/careplan-example.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/careteam-example.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/condition-example.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/patient-example.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instance-template-base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/instance-template-format.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/_includes/daf-index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/_includes/daf-research.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/condition-daf-Condition-age.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/condition-daf.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-capabilitystatement-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-capabilitystatement-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-capabilitystatement.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-condition-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-condition-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-condition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-core.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-data-models-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-data-models-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-data-models.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-encounter-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-encounter-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-encounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-medicationdispense-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-medicationdispense-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-medicationdispense.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-operationdefinition-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-operationdefinition-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-operationdefinition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-patient-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-patient-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-patient.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-provenance-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-provenance-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-provenance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-query-formats-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-query-formats-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-query-formats.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-queryresults-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-queryresults-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-queryresults.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-research.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-task-definitions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-task-mappings.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/daf-task.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/todo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/valueset-daf-bodysite.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/capabilitystatement-daf-profile-spreadsheet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/daf-execute-query.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/daf-extract-operation.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/daf-load-operation.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/operationdefinition-daf-profile-spreadsheet.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/task-daf-profile-spreadsheet_backup.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/valueset-daf-query-result-categories.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/valueset-daf-taskcodes.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/valueset-problem-severity.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/definitions.json.zip" afterPath="$PROJECT_DIR$/resources/definitions.json.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ig.json" afterPath="$PROJECT_DIR$/ig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/_includes/daf-research-intro.md" afterPath="$PROJECT_DIR$/pages/_includes/daf-research-intro.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/_includes/daf-research-profile.md" afterPath="$PROJECT_DIR$/pages/_includes/daf-research-profile.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/_includes/footer.html" afterPath="$PROJECT_DIR$/pages/_includes/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/_includes/header.html" afterPath="$PROJECT_DIR$/pages/_includes/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/_includes/navbar.html" afterPath="$PROJECT_DIR$/pages/_includes/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/capabilitystatement-daf-datamart.html" afterPath="$PROJECT_DIR$/pages/capabilitystatement-daf-datamart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/capabilitystatement-daf-datasource.html" afterPath="$PROJECT_DIR$/pages/capabilitystatement-daf-datasource.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/capabilitystatement-daf-research-queryrequester.html" afterPath="$PROJECT_DIR$/pages/capabilitystatement-daf-research-queryrequester.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/capabilitystatement-daf-research-queryresponder.html" afterPath="$PROJECT_DIR$/pages/capabilitystatement-daf-research-queryresponder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/capabilitystatement.html" afterPath="$PROJECT_DIR$/pages/capabilitystatement.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/daf-research-developer.html" afterPath="$PROJECT_DIR$/pages/daf-research-developer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/daf-research-intro.html" afterPath="$PROJECT_DIR$/pages/daf-research-intro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/daf-research-profile.html" afterPath="$PROJECT_DIR$/pages/daf-research-profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.html" afterPath="$PROJECT_DIR$/pages/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/condition-daf-profile-spreadsheet.xml" afterPath="$PROJECT_DIR$/resources/condition-daf-profile-spreadsheet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/encounter-daf-profile-spreadsheet.xml" afterPath="$PROJECT_DIR$/resources/encounter-daf-profile-spreadsheet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ig.xml" afterPath="$PROJECT_DIR$/resources/ig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/medicationdispense-daf-profile-spreadsheet.xml" afterPath="$PROJECT_DIR$/resources/medicationdispense-daf-profile-spreadsheet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/observation-daf-queryresults-profile-spreadsheet.xml" afterPath="$PROJECT_DIR$/resources/observation-daf-queryresults-profile-spreadsheet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/patient-daf-profile-spreadsheet.xml" afterPath="$PROJECT_DIR$/resources/patient-daf-profile-spreadsheet.xml" />
+    </list>
+    <ignored path="DAF-Research.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="DAF-Research" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="daf-research.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/daf-research.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="127" column="83" selection-start-line="127" selection-start-column="83" selection-end-line="127" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/daf-research.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="898" />
+    <option name="y" value="-1322" />
+    <option name="width" value="1620" />
+    <option name="height" value="1205" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DAF-Research" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DAF-Research" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DAF-Research" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RunManager" selected="Python.daf-research">
+    <configuration default="false" name="daf-research" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/daf-research.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DAF-Research" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.daf-research" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.daf-research" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65b2695a-73b9-497c-8cf6-decaae36f8d7" name="Default" comment="" />
+      <created>1480927990692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1480927990692</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="898" y="-1322" width="1620" height="1205" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/daf-research.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="127" column="83" selection-start-line="127" selection-start-column="83" selection-end-line="127" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

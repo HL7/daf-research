@@ -8993,7 +8993,7 @@
     <Cell ss:StyleID="s107"><Data ss:Type="String">This identifies the body site at which the substance was administered</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">preferred</Data></Cell>
-    <Cell ss:StyleID="s138"><Data ss:Type="String">valueset-daf-bodysite</Data></Cell>
+    <Cell ss:StyleID="s138"><Data ss:Type="String">http://hl7.org/fhir/us/daf-research/ValueSet/daf-bodysite</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s138"><Data ss:Type="String">2.16.840.1.113883.3.88.12.3221.8.9</Data></Cell>
     <Cell ss:StyleID="s135"/>
     <Cell ss:StyleID="s135"/>
@@ -9007,7 +9007,7 @@
     <Cell ss:StyleID="s107"><Data ss:Type="String">This identifies the route of substance administration.</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">preferred</Data></Cell>
-    <Cell ss:StyleID="s138"><Data ss:Type="String">valueset-daf-medication-route</Data></Cell>
+    <Cell ss:StyleID="s138"><Data ss:Type="String">http://hl7.org/fhir/us/daf-research/ValueSet/daf-medication-route</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s138"><Data ss:Type="String">2.16.840.1.113883.3.88.12.3221.8.11</Data></Cell>
     <Cell ss:StyleID="s138"/>
     <Cell ss:StyleID="s138"/>

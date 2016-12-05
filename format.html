@@ -1,22 +1,22 @@
 ---
-# jekyll prompt
+# jekyll header
 ---
-
 {% include header.html %}
 
-  <!-- ============BreadCrumb=============== -->
+
 
 {% include container-start.html %}
 
   <!-- ============CONTENT CONTENT=============== -->
 
-{% capture my-include %}{% include capabilitystatement.md %}{% endcapture %}
-{{ my-include | markdownify }}
+<h2>{{[title]}}</h2>
 
-
+{% include {{[type]}}-{{[name]}}.xhtml %}
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 {% include container-end.html %}
 
-    {% include footer.html %}
+
+
+{% include footer.html %}
