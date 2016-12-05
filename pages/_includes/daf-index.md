@@ -4,7 +4,7 @@
 
 [Data Access Framework] is an US initiative sponsored by the  [Office of the National Coordinator (ONC)].  
 
-1. [DAF-Research IG] : The DAF-Research IG defines the conformance requirements for capabilities used by researchers to access data about multiple patients. These requirements have been developed based on [PCORnet] research activities.  The DAF-Research IG is being balloted as "For Comments only ballot".
+1. [DAF-Research IG] : The DAF-Research IG defines the conformance requirements for capabilities used by researchers to access data about multiple patients. These requirements have been developed based on [PCORnet] research activities.  
 
 
 ---
