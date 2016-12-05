@@ -10,7 +10,7 @@ The following table will provide a roadmap for the reader.
 |--------------------|--------------------------|---------------------|
 |DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](daf-research-intro.html#Background)|
 |Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](daf-research-intro.html#DAF-Research IG Capabilities and Actors)|
-|Profiles, Capability Statements and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research, capability statements and resource/data mappings to PCORnet CMD and OMOP CDM.|[Profile List](daf-research-profile.html)|
+|Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to PCORnet CDM and OMOP CDM.|[Profile List](daf-research-profile.html)|
 |Developer Guidance|The artifact contains data mapping spreadsheets, deployment options, examples that will help implementers of DAF-Research IG.|[Implementation Guidance](daf-research-developer.html)|
 
 # Capabilities, Actors and Conformance Requirements
@@ -26,7 +26,7 @@ The following table outlines the various DAF-Research Capabilities specified as 
 
 
 [DAF-Core]: daf-core.html
-[US-Core]: us-core.html
+[US-Core]: http://hl7.org/fhir/us/core/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
 [ONC]: http://www.healthit.gov/newsroom/about-onc

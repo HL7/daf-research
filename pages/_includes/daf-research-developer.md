@@ -50,6 +50,9 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 
 NOTE: Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
 
+
+NOTE: Also in the case of mappings from one data model to another such as FHIR to PCORnet CDM or FHIR to OMOP etc, there is always a potential for data loss. In these cases where there is not an exact mapping between local codes and standardized codes the extraction process is encouraged to include the actual raw values as part of the coding element.
+
 * Add the data for all consented patients in the case of bulk extraction or for each patient in the case of incremental extraction to a Bundle which contains the extracted data along with the linkages.
 * Set Task.output.type - Reference. (This is the bundle that contains the data for a desired number of patients)
 * Populate Task.output.valueReference (This should point to the Bundle reference created).
@@ -61,51 +64,12 @@ NOTE: Extraction tasks may return identifiable patient information or de-identif
 The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated. 
 However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
-As one can see there are a few new resources that would be proposed and created for an effective mapping of [PCORnet CDM] to FHIR and vice versa. These New Resources will be proposed to the appropriate HL7 WGs based on pilot implementations and feedback. Similarly extensions required will be proposed and added to the profiles after pilot implementations are completed. Profiles which are not US-Core are annotated accordingly in the table below.
-
-
-|PCORnet CDM Table Name            |Recommended Profile for Data extraction|
-|----------------------------------|----------------------------------------|
-|DIAGNOSIS, CONDITION|[Condition](daf-condition.html)*|
-|LAB_RESULT_CM|[DiagnosticReport-Results](us-core-diagnosticreport.html)|
-|ENCOUNTER|[Encounter](daf-encounter.html)|
-|Prescribing|[MedicationOrder](us-core-medicationorder.html)|
-|DISPENSING|[MedicationDispense](daf-medicationdispense.html)*|
-|LAB_RESULT_CM|[Observation](us-core-resultobs.html)|
-|VITALS|[Observation-Vitalsigns](us-core-vitalsigns.html)|
-|DEMOGRAPHIC|[Patient](daf-patient.html)*|
-|PROCEDURES|[Procedure](us-core-procedure.html)|
-|PRO CM|Questionaire Profile - TBD|
-|ENROLLMENT|Potential New Resource - TBD|
-|PCORNET_TRIAL|Potential New Resource - TBD|
-|DEATH|Potential New Resource/Profile - TBD|
-|DEATH_CAUSE|Potential New Resource/Profile - TBD|
-|HARVEST|New Resource - TBD|
-
-(*) Indicate DAF-Research specific profiles which are created from US-Core profiles.
+The [DAF-Research profile] page provides the necessary mapping between FHIR Resources and PCORnet CDM.
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
 Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below.
 
-|OMOP Table Name            |Recommended Profile for Data extraction|
-|----------------------------------|----------------------------------------|
-|Concept,Vocabulary,Domain,Concept_Synonym,Concept_Ancestor|ValueSet **|
-|Concept_Class|Concept **|
-|Concept_Relationship, Relationship|ConceptMap **|
-|Cohort_Definition, Attribute_Definition|Group **|
-|Specimen|Specimen **|
-|Drug_Strength|[Medication](us-core-medication.html)|
-|Procedure_Occurence|[Procedure](us-core-procedure.html)|
-|Drug_Exposure|[MedicationOrder](us-core-medicationorder.html),[MedicationStatement](us-core-medicationstatement.html),[Immunization](us-core-immunization.html)|
-|Device_Exposure|[Procedure](us-core-procedure.html),[Device](us-core-device.html)|
-|Measurement,Note,Observation|[Observation](us-core-resultobs.html)|
-|Person|[Patient](daf-patient.html)*|
-|Observation_Period, Visit_Occurence|[Encounter](daf-encounter.html)|
-|Condition_Occurence|[Condition](daf-condition.html)*|
-
-(**) Base FHIR Resources without any specific profiles 
-(*) DAF Research specific profiles
 
 ### C1: Step 3: Instantiation of a Task for loading of data at the Data Mart
 
@@ -135,14 +99,10 @@ In cases where the data extracted from a Data Source contains identifiable patie
 ##### Mapping to be used
 
 One of the value propositions of the data extract standardization is the need to eliminate mappings from each Data Source. As long as a Data Source has performed the right mapping to its FHIR Resources and profiles, the extracted data can be directly mapped to a destination model of choice such as the PCORnet CDM. Conformance of a Data Source to US-Core can be verified by using automated open source automated test tools and the US-Core conformance statements. The [FHIR wiki] provides a listing of many of these tools.
-The following is a mapping of FHIR to PCORnet CDM developed by DAF working with PCORnet community and data experts.
-This mapping can be followed to load the appropriate tables within the PCORnet CDM.
 
-[FHIR to PCORnet CDM mapping](https://docs.google.com/spreadsheets/d/1Gw-j7GSlDA0rxJqpSRI6g9ZPRk7LHPnE5-AJuWd1ry0/edit#gid=1928349566)
+The following is a mapping of FHIR to PCORnet CDM and from OMOP to FHIR developed by DAF working with PCORnet community and data experts.
 
-For systems loading to from OMOP to FHIR and then to PCORnet CDM the following mapping developed by DAF pilots can be used.
-
-[OMOP to FHIR mapping](https://docs.google.com/spreadsheets/d/11ZmwGxnXViLkTVdX5Vi0FP-Gh4AD2HZEfYOhzZptZfw/edit#gid=0)
+[DAF-Research Mappings between data models](daf-research-profile.html)
 
 Using the above mapping the task to load the data would be executed as follows. 
 
@@ -368,7 +328,7 @@ These results would then be made available for the Researcher for further analys
 
 
 [DAF-Core]: daf-core.html
-[US-Core]: us-core.html
+[US-Core]: http://hl7.org/fhir/us/core/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc 
 [ONC]: http://www.healthit.gov/newsroom/about-onc
@@ -393,3 +353,5 @@ These results would then be made available for the Researcher for further analys
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
+[DAF-Research profile]: daf-research-profile.html
+[DAF-Research Mappings]: (daf-research-profile.html)
