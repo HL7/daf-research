@@ -104,7 +104,7 @@
           <tr>
             
             <th>
-              <a href="daf-task.html">DAF-Task</a>
+              <a href="StructureDefinition-daf-task.html">DAF-Task</a>
             </th>
             
             <td>
@@ -148,7 +148,7 @@
 		  <tr>
             
             <th>
-              <a href="us-core.html">US-Core profiles</a>
+              <a href="http://hl7.org/fhir/us/core/2017Jan">US-Core profiles</a>
             </th>
             
             <td>
