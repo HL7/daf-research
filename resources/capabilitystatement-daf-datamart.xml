@@ -148,7 +148,7 @@
 		  <tr>
             
             <th>
-              <a href="daf-provenance.html">DAF-Provenance</a>
+              <a href="StructureDefinition-daf-provenance.html">DAF-Provenance</a>
             </th>
             
             <td>
@@ -192,7 +192,7 @@
 		  <tr>
             
             <th>
-              <a href="daf-operationdefinition.html">DAF-OperationDefinition</a>
+              <a href="StructureDefinition-daf-operationdefinition.html">DAF-OperationDefinition</a>
             </th>
             
             <td>
