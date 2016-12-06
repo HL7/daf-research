@@ -117,8 +117,8 @@ A detailed data element level mapping can be accessed here:
 [C1, C2, C3, C4]: daf-research-intro.html
 [Data Source Conformance]: CapabilityStatement-daf-datasource.html
 [Data Mart Conformance]: CapabilityStatement-daf-datamart.html
-[Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html
-[Research Query Responder Conformance]: CapabilityStatement-daf-datasource.html
+[Research Query Composer Conformance]: CapabilityStatement-daf-research-queryrequester.html
+[Research Query Responder Conformance]: CapabilityStatement-daf-research-queryresponder.html
 [daf-extract-operation]: OperationDefinition-daf-extract.html
 [daf-load-operation]: OperationDefinition-daf-load.html
 [daf-execute-query]: OperationDefinition-daf-execute-query.html

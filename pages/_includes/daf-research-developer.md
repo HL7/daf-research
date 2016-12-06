@@ -360,8 +360,8 @@ These results would then be made available for the Researcher for further analys
 [C1, C2, C3, C4]: daf-research-intro.html
 [Data Source Conformance]: CapabilityStatement-daf-datasource.html
 [Data Mart Conformance]: CapabilityStatement-daf-datamart.html
-[Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html
-[Research Query Responder Conformance]: CapabilityStatement-daf-datasource.html
+[Research Query Composer Conformance]: CapabilityStatement-daf-research-queryrequester.html
+[Research Query Responder Conformance]: CapabilityStatement-daf-research-queryresponder.html
 [DAF-Task]: StructureDefinition-daf-task.html
 [DAF-Provenance]: StructureDefinition-daf-provenance.html
 [DAF-OperationDefinition]: StructureDefinition-daf-operationdefinition.html
@@ -372,4 +372,4 @@ These results would then be made available for the Researcher for further analys
 [PCORnet]: http://www.pcornet.org/
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 [DAF-Research profile]: daf-research-profile.html
-[DAF-Research Mappings]: (daf-research-profile.html)
+[DAF-Research Mappings]: daf-research-profile.html

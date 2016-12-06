@@ -19,7 +19,7 @@
       
       </p>
       
-      <p>This profile defines the expected capabilities of the <i>Data Mart</i> actor when conforming to the <a href="daf-research.html">DAF-Research IG</a>. The statement includes the complete list of actual profiles, RESTful operations, search parameters supported by a Data Mart.
+      <p>This profile defines the expected capabilities of the <i>Data Mart</i> actor when conforming to the <a href="index.html">DAF-Research IG</a>. The statement includes the complete list of actual profiles, RESTful operations, search parameters supported by a Data Mart.
       </p>
 	  
 	  <h2>General</h2>
@@ -197,7 +197,7 @@
             
             <td>
               
-              <a title="Allows discovery of DAF-OperationDefinition resources based on different search criteria" href="#DAFOperationDefinitionSearch">SHALL</a>
+              <a title="Allows discovery of DAF-OperationDefinition resources based on different search criteria">SHALL</a>
             
             </td>
             
