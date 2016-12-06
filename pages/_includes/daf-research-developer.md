@@ -304,14 +304,32 @@ The query would then be executed and the results would be created using the DAF-
 * Observation.category - Set this to the types of things being observed. It can be Patient, Encounter, Observation etc.
 * Observation.code - Set this to the types of things being aggregated. It can be Patient, Encounter, Observation etc.
 
-* For each measurement create an Observation.component entry with the following
+* For each measurement create Observation.component as follows:
 
-* Observation.component.code - Set this to the actual property being measured. (For e.g Height, Weight etc)
-* Observation.component.value - Set this to the aggregate value
-* Observation.component.interpretation - Set this to Count, Average etc.
+The Observation.component is sliced and there are two different occurrences.
+The first Observation.component is to capture the Aggregate Results.
+The second Observation.component is to capture the filters or stratifiers that were applied.
+
+For example the first occurrence of Observation.component would contain
+`	{
+        code: "Patient", 
+        valueQuantity: "10",
+		interpretation: "Count"
+      }
+
+The second occurrence of Observation.component needs to repeated multiple times, once for each filter or stratifier.
+      {
+        [
+           {"code": "Sex", "valueString": "M", "interpretation": "None", },
+           {"code": "Race", "valueString": "09", "interpretation": "None", }
+        ]
+      },
+
+* Observation.component.code - Set this to the actual property being measured. (For e.g Height, Weight, Patient etc)
+* Observation.component.value - Set this to the aggregate value or the value corresponding to the filter/stratifier code.
+* Observation.component.interpretation - Set this to Count, Average etc for the first occurrence and "None" for the second occurrence.
 * Observation.component.referenceRange - Set this to the Low and High values that are the boundaries used for value calculation.
 
-One Observation.component should be created for each stratified data element.  
 Once these results are created the Research Query Responder should create the Bundle and set the execution specific Task.output to the Bundle instance.
 The Task.status should be set to "Completed".
 In case of failures the data is returned as part of the OperationOutcome element.
@@ -342,8 +360,8 @@ These results would then be made available for the Researcher for further analys
 [C1, C2, C3, C4]: daf-research-intro.html
 [Data Source Conformance]: CapabilityStatement-daf-datasource.html
 [Data Mart Conformance]: CapabilityStatement-daf-datamart.html
-[Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html
-[Research Query Responder Conformance]: CapabilityStatement-daf-datasource.html
+[Research Query Composer Conformance]: CapabilityStatement-daf-research-queryrequester.html
+[Research Query Responder Conformance]: CapabilityStatement-daf-research-queryresponder.html
 [DAF-Task]: StructureDefinition-daf-task.html
 [DAF-Provenance]: StructureDefinition-daf-provenance.html
 [DAF-OperationDefinition]: StructureDefinition-daf-operationdefinition.html
@@ -354,4 +372,4 @@ These results would then be made available for the Researcher for further analys
 [PCORnet]: http://www.pcornet.org/
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 [DAF-Research profile]: daf-research-profile.html
-[DAF-Research Mappings]: (daf-research-profile.html)
+[DAF-Research Mappings]: daf-research-profile.html

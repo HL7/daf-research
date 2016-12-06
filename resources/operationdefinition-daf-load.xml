@@ -14,6 +14,7 @@
     <reference value="OperationDefinition/daf-load-operation"/>
   </base>
   <system value="true"/>
+  <type value="false"/>
   <instance value="false"/>
   <parameter>
     <name value="input"/>

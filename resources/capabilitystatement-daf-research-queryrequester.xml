@@ -19,7 +19,7 @@
       
       </p>
       
-      <p>This profile defines the expected capabilities of the <i>Research Query Requester</i> actor when conforming to the <a href="daf-research.html">DAF-Research IG</a>. The statement includes the complete list of actual profiles, RESTful operations, search parameters supported by a Research Query Requester.
+      <p>This profile defines the expected capabilities of the <i>Research Query Requester</i> actor when conforming to the <a href="index.html">DAF-Research IG</a>. The statement includes the complete list of actual profiles, RESTful operations, search parameters supported by a Research Query Requester.
       </p>
 	  
 	  <h2>General</h2>
@@ -147,12 +147,12 @@
 		  <tr>
             
             <th>
-              <a href="daf-queryresults.html">DAF-QueryResults</a>
+              <a href="StructureDefinition-daf-queryresults.html">DAF-QueryResults</a>
             </th>
             
             <td>
               
-              <a title="Allows discovery of DAF-QueryResults resources based on different search criteria" href="#DAFQueryResultsSearch">SHALL</a>
+              <a title="Allows discovery of DAF-QueryResults resources based on different search criteria">SHALL</a>
             
             </td>
             
@@ -240,7 +240,7 @@
             
             <td>
               
-              <a title="Allows discovery of DAF-OperationDefinition resources based on different search criteria" href="#DAFOperationDefinitionSearch">SHALL</a>
+              <a title="Allows discovery of DAF-OperationDefinition resources based on different search criteria">SHALL</a>
             
             </td>
             

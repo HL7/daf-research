@@ -19,7 +19,7 @@
       
       </p>
       
-      <p>This profile defines the expected capabilities of the <i>Data Source</i> actor when conforming to the <a href="daf-research.html">DAF-Research IG</a>. The statement includes the complete list of actual profiles, RESTful operations, search parameters supported by a Data Source.
+      <p>This profile defines the expected capabilities of the <i>Data Source</i> actor when conforming to the <a href="index.html">DAF-Research IG</a>. The statement includes the complete list of actual profiles, RESTful operations, search parameters supported by a Data Source.
       </p>
 	  
 	  <h2>General</h2>
