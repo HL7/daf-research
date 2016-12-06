@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+	<id value="daf-research-data-models"/>
+	<url value="http://hl7.org/fhir/us/core/CodeSystem/daf-research-data-models"/>
+	<name value="DAF Research Data Models"/>
+	<status value="draft"/>
+	<publisher value="HL7 (FHIR Project)"/>
+	<description value="Research Data Models that are in use widely in the industry currently"/>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-research-data-models"/>
+	<content value="complete"/>
+	<concept>
+		<code value="PCORNet-CDM"/>
+		<display value="PCORNet Common Data Model"/>
+		<definition value="[The Patient Centered Clinical Research Network (PCORNet)](http://www.pcornet.org/pcornet-common-data-model/) Common Data Model"/>
+	</concept>
+	<concept>
+		<code value="OMOP"/>
+		<display value="OMOP Data Model"/>
+		<definition value="[The Observational Medical Outcomes Partnership (OMOP)](http://omop.org/CDM) Data Model"/>
+	</concept>
+	<concept>
+		<code value="i2b2"/>
+		<display value="i2b2 Data Model"/>
+		<definition value="[The Informatics for Integrating Biology  &amp; the Bedside ([i2b2)](https://www.i2b2.org/about/intro.html) Data Model"/>
+	</concept>
+</CodeSystem>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="daf-research-query-formats"/>
 	<meta>
 		<lastUpdated value="2016-03-25T16:34:24.987-04:00"/>
@@ -22,22 +22,7 @@
 	<description value="Research Query Formats that are in use widely in the industry currently"/>
 	<compose>
 		<include>
-			<concept>
-				<code value="SAS"/>
-				<display value="Queries are created using the SAS language"/>
-			</concept>
-			<concept>
-				<code value="SQL"/>
-				<display value="Queries are created using the SQL language"/>
-			</concept>
-			<concept>
-				<code value="FHIR-SEARCH"/>
-				<display value="Queries are created using FHIR Search mechanisms"/>
-			</concept>
-			<concept>
-				<code value="PopMedNet-JSON"/>
-				<display value="Queries are created using PopMedNet JSON format, which is used in PCORNet."/>
-			</concept>
+			<system value="http://hl7.org/fhir/us/core/CodeSystem/daf-research-query-formats"/>
 		</include>
 	</compose>
 </ValueSet>
