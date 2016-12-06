@@ -34,4 +34,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 * none
 
-[Observation]: http://hl7-fhir.github.io/observation.html
+[Observation]: http://hl7.org/fhir/2017Jan/observation.html

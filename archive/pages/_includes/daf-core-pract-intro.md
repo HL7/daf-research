@@ -30,4 +30,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
  
 * none
 
-[Practitioner]: http://hl7-fhir.github.io/Practitioner.html
+[Practitioner]: http://hl7.org/fhir/2017Jan/Practitioner.html

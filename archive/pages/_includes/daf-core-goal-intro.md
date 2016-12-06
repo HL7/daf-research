@@ -22,4 +22,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 * none
 
-[Goal]:  http://hl7-fhir.github.io/goal.html
+[Goal]:  http://hl7.org/fhir/2017Jan/goal.html

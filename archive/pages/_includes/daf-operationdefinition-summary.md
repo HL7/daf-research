@@ -14,7 +14,7 @@
 3.  One administrative gender in `Patient.gender`
     -   Patient.gender is bound to [AdministrativeGender] Value set (Code Set)
 
-  [AdministrativeGender]: http://hl7-fhir.github.io/valueset-administrative-gender.html
+  [AdministrativeGender]: http://hl7.org/fhir/2017Jan/valueset-administrative-gender.html
   
   
 #### Summary of the Must Suport Requirements
@@ -22,16 +22,16 @@
 Additionally your system must return:
 
 1.  A date of birth in `Patient.birthDate`
-2.  One or more languages spoken in `Patient.communication.language` which has an [required](http://hl7-fhir.github.io/terminologies.html#required) binding to:
+2.  One or more languages spoken in `Patient.communication.language` which has an [required](http://hl7.org/fhir/2017Jan/terminologies.html#required) binding to:
     -    [Common Languages] 
-3.  One Birth Sex in the [US Core Patient Birth Sex] extension which has an [required](http://hl7-fhir.github.io/terminologies.html#required) binding to:
+3.  One Birth Sex in the [US Core Patient Birth Sex] extension which has an [required](http://hl7.org/fhir/2017Jan/terminologies.html#required) binding to:
     -   [US Core Birth Sex]
  
 4.  One or more races codes in [US Core Patient Race] extension which:
     - Must include at least one code from [US Core Race Category]
     - May include additional codes from [US Core Race]
  
-5.  An ethnicitiy code in [US Core Patient Ethnicity] extension which which has an [required](http://hl7-fhir.github.io/terminologies.html#required) binding to: 
+5.  An ethnicitiy code in [US Core Patient Ethnicity] extension which which has an [required](http://hl7.org/fhir/2017Jan/terminologies.html#required) binding to: 
     -  [US Core Ethnicity]
 
   [Patient.birthDate]: http://hl7.org/fhir/us/daf/daf-patient-definitions.html#daf-patient.Patient.birthDate

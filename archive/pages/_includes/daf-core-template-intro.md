@@ -16,5 +16,5 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 * 
 
-[Type]: http://hl7-fhir.github.io/resource.html
+[Type]: http://hl7.org/fhir/2017Jan/resource.html
  

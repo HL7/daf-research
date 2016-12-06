@@ -32,7 +32,7 @@ Secondary Authors: Grahame Grieve, Lloyd McKenzie
 
 
 [DAF-Core]: daf-core.html
-[US-Core]: http://hl7.org/fhir/us/core/index.html
+[US-Core]: http://hl7.org/fhir/us/core/2017Jan/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc

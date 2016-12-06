@@ -1203,7 +1203,7 @@
     <Cell ss:StyleID="s80"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s81"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s81"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s80"><Data ss:Type="String">{http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition}</Data><NamedCell
+    <Cell ss:StyleID="s80"><Data ss:Type="String">{http://hl7.org/fhir/us/core/2017Jan/StructureDefinition/us-core-condition}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s81"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s81"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -8999,7 +8999,7 @@
     <Cell ss:StyleID="s91"><Data ss:Type="String">Valueset to describe the actual problem experienced by the patient</Data></Cell>
     <Cell ss:StyleID="s138"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s138"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:StyleID="s138"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-problem</Data></Cell>
+    <Cell ss:StyleID="s138"><Data ss:Type="String">http://hl7.org/fhir/us/core/2017Jan/ValueSet/us-core-problem</Data></Cell>
     <Cell ss:StyleID="s138"><Data ss:Type="String">Value set to identify the actual problem</Data></Cell>
     <Cell ss:StyleID="s138"/>
     <Cell ss:StyleID="s138"/>

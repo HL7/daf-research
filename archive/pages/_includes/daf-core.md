@@ -79,21 +79,21 @@ DAF actors must implement applicable security requirements identified in the [DA
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
-[profiles]: http://hl7-fhir.github.io/profiling.html
-[logical view]: http://hl7-fhir.github.io/formats.html#table
-[StructureDefinitions]: http://hl7-fhir.github.io/structuredefinition.html
-[Value sets]: http://hl7-fhir.github.io/valueset.html
-[CodeSystem]: http://hl7-fhir.github.io/codesystem.html
-[ConceptMap]: http://hl7-fhir.github.io/conceptmap.html
-[NamingSystem]: http://hl7-fhir.github.io/namingsystem.html
-[FHIR Conformance Rules]: http://hl7-fhir.github.io/capabilitystatement-rules.html
-[dataAbsentReason]: http://hl7-fhir.github.io/extension-data-absent-reason.html
-[FHIR Terminology]: http://hl7-fhir.github.io/terminologies.html
-[FHIR RESTful API]: http://hl7-fhir.github.io/http.html
-[HTTP]: http://hl7-fhir.github.io/http.html
-[FHIR Data Types]: http://hl7-fhir.github.io/datatypes.html
-[FHIR Search]: http://hl7-fhir.github.io/search.html
-[FHIR Resource]: http://hl7-fhir.github.io/formats.html
+[profiles]: http://hl7.org/fhir/2017Jan/profiling.html
+[logical view]: http://hl7.org/fhir/2017Jan/formats.html#table
+[StructureDefinitions]: http://hl7.org/fhir/2017Jan/structuredefinition.html
+[Value sets]: http://hl7.org/fhir/2017Jan/valueset.html
+[CodeSystem]: http://hl7.org/fhir/2017Jan/codesystem.html
+[ConceptMap]: http://hl7.org/fhir/2017Jan/conceptmap.html
+[NamingSystem]: http://hl7.org/fhir/2017Jan/namingsystem.html
+[FHIR Conformance Rules]: http://hl7.org/fhir/2017Jan/capabilitystatement-rules.html
+[dataAbsentReason]: http://hl7.org/fhir/2017Jan/extension-data-absent-reason.html
+[FHIR Terminology]: http://hl7.org/fhir/2017Jan/terminologies.html
+[FHIR RESTful API]: http://hl7.org/fhir/2017Jan/http.html
+[HTTP]: http://hl7.org/fhir/2017Jan/http.html
+[FHIR Data Types]: http://hl7.org/fhir/2017Jan/datatypes.html
+[FHIR Search]: http://hl7.org/fhir/2017Jan/search.html
+[FHIR Resource]: http://hl7.org/fhir/2017Jan/formats.html
 
 
 

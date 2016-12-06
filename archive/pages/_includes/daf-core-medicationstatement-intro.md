@@ -32,10 +32,10 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
   [Medication Clinical Drug (RxNorm)]: valueset-daf-medication-codes.html
   [MedicationOrderStatus]: http://hl7.org/fhir/us/daf/valueset-medication-order-status.html
 [MedicationStatementStatus]: http://hl7.org/fhir/us/daf/valueset-medication-statement-status.html
-[MedicationStatement]:http://hl7-fhir.github.io/medicationstatement.html
- [MedicationOrder]: http://hl7-fhir.github.io/medicationorder.html
- [Medication]:http://hl7-fhir.github.io/medication.html
+[MedicationStatement]:http://hl7.org/fhir/2017Jan/medicationstatement.html
+ [MedicationOrder]: http://hl7.org/fhir/2017Jan/medicationorder.html
+ [Medication]:http://hl7.org/fhir/2017Jan/medication.html
  [Conformance]: daf-core-medicationstatement-conformance.html
- [boundaries section]: http://hl7-fhir.github.io/medicationorder.html#bnr
+ [boundaries section]: http://hl7.org/fhir/2017Jan/medicationorder.html#bnr
 
  

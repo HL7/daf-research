@@ -48,7 +48,7 @@
 	  
 	  <h2>REST  behavior</h2>
       
-      <p>The Data Mart SHALL implement REST behavior according to the <a href="http://hl7-fhir.github.io/http.html">FHIR</a> specification. The Data Mart SHALL use either DAF-Core or DAF-Research profiles as needed to load data. The Data Mart SHALL support both json and xml resource formats for all DAF interactions. The Data Mart SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Mart SHALL declare a Capability statement and identify the list of profiles, operations, search parameters supported.
+      <p>The Data Mart SHALL implement REST behavior according to the <a href="http://hl7.org/fhir/2017Jan/http.html">FHIR</a> specification. The Data Mart SHALL use either DAF-Core or DAF-Research profiles as needed to load data. The Data Mart SHALL support both json and xml resource formats for all DAF interactions. The Data Mart SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Mart SHALL declare a Capability statement and identify the list of profiles, operations, search parameters supported.
       </p>
       
       <p>
@@ -71,27 +71,27 @@
             <th>Resource(Profile Name)</th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Search</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Search</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Read</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Read</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Version Read</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Version Read</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Instance History</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Instance History</a>
             </th>
           
 			<th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Create</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Create</a>
             </th>
 			
 			<th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Update</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Update</a>
             </th>
 			
           </tr>
@@ -247,29 +247,29 @@
       <ul>
 	     
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#id">_id</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#id">_id</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#lastUpdated">_lastUpdated</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#lastUpdated">_lastUpdated</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#profile">_profile</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#profile">_profile</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#count">_count</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#count">_count</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#include">_include</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#include">_include</a>
         </li>
 	  
       </ul>
 	 
       <p>Data Marts SHALL support the following search contexts defined within the 
-        <a href="http://hl7-fhir.github.io/search.html#Introduction">FHIR</a>specification.
+        <a href="http://hl7.org/fhir/2017Jan/search.html#Introduction">FHIR</a>specification.
       </p> 
 	
       <ul>
@@ -279,8 +279,8 @@
       </ul>
 	
       <p>Data Marts SHALL support 
-        <a href="http://hl7-fhir.github.io/search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters. Data Marts SHALL also support 
-        <a href="http://hl7-fhir.github.io/search.html#Composite Search Parameters">Composite Search Parameters</a> as defined in the FHIR specification.
+        <a href="http://hl7.org/fhir/2017Jan/search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters. Data Marts SHALL also support 
+        <a href="http://hl7.org/fhir/2017Jan/search.html#Composite Search Parameters">Composite Search Parameters</a> as defined in the FHIR specification.
       </p>
 	  
 	  <table class="grid">
@@ -308,43 +308,43 @@
               <ul>
 			  
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">id</a> - Search based on resource id (
-                  <a href="http://hl7-fhir.github.io/search.html#string">string</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">id</a> - Search based on resource id (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#string">string</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">identifier</a> - Search based on Task identifier (
-                  <a href="http://hl7-fhir.github.io/search.html#token">token</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">identifier</a> - Search based on Task identifier (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">token</a>)
                 </li>
 					
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">code</a> - Search based on Task code (
-                  <a href="http://hl7-fhir.github.io/search.html#token">token</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">code</a> - Search based on Task code (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">token</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">status</a> - Search based on Task status (
-                  <a href="http://hl7-fhir.github.io/search.html#token">token</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">status</a> - Search based on Task status (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">token</a>)
                 </li>
                 
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">parent</a> - Search based on Task parent (
-                  <a href="http://hl7-fhir.github.io/search.html#token">reference</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">parent</a> - Search based on Task parent (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">reference</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">owner</a> - Search based on Task parent (
-                  <a href="http://hl7-fhir.github.io/search.html#token">reference</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">owner</a> - Search based on Task parent (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">reference</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">performer</a> - Search based on Task parent (
-                  <a href="http://hl7-fhir.github.io/search.html#token">reference</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">performer</a> - Search based on Task parent (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">reference</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">requester</a> - Search based on Task parent (
-                  <a href="http://hl7-fhir.github.io/search.html#token">reference</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">requester</a> - Search based on Task parent (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">reference</a>)
                 </li>
 				
               </ul>
@@ -362,18 +362,18 @@
               <ul>
 		
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">target</a> - Search based on Provenance target (
-                  <a href="http://hl7-fhir.github.io/search.html#token">reference</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">target</a> - Search based on Provenance target (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">reference</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">start</a> - Search based on Provenance start time (
-                  <a href="http://hl7-fhir.github.io/search.html#token">date</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">start</a> - Search based on Provenance start time (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">date</a>)
                 </li>
 				
 				<li>
-                  <a href="http://hl7-fhir.github.io/task.html#search">end</a> - Search based on Provenance end time (
-                  <a href="http://hl7-fhir.github.io/search.html#token">date</a>)
+                  <a href="http://hl7.org/fhir/2017Jan/task.html#search">end</a> - Search based on Provenance end time (
+                  <a href="http://hl7.org/fhir/2017Jan/search.html#token">date</a>)
                 </li>
                 
               </ul>

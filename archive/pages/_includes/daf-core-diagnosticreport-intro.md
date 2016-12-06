@@ -32,5 +32,5 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
    -  providing a more specific category codes such as “CH” (chemistry) in addition to the "LAB"  category code.
 
 
-[Observation]:  http://hl7-fhir.github.io/observation.html
-[DiagnosticReport]:  http://hl7-fhir.github.io/diagnosticreport.html
+[Observation]:  http://hl7.org/fhir/2017Jan/observation.html
+[DiagnosticReport]:  http://hl7.org/fhir/2017Jan/diagnosticreport.html

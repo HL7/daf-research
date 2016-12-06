@@ -22,6 +22,6 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
  
 * none
 
-[MedicationStatement]: http://hl7-fhir.github.io/medicationstatement.html
- [MedicationOrder]: http://hl7-fhir.github.io/medicationorder.html
- [Medication]: http://hl7-fhir.github.io/medication.html
+[MedicationStatement]: http://hl7.org/fhir/2017Jan/medicationstatement.html
+ [MedicationOrder]: http://hl7.org/fhir/2017Jan/medicationorder.html
+ [Medication]: http://hl7.org/fhir/2017Jan/medication.html

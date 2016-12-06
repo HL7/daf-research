@@ -41,5 +41,5 @@ profile:
 -   Query for allergies based on reaction and severity
 
 
-[AllergyIntolerance]: http://hl7-fhir.github.io/allergyintolerance.html
+[AllergyIntolerance]: http://hl7.org/fhir/2017Jan/allergyintolerance.html
 

@@ -23,11 +23,11 @@ This paragraph identifies a list of profiles from US-Core that are reused by DAF
 In addition a few of the FHIR Resources are used without profiling currently. These resources may be profiled in the future depending on feedback obtained from DAF-Research pilots.
 
 ### US-Core profiles used by DAF-Research
-* [DiagnosticReport-Results](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html)
-* [MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)
-* [Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)
-* [Observation-Vitalsigns](http://hl7.org/fhir/us/core/StructureDefinition-us-core-vitalsigns.html)
-* [Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)
+* [DiagnosticReport-Results](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-diagnosticreport.html)
+* [MedicationOrder](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-medicationrequest.html)
+* [Observation](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-observationresults.html)
+* [Observation-Vitalsigns](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-vitalsigns.html)
+* [Procedure](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-procedure.html)
 
 
 ### DAF-Research specific profiles
@@ -38,10 +38,10 @@ In addition a few of the FHIR Resources are used without profiling currently. Th
 
 
 ### Base FHIR Resources used without profiling by DAF-Research
-* [Questionaire](http://build.fhir.org/questionaire.html)
-* [ResearchStudy](http://build.fhir.org/researchstudy.html)
-* [ResearchSubject](http://build.fhir.org/researchsubject.html)
-* [Group](http://build.fhir.org/group.html)
+* [Questionaire](http://hl7.org/fhir/2017Jan/questionaire.html)
+* [ResearchStudy](http://hl7.org/fhir/2017Jan/researchstudy.html)
+* [ResearchSubject](http://hl7.org/fhir/2017Jan/researchsubject.html)
+* [Group](http://hl7.org/fhir/2017Jan/group.html)
 
 
 ## Mappings from FHIR to PCORnet CDM
@@ -52,16 +52,16 @@ NOTE: Mappings from one data model to another such as FHIR to PCORnet CDM or FHI
 |PCORnet CDM Table Name            |Recommended Profile/Resource for Data Extraction|
 |----------------------------------|----------------------------------------|
 |DIAGNOSIS, CONDITION|[Condition](StructureDefinition-daf-condition.html)|
-|LAB_RESULT_CM|[DiagnosticReport-Results](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html),[Observation](observation.html)|
+|LAB_RESULT_CM|[DiagnosticReport-Results](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-diagnosticreport.html),[Observation](observation.html)|
 |ENCOUNTER|[Encounter](StructureDefinition-daf-encounter.html)|
-|PRESCRIBING|[MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|
+|PRESCRIBING|[MedicationOrder](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-medicationrequest.html)|
 |DISPENSING|[MedicationDispense](StructureDefinition-daf-medicationdispense.html)|
-|VITALS|[Observation-Vitalsigns](http://hl7.org/fhir/us/core/StructureDefinition-us-core-vitalsigns.html)|
+|VITALS|[Observation-Vitalsigns](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-vitalsigns.html)|
 |DEMOGRAPHIC|[Patient](StructureDefinition-daf-patient.html)|
-|PROCEDURES|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|
-|PRO CM|[Questionaire](http://build.fhir.org/questionaire.html),[Observation](http://build.fhir.org/observation.html)|
-|ENROLLMENT|[ResearchSubject](http://build.fhir.org/researchsubject.html)|
-|PCORNET_TRIAL|[ResearchStudy](http://build.fhir.org/researchstudy.html)
+|PROCEDURES|[Procedure](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-procedure.html)|
+|PRO CM|[Questionaire](http://hl7.org/fhir/2017Jan/questionaire.html),[Observation](http://hl7.org/fhir/2017Jan/observation.html)|
+|ENROLLMENT|[ResearchSubject](http://hl7.org/fhir/2017Jan/researchsubject.html)|
+|PCORNET_TRIAL|[ResearchStudy](http://hl7.org/fhir/2017Jan/researchstudy.html)
 |DEATH|[Patient](StructureDefinition-daf-patient.html)|
 |DEATH_CAUSE|[Patient](StructureDefinition-daf-patient.html)|
 |HARVEST|[DAF-Conformance]|
@@ -76,16 +76,16 @@ A detailed data element level mapping can be accessed here:
 
 |OMOP Table Name            |Recommended Profile/Resource for Data Extraction|
 |----------------------------------|----------------------------------------|
-|Concept,Vocabulary,Domain,Concept_Synonym,Concept_Ancestor|[ValueSet](http://build.fhir.org/valueset.html)|
-|Concept_Class|[Concept](http://build.fhir.org/concept.html)|
-|Concept_Relationship, Relationship|[ConceptMap](http://build.fhir.org/conceptmap.html)|
-|Cohort_Definition, Attribute_Definition|[Group](http://build.fhir.org/group.html)|
-|Specimen|[Specimen](http://build.fhir.org/specimen.html)|
-|Drug_Strength|[Medication](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medication.html)|
-|Procedure_Occurence|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|
-|Drug_Exposure|[MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html),[MedicationStatement](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationstatement.html),[Immunization](http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html)|
-|Device_Exposure|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html),[Device](http://hl7.org/fhir/us/core/StructureDefinition-us-core-device.html)|
-|Measurement,Note,Observation|[Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)|
+|Concept,Vocabulary,Domain,Concept_Synonym,Concept_Ancestor|[ValueSet](http://hl7.org/fhir/2017Jan/valueset.html)|
+|Concept_Class|[Concept](http://hl7.org/fhir/2017Jan/concept.html)|
+|Concept_Relationship, Relationship|[ConceptMap](http://hl7.org/fhir/2017Jan/conceptmap.html)|
+|Cohort_Definition, Attribute_Definition|[Group](http://hl7.org/fhir/2017Jan/group.html)|
+|Specimen|[Specimen](http://hl7.org/fhir/2017Jan/specimen.html)|
+|Drug_Strength|[Medication](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-medication.html)|
+|Procedure_Occurence|[Procedure](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-procedure.html)|
+|Drug_Exposure|[MedicationOrder](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-medicationrequest.html),[MedicationStatement](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-medicationstatement.html),[Immunization](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-immunization.html)|
+|Device_Exposure|[Procedure](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-procedure.html),[Device](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-device.html)|
+|Measurement,Note,Observation|[Observation](http://hl7.org/fhir/us/core/2017Jan/StructureDefinition-us-core-observationresults.html)|
 |Person|[Patient](StructureDefinition-daf-patient.html)|
 |Observation_Period, Visit_Occurence|[Encounter](StructureDefinition-daf-encounter.html)|
 |Condition_Occurence|[Condition](StructureDefinition-daf-condition.html)|
@@ -97,7 +97,7 @@ A detailed data element level mapping can be accessed here:
 
 
 [DAF-Core]: daf-core.html
-[US-Core]: http://hl7.org/fhir/us/core/index.html
+[US-Core]: http://hl7.org/fhir/us/core/2017Jan/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc

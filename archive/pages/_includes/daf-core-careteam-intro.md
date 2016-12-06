@@ -29,4 +29,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 * none
 
-[CareTeam]:  http://hl7-fhir.github.io/careteam.html
+[CareTeam]:  http://hl7.org/fhir/2017Jan/careteam.html

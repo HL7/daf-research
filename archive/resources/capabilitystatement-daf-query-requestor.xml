@@ -48,7 +48,7 @@
       <h2>REST  behavior</h2>
 	  
       
-      <p>The DAF Requestor SHALL support accessing at least one FHIR resource using the appropriate DAF-core profile(s) for the resource being accessed. The DAF Requestor SHALL implement REST behavior according to the <a href="http://hl7-fhir.github.io/http.html">FHIR</a> specification.
+      <p>The DAF Requestor SHALL support accessing at least one FHIR resource using the appropriate DAF-core profile(s) for the resource being accessed. The DAF Requestor SHALL implement REST behavior according to the <a href="http://hl7.org/fhir/2017Jan/http.html">FHIR</a> specification.
 	  The DAF Requestor SHALL support either json or xml resource formats for all DAF interactions.
       </p>
 	  
@@ -73,19 +73,19 @@
             <th>Resource(Profile Name)</th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Search</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Search</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Read</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Read</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Version Read</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Version Read</a>
             </th>
             
             <th>
-              <a href="http://hl7-fhir.github.io/valueset-type-restful-interaction.html">Instance History</a>
+              <a href="http://hl7.org/fhir/2017Jan/valueset-type-restful-interaction.html">Instance History</a>
             </th>
           
           </tr>
@@ -720,19 +720,19 @@
       <ul>
 	     
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#id">_id</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#id">_id</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#lastUpdated">_lastUpdated</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#lastUpdated">_lastUpdated</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#profile">_profile</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#profile">_profile</a>
         </li>
 		 
         <li>
-          <a href="http://hl7-fhir.github.io/search.html#count">_count</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#count">_count</a>
         </li>
 		 
       </ul>
@@ -740,12 +740,12 @@
 	  <p>DAF Requestors SHOULD use the following common parameters as part of queries related to DAF profiles to avoid repeated queries.</p>
 	  <ul>
 		<li>
-          <a href="http://hl7-fhir.github.io/search.html#include">_include</a>
+          <a href="http://hl7.org/fhir/2017Jan/search.html#include">_include</a>
         </li>
 	  </ul>
 	
       <p>DAF Requestors SHALL use the following search contexts defined within the 
-        <a href="http://hl7-fhir.github.io/search.html#Introduction">FHIR</a> specification.
+        <a href="http://hl7.org/fhir/2017Jan/search.html#Introduction">FHIR</a> specification.
       </p> 
 	
       <ul>
@@ -756,7 +756,7 @@
       </ul>
 	
       <p>DAF Requestors MAY use 
-        <a href="http://hl7-fhir.github.io/search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters to access data.
+        <a href="http://hl7.org/fhir/2017Jan/search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters to access data.
 		DAF Requestors MAY use any search parameters that are appropriate for querying a particular FHIR resource, however they can only count on the search parameters that are identified as SHALL within the <a href="capabilitystatement-daf-query-responder.html">DAF Responder's Capability statement</a> to be used in the execution of the search. For a complete list of search parameters that are available, please refer to <a href="capabilitystatement-daf-query-responder.html">DAF Responder's Capability statement</a> and the search parameters supported by the base FHIR resources profiled by DAF.
       </p>
 	  

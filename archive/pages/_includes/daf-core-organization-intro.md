@@ -32,4 +32,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 
 
-[Organization]: http://hl7-fhir.github.io/organization.html
+[Organization]: http://hl7.org/fhir/2017Jan/organization.html

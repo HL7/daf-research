@@ -1229,7 +1229,7 @@
     <Cell ss:StyleID="s96"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s96"><Data ss:Type="String">{http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}</Data><NamedCell
+    <Cell ss:StyleID="s96"><Data ss:Type="String">{http://hl7.org/fhir/us/core/2017Jan/StructureDefinition/us-core-patient}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -9506,7 +9506,7 @@
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s155" ss:HRef="http://hl7.org/fhir/ValueSet/usps-state"><Data
-      ss:Type="String">http://build.fhir.org/ValueSet/usps-state</Data></Cell>
+      ss:Type="String">http://hl7.org/fhir/2017Jan/ValueSet/usps-state</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">US State list</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">2.16.840.1.113883.4.642.2.517</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/ValueSet/usps-state</Data></Cell>
@@ -9522,7 +9522,7 @@
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s156" ss:HRef="http://hl7.org/fhir/ValueSet/patient-contact-relationship"><Data
-      ss:Type="String">http://build.fhir.org/ValueSet/patient-contact-relationship</Data></Cell>
+      ss:Type="String">http://hl7.org/fhir/2017Jan/ValueSet/patient-contact-relationship</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">Relationship between people</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">2.16.840.1.113883.1.11.19563</Data></Cell>
     <Cell ss:StyleID="s135" ss:HRef="http://hl7.org/fhir/ValueSet/patient-contact-relationship"><Data
@@ -9539,7 +9539,7 @@
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">extensible</Data></Cell>
     <Cell ss:StyleID="s156" ss:HRef="http://hl7.org/fhir/ValueSet/v3-ReligiousAffiliation"><Data
-      ss:Type="String">http://build.fhir.org/ValueSet/v3-ReligiousAffiliation</Data></Cell>
+      ss:Type="String">http://hl7.org/fhir/2017Jan/ValueSet/v3-ReligiousAffiliation</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">Religious affiliation of the patient.</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">2.16.840.1.113883.5.1076</Data></Cell>
     <Cell ss:StyleID="s135" ss:HRef="http://hl7.org/fhir/ValueSet/v3-ReligiousAffiliation"><Data
