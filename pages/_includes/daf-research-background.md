@@ -75,15 +75,15 @@ In addition to the above C1 through C4 capabilities, C5 and C6 have been identif
 [ASPE]: https://aspe.hhs.gov/
 [DAF-Research-intro]: daf-research-intro.html
 [C1, C2, C3, C4]: daf-research-intro.html
-[Data Source Conformance]: capabilitystatement-daf-datasource.html
-[Data Mart Conformance]: capabilitystatement-daf-datamart.html
-[Research Query Composer Conformance]: capabilitystatement-daf-datasource.html
-[Research Query Responder Conformance]: capabilitystatement-daf-datasource.html
-[DAF-Task]: daf-task.html
-[DAF-Provenance]: daf-provenance.html
-[DAF-OperationDefinition]: daf-operationdefinition.html
-[DAF-Conformance]: daf-conformance.html
-[DAF-QueryResults]: daf-queryresults.html
+[Data Source Conformance]: CapabilityStatement-daf-datasource.html
+[Data Mart Conformance]: CapabilityStatement-daf-datamart.html
+[Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html
+[Research Query Responder Conformance]: CapabilityStatement-daf-datasource.html
+[DAF-Task]:StructureDefinition-daf-task.html
+[DAF-Provenance]:StructureDefinition-daf-provenance.html
+[DAF-OperationDefinition]:StructureDefinition-daf-operationdefinition.html
+[DAF-Conformance]:StructureDefinition-daf-conformance.html
+[DAF-QueryResults]:StructureDefinition-daf-queryresults.html
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/

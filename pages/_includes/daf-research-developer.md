@@ -340,15 +340,15 @@ These results would then be made available for the Researcher for further analys
 [ASPE]: https://aspe.hhs.gov/
 [DAF-Research-intro]: daf-research-intro.html
 [C1, C2, C3, C4]: daf-research-intro.html
-[Data Source Conformance]: capabilitystatement-daf-datasource.html
-[Data Mart Conformance]: capabilitystatement-daf-datamart.html
-[Research Query Composer Conformance]: capabilitystatement-daf-datasource.html
-[Research Query Responder Conformance]: capabilitystatement-daf-datasource.html
-[DAF-Task]: structuredefinition-daf-task.html
-[DAF-Provenance]: structuredefinition-daf-provenance.html
-[DAF-OperationDefinition]: structuredefinition-daf-operationdefinition.html
-[DAF-Conformance]: structuredefinition-daf-capabilitystatement.html
-[DAF-QueryResults]: structuredefinition-daf-queryresults.html
+[Data Source Conformance]: CapabilityStatement-daf-datasource.html
+[Data Mart Conformance]: CapabilityStatement-daf-datamart.html
+[Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html
+[Research Query Responder Conformance]: CapabilityStatement-daf-datasource.html
+[DAF-Task]: StructureDefinition-daf-task.html
+[DAF-Provenance]: StructureDefinition-daf-provenance.html
+[DAF-OperationDefinition]: StructureDefinition-daf-operationdefinition.html
+[DAF-Conformance]: StructureDefinition-daf-capabilitystatement.html
+[DAF-QueryResults]: StructureDefinition-daf-queryresults.html
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/

@@ -23,18 +23,18 @@ This paragraph identifies a list of profiles from US-Core that are reused by DAF
 In addition a few of the FHIR Resources are used without profiling currently. These resources may be profiled in the future depending on feedback obtained from DAF-Research pilots.
 
 ### US-Core profiles used by DAF-Research
-* [DiagnosticReport-Results](http://hl7.org/fhir/us/core/structuredefinition-us-core-diagnosticreport.html)
-* [MedicationOrder](http://hl7.org/fhir/us/core/structuredefinition-us-core-medicationrequest.html)
-* [Observation](http://hl7.org/fhir/us/core/structuredefinition-us-core-observationresults.html)
-* [Observation-Vitalsigns](http://hl7.org/fhir/us/core/structuredefinition-us-core-vitalsigns.html)
-* [Procedure](http://hl7.org/fhir/us/core/structuredefinition-us-core-procedure.html)
+* [DiagnosticReport-Results](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html)
+* [MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)
+* [Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)
+* [Observation-Vitalsigns](http://hl7.org/fhir/us/core/StructureDefinition-us-core-vitalsigns.html)
+* [Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)
 
 
 ### DAF-Research specific profiles
-* [Condition](structuredefinition-daf-condition.html)
-* [MedicationDispense](structuredefinition-daf-medicationdispense.html)
-* [Patient](structuredefinition-daf-patient.html)
-* [Encounter](structuredefinition-daf-encounter.html)
+* [Condition](StructureDefinition-daf-condition.html)
+* [MedicationDispense](StructureDefinition-daf-medicationdispense.html)
+* [Patient](StructureDefinition-daf-patient.html)
+* [Encounter](StructureDefinition-daf-encounter.html)
 
 
 ### Base FHIR Resources used without profiling by DAF-Research
@@ -51,19 +51,19 @@ NOTE: Mappings from one data model to another such as FHIR to PCORnet CDM or FHI
 
 |PCORnet CDM Table Name            |Recommended Profile/Resource for Data Extraction|
 |----------------------------------|----------------------------------------|
-|DIAGNOSIS, CONDITION|[Condition](structuredefinition-daf-condition.html)|
-|LAB_RESULT_CM|[DiagnosticReport-Results](http://hl7.org/fhir/us/core/structuredefinition-us-core-diagnosticreport.html),[Observation](observation.html)|
-|ENCOUNTER|[Encounter](structuredefinition-daf-encounter.html)|
-|PRESCRIBING|[MedicationOrder](http://hl7.org/fhir/us/core/structuredefinition-us-core-medicationrequest.html)|
-|DISPENSING|[MedicationDispense](structuredefinition-daf-medicationdispense.html)|
-|VITALS|[Observation-Vitalsigns](http://hl7.org/fhir/us/core/structuredefinition-us-core-vitalsigns.html)|
-|DEMOGRAPHIC|[Patient](structuredefinition-daf-patient.html)|
-|PROCEDURES|[Procedure](http://hl7.org/fhir/us/core/structuredefinition-us-core-procedure.html)|
+|DIAGNOSIS, CONDITION|[Condition](StructureDefinition-daf-condition.html)|
+|LAB_RESULT_CM|[DiagnosticReport-Results](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html),[Observation](observation.html)|
+|ENCOUNTER|[Encounter](StructureDefinition-daf-encounter.html)|
+|PRESCRIBING|[MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|
+|DISPENSING|[MedicationDispense](StructureDefinition-daf-medicationdispense.html)|
+|VITALS|[Observation-Vitalsigns](http://hl7.org/fhir/us/core/StructureDefinition-us-core-vitalsigns.html)|
+|DEMOGRAPHIC|[Patient](StructureDefinition-daf-patient.html)|
+|PROCEDURES|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|
 |PRO CM|[Questionaire](http://build.fhir.org/questionaire.html),[Observation](http://build.fhir.org/observation.html)|
 |ENROLLMENT|[ResearchSubject](http://build.fhir.org/researchsubject.html)|
 |PCORNET_TRIAL|[ResearchStudy](http://build.fhir.org/researchstudy.html)
-|DEATH|[Patient](structuredefinition-daf-patient.html)|
-|DEATH_CAUSE|[Patient](structuredefinition-daf-patient.html)|
+|DEATH|[Patient](StructureDefinition-daf-patient.html)|
+|DEATH_CAUSE|[Patient](StructureDefinition-daf-patient.html)|
 |HARVEST|[DAF-Conformance]|
 
 
@@ -81,14 +81,14 @@ A detailed data element level mapping can be accessed here:
 |Concept_Relationship, Relationship|[ConceptMap](http://build.fhir.org/conceptmap.html)|
 |Cohort_Definition, Attribute_Definition|[Group](http://build.fhir.org/group.html)|
 |Specimen|[Specimen](http://build.fhir.org/specimen.html)|
-|Drug_Strength|[Medication](http://hl7.org/fhir/us/core/structuredefinition-us-core-medication.html)|
-|Procedure_Occurence|[Procedure](http://hl7.org/fhir/us/core/structuredefinition-us-core-procedure.html)|
-|Drug_Exposure|[MedicationOrder](http://hl7.org/fhir/us/core/structuredefinition-us-core-medicationrequest.html),[MedicationStatement](http://hl7.org/fhir/us/core/structuredefinition-us-core-medicationstatement.html),[Immunization](http://hl7.org/fhir/us/core/structuredefinition-us-core-immunization.html)|
-|Device_Exposure|[Procedure](http://hl7.org/fhir/us/core/structuredefinition-us-core-procedure.html),[Device](http://hl7.org/fhir/us/core/structuredefinition-us-core-device.html)|
-|Measurement,Note,Observation|[Observation](http://hl7.org/fhir/us/core/structuredefinition-us-core-observationresults.html)|
-|Person|[Patient](structuredefinition-daf-patient.html)|
-|Observation_Period, Visit_Occurence|[Encounter](structuredefinition-daf-encounter.html)|
-|Condition_Occurence|[Condition](structuredefinition-daf-condition.html)|
+|Drug_Strength|[Medication](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medication.html)|
+|Procedure_Occurence|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|
+|Drug_Exposure|[MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html),[MedicationStatement](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationstatement.html),[Immunization](http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html)|
+|Device_Exposure|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html),[Device](http://hl7.org/fhir/us/core/StructureDefinition-us-core-device.html)|
+|Measurement,Note,Observation|[Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)|
+|Person|[Patient](StructureDefinition-daf-patient.html)|
+|Observation_Period, Visit_Occurence|[Encounter](StructureDefinition-daf-encounter.html)|
+|Condition_Occurence|[Condition](StructureDefinition-daf-condition.html)|
 
 A detailed data element level mapping can be accessed here:
 
@@ -109,18 +109,18 @@ A detailed data element level mapping can be accessed here:
 [ASPE]: https://aspe.hhs.gov/
 [DAF-Research-intro]: daf-research-intro.html
 [C1, C2, C3, C4]: daf-research-intro.html
-[Data Source Conformance]: capabilitystatement-daf-datasource.html
-[Data Mart Conformance]: capabilitystatement-daf-datamart.html
-[Research Query Composer Conformance]: capabilitystatement-daf-datasource.html
-[Research Query Responder Conformance]: capabilitystatement-daf-datasource.html
+[Data Source Conformance]: CapabilityStatement-daf-datasource.html
+[Data Mart Conformance]: CapabilityStatement-daf-datamart.html
+[Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html
+[Research Query Responder Conformance]: CapabilityStatement-daf-datasource.html
 [daf-extract-operation]: OperationDefinition-daf-extract.html
 [daf-load-operation]: OperationDefinition-daf-load.html
 [daf-execute-query]: OperationDefinition-daf-execute-query.html
-[DAF-Task]: structuredefinition-daf-task.html
-[DAF-Provenance]: structuredefinition-daf-provenance.html
-[DAF-OperationDefinition]: structuredefinition-daf-operationdefinition.html
-[DAF-Conformance]: structuredefinition-daf-capabilitystatement.html
-[DAF-QueryResults]: structuredefinition-daf-queryresults.html
+[DAF-Task]: StructureDefinition-daf-task.html
+[DAF-Provenance]: StructureDefinition-daf-provenance.html
+[DAF-OperationDefinition]: StructureDefinition-daf-operationdefinition.html
+[DAF-Conformance]: StructureDefinition-daf-capabilitystatement.html
+[DAF-QueryResults]: StructureDefinition-daf-queryresults.html
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/
