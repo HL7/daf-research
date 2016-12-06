@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+	<id value="daf-research-query-formats"/>
+	<url value="http://hl7.org/fhir/us/core/CodeSystem/daf-research-query-formats"/>
+	<name value="DAF Research Query Formats"/>
+	<status value="draft"/>
+	<publisher value="HL7 (FHIR Project)"/>
+	<description value="Research Data Models that are in use widely in the industry currently"/>
+	<caseSensitive value="true"/>
+	<valueSet value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-research-query-formats"/>
+	<content value="complete"/>
+			<concept>
+				<code value="SAS"/>
+				<display value="SAS Queries"/>
+		<definition value="Queries are created using the SAS language"/>
+	</concept>
+			<concept>
+				<code value="SQL"/>
+				<display value="SQL Queries"/>
+				<definition value="Queries are created using the SQL language"/>
+	</concept>
+			<concept>
+				<code value="FHIR-SEARCH"/>
+				<display value="FHIR Search Queries"/>
+				<definition value="Queries are created using FHIR Search mechanisms"/>
+	</concept>
+			<concept>
+				<code value="PopMedNet-JSON"/>
+				<display value="PopMedNet-JSON Queries"/>
+				<definition value="Queries are created using PopMedNet JSON format, which is used in PCORNet."/>
+	</concept>
+
+</CodeSystem>
