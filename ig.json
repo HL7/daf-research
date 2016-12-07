@@ -1,1 +1,155 @@
-{"canonicalBase": "http://hl7.org/fhir/us/daf-research", "dependencyList": [{"source": "resources", "name": "uscore", "location": "http://hl7.org/fhir/us/core"}], "extraTemplates": ["mappings"], "paths": {"output": "output", "specification": "http://build.fhir.org", "resources": ["resources", "examples"], "txCache": "txCache", "qa": "qa", "pages": "pages", "temp": "temp"}, "version": "1.7.0", "source": "ig.xml", "tool": "jekyll", "defaults": {"Any": {"template-format": "format.html", "template-base": "base.html"}, "ConceptMap": {"template-base": "cm.html"}, "StructureDefinition": {"template-base": "sd.html", "template-defns": "sd-definitions.html", "template-mappings": "sd-mappings.html"}, "ValueSet": {"template-base": "vs.html"}}, "resources": {"CapabilityStatement/capabilitystatement-daf-datasource": {"base": "CapabilityStatement-capabilitystatement-daf-datasource.html"}, "StructureDefinition/DAF-Provenance": {"defns": "StructureDefinition-DAF-Provenance-definitions.html", "base": "StructureDefinition-DAF-Provenance.html"}, "StructureDefinition/DAF-Encounter": {"defns": "StructureDefinition-DAF-Encounter-definitions.html", "base": "StructureDefinition-DAF-Encounter.html"}, "StructureDefinition/DAF-CapabilityStatement": {"defns": "StructureDefinition-DAF-CapabilityStatement-definitions.html", "base": "StructureDefinition-DAF-CapabilityStatement.html"}, "StructureDefinition/DAF-QueryResults": {"defns": "StructureDefinition-DAF-QueryResults-definitions.html", "base": "StructureDefinition-DAF-QueryResults.html"}, "ValueSet/daf-research-query-formats": {"base": "ValueSet-daf-research-query-formats.html"}, "CapabilityStatement/capabilitystatement-daf-research-queryresponder": {"base": "CapabilityStatement-capabilitystatement-daf-research-queryresponder.html"}, "ValueSet/daf-encounter-type": {"base": "ValueSet-daf-encounter-type.html"}, "CodeSystem/daf-research-query-formats": {"base": "CodeSystem-daf-research-query-formats.html"}, "ValueSet/daf-query-result-interpretations": {"base": "ValueSet-daf-query-result-interpretations.html"}, "OperationDefinition/daf-execute-query": {"base": "OperationDefinition-daf-execute-query.html"}, "StructureDefinition/DAF-Task": {"defns": "StructureDefinition-DAF-Task-definitions.html", "base": "StructureDefinition-DAF-Task.html"}, "CapabilityStatement/capabilitystatement-daf-datamart": {"base": "CapabilityStatement-capabilitystatement-daf-datamart.html"}, "StructureDefinition/DAF-Condition": {"defns": "StructureDefinition-DAF-Condition-definitions.html", "base": "StructureDefinition-DAF-Condition.html"}, "ValueSet/daf-query-results-categories": {"base": "ValueSet-daf-query-results-categories.html"}, "StructureDefinition/DAF-MedicationDispense": {"defns": "StructureDefinition-DAF-MedicationDispense-definitions.html", "base": "StructureDefinition-DAF-MedicationDispense.html"}, "OperationDefinition/daf-load": {"base": "OperationDefinition-daf-load.html"}, "ValueSet/daf-medication-route": {"base": "ValueSet-daf-medication-route.html"}, "OperationDefinition/daf-extract": {"base": "OperationDefinition-daf-extract.html"}, "ValueSet/daf-problem-severity": {"base": "ValueSet-daf-problem-severity.html"}, "StructureDefinition/DAF-Patient": {"defns": "StructureDefinition-DAF-Patient-definitions.html", "base": "StructureDefinition-DAF-Patient.html"}, "ValueSet/daf-research-data-models": {"base": "ValueSet-daf-research-data-models.html"}, "CapabilityStatement/capabilitystatement-daf-research-queryrequester": {"base": "CapabilityStatement-capabilitystatement-daf-research-queryrequester.html"}, "ValueSet/daf-encounter-dischargedisposition": {"base": "ValueSet-daf-encounter-dischargedisposition.html"}, "StructureDefinition/daf-query-formats": {"defns": "StructureDefinition-daf-query-formats-definitions.html", "base": "StructureDefinition-daf-query-formats.html"}, "ValueSet/daf-task-codes": {"base": "ValueSet-daf-task-codes.html"}, "StructureDefinition/DAF-OperationDefinition": {"defns": "StructureDefinition-DAF-OperationDefinition-definitions.html", "base": "StructureDefinition-DAF-OperationDefinition.html"}, "ValueSet/daf-encounter-reason": {"base": "ValueSet-daf-encounter-reason.html"}, "StructureDefinition/daf-data-models": {"defns": "StructureDefinition-daf-data-models-definitions.html", "base": "StructureDefinition-daf-data-models.html"}, "ValueSet/daf-bodysite": {"base": "ValueSet-daf-bodysite.html"}, "CodeSystem/daf-research-data-models": {"base": "CodeSystem-daf-research-data-models.html"}}, "sct-edition": "http://snomed.info/sct/731000124108", "spreadsheets": ["capstatement-daf-profile-spreadsheet.xml", "condition-daf-profile-spreadsheet.xml", "encounter-daf-profile-spreadsheet.xml", "medicationdispense-daf-profile-spreadsheet.xml", "observation-daf-queryresults-profile-spreadsheet.xml", "opdefinition-daf-profile-spreadsheet.xml", "patient-daf-profile-spreadsheet.xml", "provenance-daf-profile-spreadsheet.xml", "task-daf-profile-spreadsheet.xml"]}
+{
+	"tool": "jekyll",
+	"spreadsheets": ["capstatement-daf-profile-spreadsheet.xml",
+	"condition-daf-profile-spreadsheet.xml",
+	"encounter-daf-profile-spreadsheet.xml",
+	"medicationdispense-daf-profile-spreadsheet.xml",
+	"observation-daf-queryresults-profile-spreadsheet.xml",
+	"opdefinition-daf-profile-spreadsheet.xml",
+	"patient-daf-profile-spreadsheet.xml",
+	"provenance-daf-profile-spreadsheet.xml",
+	"task-daf-profile-spreadsheet.xml"],
+	"defaults": {
+		"Any": {
+			"template-base": "base.html",
+			"template-format": "format.html"
+		},
+		"ValueSet": {
+			"template-base": "vs.html"
+		},
+		"StructureDefinition": {
+			"template-base": "sd.html",
+			"template-mappings": "sd-mappings.html",
+			"template-defns": "sd-definitions.html"
+		},
+		"ConceptMap": {
+			"template-base": "cm.html"
+		}
+	},
+	"dependencyList": [{
+		"source": "../core/output",
+		"name": "uscore",
+		"location": "http://hl7.org/fhir/us/core/2017Jan"
+	}],
+	"sct-edition": "http://snomed.info/sct/731000124108",
+	"source": "ig.xml",
+	"extraTemplates": ["mappings"],
+	"resources": {
+		"ValueSet/daf-research-data-models": {
+			"base": "ValueSet-daf-research-data-models.html"
+		},
+		"CodeSystem/daf-research-query-formats": {
+			"base": "CodeSystem-daf-research-query-formats.html"
+		},
+		"StructureDefinition/DAF-Provenance": {
+			"defns": "StructureDefinition-DAF-Provenance-definitions.html",
+			"base": "StructureDefinition-DAF-Provenance.html"
+		},
+		"CapabilityStatement/capabilitystatement-daf-research-queryrequester": {
+			"base": "CapabilityStatement-capabilitystatement-daf-research-queryrequester.html"
+		},
+		"ValueSet/daf-research-query-formats": {
+			"base": "ValueSet-daf-research-query-formats.html"
+		},
+		"StructureDefinition/daf-query-formats": {
+			"defns": "StructureDefinition-daf-query-formats-definitions.html",
+			"base": "StructureDefinition-daf-query-formats.html"
+		},
+		"StructureDefinition/DAF-CapabilityStatement": {
+			"defns": "StructureDefinition-DAF-CapabilityStatement-definitions.html",
+			"base": "StructureDefinition-DAF-CapabilityStatement.html"
+		},
+		"ValueSet/daf-query-results-categories": {
+			"base": "ValueSet-daf-query-results-categories.html"
+		},
+		"OperationDefinition/daf-execute-query": {
+			"base": "OperationDefinition-daf-execute-query.html"
+		},
+		"StructureDefinition/DAF-Patient": {
+			"defns": "StructureDefinition-DAF-Patient-definitions.html",
+			"base": "StructureDefinition-DAF-Patient.html"
+		},
+		"StructureDefinition/DAF-OperationDefinition": {
+			"defns": "StructureDefinition-DAF-OperationDefinition-definitions.html",
+			"base": "StructureDefinition-DAF-OperationDefinition.html"
+		},
+		"CapabilityStatement/capabilitystatement-daf-research-queryresponder": {
+			"base": "CapabilityStatement-capabilitystatement-daf-research-queryresponder.html"
+		},
+		"ValueSet/daf-task-codes": {
+			"base": "ValueSet-daf-task-codes.html"
+		},
+		"ValueSet/daf-query-result-interpretations": {
+			"base": "ValueSet-daf-query-result-interpretations.html"
+		},
+		"StructureDefinition/DAF-Encounter": {
+			"defns": "StructureDefinition-DAF-Encounter-definitions.html",
+			"base": "StructureDefinition-DAF-Encounter.html"
+		},
+		"StructureDefinition/DAF-Condition": {
+			"defns": "StructureDefinition-DAF-Condition-definitions.html",
+			"base": "StructureDefinition-DAF-Condition.html"
+		},
+		"StructureDefinition/DAF-Task": {
+			"defns": "StructureDefinition-DAF-Task-definitions.html",
+			"base": "StructureDefinition-DAF-Task.html"
+		},
+		"ValueSet/daf-medication-route": {
+			"base": "ValueSet-daf-medication-route.html"
+		},
+		"ValueSet/daf-encounter-type": {
+			"base": "ValueSet-daf-encounter-type.html"
+		},
+		"CodeSystem/daf-research-data-models": {
+			"base": "CodeSystem-daf-research-data-models.html"
+		},
+		"OperationDefinition/daf-load": {
+			"base": "OperationDefinition-daf-load.html"
+		},
+		"CapabilityStatement/capabilitystatement-daf-datasource": {
+			"base": "CapabilityStatement-capabilitystatement-daf-datasource.html"
+		},
+		"ValueSet/daf-problem-severity": {
+			"base": "ValueSet-daf-problem-severity.html"
+		},
+		"StructureDefinition/daf-data-models": {
+			"defns": "StructureDefinition-daf-data-models-definitions.html",
+			"base": "StructureDefinition-daf-data-models.html"
+		},
+		"StructureDefinition/DAF-QueryResults": {
+			"defns": "StructureDefinition-DAF-QueryResults-definitions.html",
+			"base": "StructureDefinition-DAF-QueryResults.html"
+		},
+		"CapabilityStatement/capabilitystatement-daf-datamart": {
+			"base": "CapabilityStatement-capabilitystatement-daf-datamart.html"
+		},
+		"StructureDefinition/DAF-MedicationDispense": {
+			"defns": "StructureDefinition-DAF-MedicationDispense-definitions.html",
+			"base": "StructureDefinition-DAF-MedicationDispense.html"
+		},
+		"ValueSet/daf-encounter-reason": {
+			"base": "ValueSet-daf-encounter-reason.html"
+		},
+		"ValueSet/daf-encounter-dischargedisposition": {
+			"base": "ValueSet-daf-encounter-dischargedisposition.html"
+		},
+		"ValueSet/daf-bodysite": {
+			"base": "ValueSet-daf-bodysite.html"
+		},
+		"OperationDefinition/daf-extract": {
+			"base": "OperationDefinition-daf-extract.html"
+		}
+	},
+	"canonicalBase": "http://hl7.org/fhir/us/daf-research",
+	"version": "1.8.0",
+	"paths": {
+		"temp": "temp",
+		"qa": "qa",
+		"specification": "http://hl7.org/fhir/2017Jan",
+		"txCache": "txCache",
+		"resources": ["resources",
+		"examples"],
+		"pages": "pages",
+		"output": "output"
+	}
+}
