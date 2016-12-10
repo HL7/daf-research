@@ -8,6 +8,8 @@ The following table will provide a roadmap for the reader.
 
 |Topic of Interest|What it contains|Where can I find it|
 |--------------------|--------------------------|---------------------|
+|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core](http://hl7.org/fhir/us/core/2017Jan/index.html)|
+|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://hl7.org/fhir/us/core/2017Jan/definitions.html)|
 |DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](daf-research-intro.html#Background)|
 |Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](daf-research-intro.html#daf-research-ig-capabilities-and-actors)|
 |Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to PCORnet CDM and OMOP CDM.|[Profile List](daf-research-profile.html)|
