@@ -3,7 +3,7 @@
 	<id value="daf-task-codes"/>
 	<meta>
 		<lastUpdated value="2016-03-25T16:34:24.987-04:00"/>
-		<profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+		<profile value="http://hl7.org/fhir/StructureDefinition/ValueSet-shareable-definition"/>
 	</meta>
 	<url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-task-codes"/>
 	<version value="1.3.0"/>

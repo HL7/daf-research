@@ -14,7 +14,7 @@
 3.  One administrative gender in `Patient.gender`
     -   Patient.gender is bound to [AdministrativeGender] Value set (Code Set)
 
-  [AdministrativeGender]: http://hl7.org/fhir/2017Jan/valueset-administrative-gender.html
+  [AdministrativeGender]: http://hl7.org/fhir/2017Jan/ValueSet-administrative-gender.html
   
   
 #### Summary of the Must Suport Requirements
@@ -40,7 +40,7 @@ Additionally your system must return:
   [US Core Patient Birth Sex]: Draft_Birth_Sex_Extension "wikilink"
   [US Core Birth Sex]:  http://hl7.org/fhir/extension-us-core-birthsex.html
   [US Core Patient Race]: http://hl7.org/fhir/extension-us-core-race.html
-  [US Core Race Category]: http://hl7.org/fhir/us/daf/valueset-daf-race.html
+  [US Core Race Category]: http://hl7.org/fhir/us/daf/ValueSet-daf-race.html
   [US Core Race]: http://hl7.org/fhir/v3/Race/index.html
  [US Core Patient Ethnicity]: http://hl7.org/fhir/extension-us-core-ethnicity.html
  [US Core Ethnicity]: http://hl7.org/fhir/v3/Ethnicity/index.html
