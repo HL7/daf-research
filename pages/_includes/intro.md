@@ -1,4 +1,5 @@
-# Introduction
+## {{ page.title }}
+
 
 DAF-Research IG will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). While DAF-Research IG can be applied to multiple use cases, the current requirements have been drawn heavily from PCORnet use cases and implementations. The capabilities described as part of the IG are intended to be leveraged to build our nation's data infrastructure for a Learning Health System.
 DAF-Research will leverage the US-Core IG and profiles for the resources that overlap with US-Core. In addition DAF-Research will create additional profiles necessary for DAF-Research purposes which do not exist in US-Core. The US-Core has been created with substantial feedback from the Argonaut project.
@@ -8,12 +9,12 @@ The following table will provide a roadmap for the reader.
 
 |Topic of Interest|What it contains|Where can I find it|
 |--------------------|--------------------------|---------------------|
-|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core](http://hl7.org/fhir/us/core/2017Jan/index.html)|
-|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://hl7.org/fhir/us/core/2017Jan/definitions.html)|
-|DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](daf-research-intro.html#Background)|
-|Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](daf-research-intro.html#daf-research-ig-capabilities-and-actors)|
-|Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to PCORnet CDM and OMOP CDM.|[Profile List](daf-research-profile.html)|
-|Developer Guidance|The artifact contains data mapping spreadsheets, deployment options, examples that will help implementers of DAF-Research IG.|[Implementation Guidance](daf-research-developer.html)|
+|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core](http://build.fhir.org/ig/Healthedata1/US-Core//index.html)|
+|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://build.fhir.org/ig/Healthedata1/US-Core//guidance.html)|
+|DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](background.html)|
+|Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](index.html#capabilities-actors-and-conformance-requirements)|
+|Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to PCORnet CDM and OMOP CDM.|[Profile List](profiles.html)|
+|Developer Guidance|The artifact contains data mapping spreadsheets, deployment options, examples that will help implementers of DAF-Research IG.|[Implementation Guidance](guidance.html)|
 
 # Capabilities, Actors and Conformance Requirements
 The following table outlines the various DAF-Research Capabilities specified as part of the IG, the actors associated with the capability and a link to the conformance requirements for the actor.
@@ -33,8 +34,8 @@ Primary Authors: Brett Marquard, Nagesh Bashyam, Eric Haas
 Secondary Authors: Grahame Grieve, Lloyd McKenzie
 
 
-[DAF-Core]: daf-core.html
-[US-Core]: http://hl7.org/fhir/us/core/2017Jan/index.html
+
+[US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
@@ -44,8 +45,8 @@ Secondary Authors: Grahame Grieve, Lloyd McKenzie
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page*
 [ASPE]: https://aspe.hhs.gov/
-[DAF-Research-intro]: daf-research-intro.html
-[C1, C2, C3, C4]: daf-research-intro.html
+[DAF-Research-intro]: index.html
+[C1, C2, C3, C4]: index.html
 [Data Source Conformance]: CapabilityStatement-daf-datasource.html
 [Data Mart Conformance]: CapabilityStatement-daf-datamart.html
 [Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html

@@ -1,8 +1,8 @@
-# Background
+US Core## {{ page.title }}
 
 The nation is reaching a critical mass of HealthIT systems (EHRs, Data Warehouses etc) that comply with data and vocabulary standards. The wide deployment of HealthIT systems has created unique opportunities for providers, provider support teams, healthcare professionals and organizations etc. to access and use the patient data that is already collected during clinical workflows. [DAF] initiative has developed multiple implementation guides to enable and access the structured patient data collected as part of existing clinical workflows.
 
-[US-Core] IG focuses on specifying standard Application Programming Interfaces (APIs) for accessing data about individual patients for treatment and payment purposes. The [Argonaut] project has been invaluable in providing feedback on implementing FHIR in the real-world and the use of DAF profiles that were balloted as part of DSTU2. This feedback is now incorporated into DAF-Core and the profiles that were previously balloted are now updated based on the Argonaut feedback.
+[US-Core] IG focuses on specifying standard Application Programming Interfaces (APIs) for accessing data about individual patients for treatment and payment purposes. The [Argonaut] project has been invaluable in providing feedback on implementing FHIR in the real-world and the use of DAF profiles that were balloted as part of DSTU2. This feedback is now incorporated into US Core and the profiles that were previously balloted are now updated based on the Argonaut feedback.
 
 DAF-Research IG on the other hand will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). The capabilities created as part of DAF-Research are intended to be leveraged to build our nation's data infrastructure for a Learning Health System. DAF-Research IG will leverage work that has been completed and tested as part of the [US-Core] IG.
 
@@ -62,8 +62,8 @@ In addition to the above C1 through C4 capabilities, C5 and C6 have been identif
 * [http://nam.edu/perspectives-2013-making-the-case-for-continuous-learning-from-routinely-collected-data/](http://nam.edu/perspectives-2013-making-the-case-for-continuous-learning-from-routinely-collected-data/)
 
 
-[DAF-Core]: daf-core.html
-[US-Core]: http://hl7.org/fhir/us/core/2017Jan/index.html
+
+[US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
@@ -73,8 +73,8 @@ In addition to the above C1 through C4 capabilities, C5 and C6 have been identif
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/
 [ASPE]: https://aspe.hhs.gov/
-[DAF-Research-intro]: daf-research-intro.html
-[C1, C2, C3, C4]: daf-research-intro.html
+[DAF-Research-intro]: index.html
+[C1, C2, C3, C4]: index.html
 [Data Source Conformance]: CapabilityStatement-daf-datasource.html
 [Data Mart Conformance]: CapabilityStatement-daf-datamart.html
 [Research Query Composer Conformance]: CapabilityStatement-daf-datasource.html

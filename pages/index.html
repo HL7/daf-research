@@ -1,24 +1,7 @@
 ---
 # jekyll prompt
-profile: daf-research-intro
-title:  DAF Reseach Index page
+title: DAF Research Implementation Guide
+md_filename: intro
 ---
 
-{% include header.html %}
-
-  <!-- ============BreadCrumb=============== -->
-
-{% include container-start.html %}
-
-  <!-- ============CONTENT CONTENT=============== -->
-
-{% capture my-include %}{% include {{page.profile}}.md %}{% endcapture %}
-{{ my-include | markdownify }}
-
-
-
-  <!-- ==============END CONTENT END CONTENT=================== -->
-
-{% include container-end.html %}
-
-    {% include footer.html %}
+{% include page.html %}

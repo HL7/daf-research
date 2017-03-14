@@ -61,7 +61,7 @@
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="The parameter indicates whether Aggregate, De-Identified, Patient Level data is expected as part of the query results. By default only aggregate data would be returned. "/>
+    <documentation value="The parameter indicates whether Aggregate, De-Identified, Patient Level data is expected as part of the query results. By default only aggregate data would be returned."/>
     <type value="string"/>
   </parameter>
   <parameter>
@@ -69,7 +69,7 @@
     <use value="out"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="A Bundle containing the resulting data. "/>
+    <documentation value="A Bundle containing the resulting data."/>
     <type value="Bundle"/>
   </parameter>
   <parameter>
@@ -77,7 +77,7 @@
     <use value="out"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="A list of hints and warnings about problems encountered while executing the query. These might be shown to the user as an advisory note. Note: if the query cannot be executed at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter. "/>
+    <documentation value="A list of hints and warnings about problems encountered while executing the query. These might be shown to the user as an advisory note. Note: if the query cannot be executed at all, then the operation should fail, and an OperationOutcome is returned directly with the failure, rather than using this parameter."/>
     <type value="OperationOutcome"/>
   </parameter>
   

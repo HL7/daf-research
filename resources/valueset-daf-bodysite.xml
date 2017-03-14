@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="daf-bodysite"/>
-  <meta>
+	<id value="daf-bodysite"/>
+	<meta>
     <lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
     <profile value="http://hl7.org/fhir/StructureDefinition/ValueSet-shareable-definition"/>
   </meta>
-  <text>
+	<text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>Vaccine Administered Body Site</h2>
@@ -24,26 +23,26 @@
       </ul>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-bodysite"/>
-  <identifier>
+	<url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-bodysite"/>
+	<identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.3.88.12.3221.8.9"/>
   </identifier>
-  <version value="1.6.0"/>
-  <name value="Vaccine Administered Body Site"/>
-  <status value="active"/>
-  <experimental value="true"/>
-  <publisher value="HL7 FHIR"/>
-  <contact>
+	<version value="1.6.0"/>
+	<name value="Vaccine Administered Body Site"/>
+	<status value="active"/>
+	<experimental value="true"/>
+	<date value="2016-05-25T16:59:08+10:00"/>
+	<publisher value="HL7 FHIR"/>
+	<contact>
     <telecom>
       <system value="other"/>
       <value value="http://hl7.org/fhir"/>
     </telecom>
   </contact>
-  <date value="2016-05-25T16:59:08+10:00"/>
-  <description value="This identifies the body site at which the substance was administered"/>
-  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
-  <compose>
+	<description value="This identifies the body site at which the substance was administered"/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<compose>
     <include>
       <system value="http://snomed.info/sct"/>
       <filter>

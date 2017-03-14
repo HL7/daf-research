@@ -1,4 +1,4 @@
-# DAF-Research Implementation Guidance
+## {{ page.title }}
 
 [DAF-Research] IG describes four capabilities [C1, C2, C3, C4], each one of which is intended to help improve the data infrastructure for PCORnet and in the larger context a Learning Health System.
 This part of the IG provides additional guidance for the implementation of each of the four capabilities. This section is not normative and is only intended to provide guidance to implementers.
@@ -102,7 +102,7 @@ One of the value propositions of the data extract standardization is the need to
 
 The following is a mapping of FHIR to PCORnet CDM and from OMOP to FHIR developed by DAF working with PCORnet community and data experts.
 
-[DAF-Research Mappings between data models](daf-research-profile.html)
+[DAF-Research Mappings between data models](profiles.html)
 
 Using the above mapping the task to load the data would be executed as follows.
 
@@ -312,7 +312,7 @@ The second Observation.component is to capture the filters or stratifiers that w
 
 For example the first occurrence of Observation.component would contain
 `	{
-        code: "Patient", 
+        code: "Patient",
         valueQuantity: "10",
 		interpretation: "Count"
       }
@@ -345,8 +345,8 @@ These results would then be made available for the Researcher for further analys
 
 
 
-[DAF-Core]: daf-core.html
-[US-Core]: http://hl7.org/fhir/us/core/2017Jan/index.html
+
+[US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
 [DAF-Research]: index.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
@@ -356,8 +356,8 @@ These results would then be made available for the Researcher for further analys
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page*
 [ASPE]: https://aspe.hhs.gov/
-[DAF-Research-intro]: daf-research-intro.html
-[C1, C2, C3, C4]: daf-research-intro.html
+[DAF-Research-intro]: index.html
+[C1, C2, C3, C4]: index.html
 [Data Source Conformance]: CapabilityStatement-daf-datasource.html
 [Data Mart Conformance]: CapabilityStatement-daf-datamart.html
 [Research Query Composer Conformance]: CapabilityStatement-daf-research-queryrequester.html
@@ -371,5 +371,5 @@ These results would then be made available for the Researcher for further analys
 [OMOP CDM]: http://omop.org/CDM
 [PCORnet]: http://www.pcornet.org/
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
-[DAF-Research profile]: daf-research-profile.html
-[DAF-Research Mappings]: daf-research-profile.html
+[DAF-Research profile]: profiles.html
+[DAF-Research Mappings]: profiles.html

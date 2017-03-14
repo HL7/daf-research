@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="daf-medication-route"/>
-  <meta>
+	<id value="daf-medication-route"/>
+	<meta>
     <lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
     <profile value="http://hl7.org/fhir/StructureDefinition/ValueSet-shareable-definition"/>
   </meta>
-  <text>
+	<text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>Medication Route FDA Value Set</h2>
@@ -643,25 +642,25 @@
       </ul>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-medication-route"/>
-  <identifier>
+	<url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-medication-route"/>
+	<identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.3.88.12.3221.8.11"/>
   </identifier>
-  <version value="1.6.0"/>
-  <name value="Medication Route FDA Value Set"/>
-  <status value="active"/>
-  <experimental value="true"/>
-  <publisher value="PHIN VADS"/>
-  <contact>
+	<version value="1.6.0"/>
+	<name value="Medication Route FDA Value Set"/>
+	<status value="active"/>
+	<experimental value="true"/>
+	<date value="2016-05-25T16:59:08+10:00"/>
+	<publisher value="PHIN VADS"/>
+	<contact>
     <telecom>
       <system value="other"/>
       <value value="https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.113883.3.88.12.3221.8.7"/>
     </telecom>
   </contact>
-  <date value="2016-05-25T16:59:08+10:00"/>
-  <description value="Route of Administration value set is based upon FDA Drug Registration and Listing Database (FDA Orange Book) which are used in FDA structured product and labelling (SPL)"/>
-  <compose>
+	<description value="Route of Administration value set is based upon FDA Drug Registration and Listing Database (FDA Orange Book) which are used in FDA structured product and labelling (SPL)"/>
+	<compose>
     <include>
       <system value="http://ncimeta.nci.nih.gov"/>
       <concept>

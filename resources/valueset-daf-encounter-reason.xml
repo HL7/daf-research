@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <ValueSet xmlns="http://hl7.org/fhir">
-  <id value="daf-encounter-reason"/>
-  <meta>
+	<id value="daf-encounter-reason"/>
+	<meta>
     <lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
     <profile value="http://hl7.org/fhir/StructureDefinition/ValueSet-shareable-definition"/>
   </meta>
-  <text>
+	<text>
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
       <h2>DAF Encounter Diagnoses</h2>
@@ -22,26 +21,26 @@
       </ul>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-encounter-reason"/>
-  <identifier>
+	<url value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-encounter-reason"/>
+	<identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.2.591"/>
   </identifier>
-  <version value="1.6.0"/>
-  <name value="DAF Encounter Diagnoses"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <publisher value="FHIR Project team"/>
-  <contact>
+	<version value="1.6.0"/>
+	<name value="DAF Encounter Diagnoses"/>
+	<status value="draft"/>
+	<experimental value="true"/>
+	<date value="2016-05-25T16:59:08+10:00"/>
+	<publisher value="FHIR Project team"/>
+	<contact>
     <telecom>
       <system value="other"/>
       <value value="http://hl7.org/fhir"/>
     </telecom>
   </contact>
-  <date value="2016-05-25T16:59:08+10:00"/>
-  <description value="Encounter Diagnoses: a specific code indicating type of service provided: SNOMED CT, ICD-10-AM, or CPT"/>
-  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
-  <compose>
+	<description value="Encounter Diagnoses: a specific code indicating type of service provided: SNOMED CT, ICD-10-AM, or CPT"/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<compose>
     <include>
       <system value="http://snomed.info/sct"/>
     </include>
