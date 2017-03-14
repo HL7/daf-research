@@ -48,7 +48,7 @@ The files shown below form the layout for all the FHIR artifacts are shown below
 
 1. **template files:**
 
-![template files](tempate files.png)
+![template files](template%20files.png)
 
 
 
