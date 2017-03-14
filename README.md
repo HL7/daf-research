@@ -24,6 +24,8 @@ http://build.fhir.org/ig/Healthedata1/daf-research/debug.tgz
 
 ## Setup instructions
 
+See ig publisher [documentation](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation).
+
 You will also need to add the following directories to the same path:
 
 - `temp`
@@ -40,6 +42,8 @@ form Mac OS you can build the IG using the bash scripts using:
 To automatically build the ig.xml IG resource and ig.json definition file when adding or removing FHIR artifacts use:
 
 `>bash publish2.sh`  which first runs the python script "daf-research.py" before the ig publisher.
+
+also `>bash push.sh` is a handy scriptto to commit to GIT if you have a text editor set up.
 
 The files shown below form the layout for all the FHIR artifacts are shown below:
 
