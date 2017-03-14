@@ -50,15 +50,15 @@ The files shown below form the layout for all the FHIR artifacts are shown below
 
 2. **page files:**
 
-![page files](page20files.png)
+![page files](page%20files.png)
 
 3. **markdown files:**
 
-![markdown pages](markdown20pages.png)
+![markdown pages](markdown%20pages.png)
 
 4. **html file content:**
 
-![html file content](html20files.png)
+![html file content](html%20files.png)
 
 
 
