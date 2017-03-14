@@ -1,7 +1,20 @@
 ## {{ page.title }}
+{:.no_toc}
 
-[DAF-Research] IG describes four capabilities [C1, C2, C3, C4], each one of which is intended to help improve the data infrastructure for PCORnet and in the larger context a Learning Health System.
+[DAF-Research] IG describes four capabilities C1, C2, C3, C4, each one of which is intended to help improve the data infrastructure for PCORnet and in the larger context a Learning Health System.
 This part of the IG provides additional guidance for the implementation of each of the four capabilities. This section is not normative and is only intended to provide guidance to implementers.
+
+---
+
+<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+**Contents**
+
+* Do not remove this line (it will not be displayed)
+{:toc}
+
+---
+
+<!-- end TOC -->
 
 
 ## Capability C1: Extracting data from a Data Source and population of a Data Mart
