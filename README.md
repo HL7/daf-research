@@ -44,11 +44,23 @@ To automatically build the ig.xml IG resource and ig.json definition file when a
 The files shown below form the layout for all the FHIR artifacts are shown below:
 
 
-
-
 1. **template files:**
 
 ![template files](template%20files.png)
+
+2. **page files:**
+
+![page files](page20files.png)
+
+3. **markdown files:**
+
+![markdown pages](markdown20pages.png)
+
+4. **html file content:**
+
+![html file content](html20files.png)
+
+
 
 
 
