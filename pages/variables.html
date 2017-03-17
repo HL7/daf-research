@@ -1,14 +1,30 @@
+---
+# jekyll header
+---
 {% include header.html %}
 
 {% include container-start.html %}
 
   <!-- ============BreadCrumb=============== -->
 
-{% include breadcrumbs.html %}
-
   <!-- ============CONTENT CONTENT=============== -->
 
-{% capture my-include %}{% include {{page.md_filename}}.md %}{% endcapture %}{{ my-include | markdownify }}
+
+<ul>
+
+<li> {{site}}</li>
+
+<li>  {{ site.url }} </li>
+
+<li>{{ page.url }}</li>
+
+<li>{{page.path}}</li>
+
+{% for p in site.html_pages %}
+<li>  {{ p.path }} </li>
+{% endfor %}
+
+</ul>
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->

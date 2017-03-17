@@ -2,10 +2,9 @@
 # jekyll header
 active: terminology
 level: 2
+
 ---
-
 {% include header.html %}
-
 
 {% include container-start.html %}
 
@@ -15,24 +14,14 @@ level: 2
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<!--
-<h2>{{[title]}}</h2>
+
+<h2>CodeSystem: {{[id]}}</h2>
 
 <p>
 Formats: <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
 </p>
 
--->
-
-<!-- include {{[type]}}-{{[name]}}.xhtml   -->
-
-{% include {{[type]}}-{{[id]}}-summary.xhtml %}
-{% include {{[type]}}-{{[id]}}-xref.xhtml %}
-{% include {{[type]}}-{{[id]}}-cld.xhtml %}
-
-<h3>Expansion</h3>
-
-{% include {{[type]}}-{{[id]}}-expansion.xhtml %}
+{% include {{[type]}}-{{[name]}}.xhtml %}
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 

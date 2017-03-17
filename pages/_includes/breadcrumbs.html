@@ -1,0 +1,27 @@
+<nav class="breadcrumb float-right">
+  <a class="breadcrumb-item" href="index.html">Home</a>
+  {% if page.active != 'home' %}
+    {% if page.level != 2 %}
+      /
+      <span class="breadcrumb-item active">{{page.title}}</span>
+    {% endif %}
+    {% if page.active == 'profiles' and  page.level == 2 %}
+      /
+      <a class="breadcrumb-item" href="profiles.html">Profiles, Operations, and Mappings</a>
+      /
+      <span class="breadcrumb-item active">{{page.path}}</span>
+    {% endif %}
+    {% if page.active == 'capstatements' and  page.level == 2 %}
+      /
+      <a class="breadcrumb-item" href="profiles.html">Capability Statements</a>
+      /
+      <span class="breadcrumb-item active">{{page.path}}</span>
+    {% endif %}
+    {% if page.active == 'terminology' and  page.level == 2 %}
+      /
+      <a class="breadcrumb-item" href="profiles.html">Terminology</a>
+      /
+      <span class="breadcrumb-item active">{{page.path}}</span>
+    {% endif %}
+  {% endif %}
+</nav>
