@@ -61,7 +61,7 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 2. Extract data for each patient using the Patient/$everything operation if the vendor system supports it.
 3. Extract data for each patient using a native API or query if available.
 
-NOTE: Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
+NOTE: These extraction tasks could be inefficient and the initial extraction may take a long time. Implementers have to be aware of these inefficiencies in extracting data especially if they choose to use extraction of the data one patient at a time. Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
 
 
 NOTE: Also in the case of mappings from one data model to another such as FHIR to PCORnet CDM or FHIR to OMOP etc, there is always a potential for data loss. In these cases where there is not an exact mapping between local codes and standardized codes the extraction process is encouraged to include the actual raw values as part of the coding element.
@@ -78,6 +78,8 @@ The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a 
 However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
 The [DAF-Research profile] page provides the necessary mapping between FHIR Resources and PCORnet CDM.
+
+Note: As is the case in all mapping exercises, there could be data loss in the mapping. However since there is a large amount of legacy data already present and systems capturing data are not capturing according the standards being used for extractions and/or exchange this problem will persist and the and the researchers should be made aware of the existence of these data losses.
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 

@@ -68,7 +68,7 @@ Each of these capabilities have been identified based on discussions with PCORne
 In addition to the above C1 through C4 capabilities, C5 and C6 have been identified as part of the future work, but have been delayed waiting to learn from the pilot implementations of C1 through C4.
 
 * C5 capability deals with standardizing the query result structure and semantics for patient level data to be returned to researchers. This will reuse in large part the capabilities already developed by US-Core.
-* C6 capability deals with standardizing the query semantics (query language) for research based queries. This is an area which is evolving and is not mature enough for us to standardize at this point.
+* C6 capability deals with standardizing the query semantics (query language) for research based queries. This is an area which is evolving and is not mature enough for us to standardize at this point. This capability could use CQL as a mechanism to define the query semantics.
 
 <br />
 
