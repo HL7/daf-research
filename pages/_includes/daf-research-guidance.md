@@ -83,7 +83,7 @@ Note: As is the case in all data mapping exercises, there could be data loss in 
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
-Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below.
+Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below. For PCORnet further enhancing the OMOP mapping will bring in additional data sources to contribute data to the network along with analytical tools that may be also provided by the various OMOP implementers. 
 
 
 ### C1: Step 3: Instantiation of a Task for loading of data at the Data Mart
@@ -127,7 +127,7 @@ Using the above mapping the task to load the data would be executed as follows.
 * Set the Task.status to In-progress. Set the parent Task.status to In-progress.
 * Start loading of data for each patient into the database using the PCORnet CDM to FHIR mapping provided.
 * Create [DAF-Provenance] instance for each run of the task pointing back to all the Resources that were updated in this execution.
-* Update [DAF-Conformance] as needed to reflect the latest data changes.
+* Update [CapabilityStatement] as needed to reflect the latest data changes.
 * Set Task.status as completed if everything completes normally. The parent Task will remain In-progress for ever until the parent Task is Completed or Rejected.
 * In case of exception, Set Task.status as Failed and Set Task.output.type as Reference but Task.output.valueReference will point to the OperationOutcome resource instance.
 
@@ -137,34 +137,34 @@ Using the above mapping the task to load the data would be executed as follows.
 
 Implementing C2 capability involves three steps.
 
-1. Instantiation of the Conformance profile
-2. Population and updating of the Conformance profile
-3. Making the Conformance profile available to Researchers
+1. Instantiation of the CapabilityStatement.
+2. Population and updating of the CapabilityStatement.
+3. Making the CapabilityStatement available to Researchers
 
 The next few paragraphs will provide details for each step above.
 
 
-### C2:Step 1: Instantiation of the Conformance profile
+### C2:Step 1: Instantiation of the CapabilityStatement
 
-The Data Mart has to instantiate a Conformance Resource instance to declare its characteristics that would help a Researcher to compose queries.
-In addition the Conformance Resource should also help a Data Mart administrator to manage the data within the Data Mart.
-The Conformance Resource declares the various profiles, operations and other specifics about the implementation.
-For the DAF Data Mart actor the following data is expected to be present within the DAF-Conformance resource instance.
+The Data Mart has to instantiate a CapabilityStatement Resource instance to declare its characteristics that would help a Researcher to compose queries.
+In addition the CapabilityStatement Resource should also help a Data Mart administrator to manage the data within the Data Mart.
+The CapabilityStatement Resource declares the various profiles, operations and other specifics about the implementation.
+For the DAF Data Mart actor the following data is expected to be present within the CapabilityStatement resource instance.
 
-* Conformance.url provides the unique identifier for the Resource. The URL is a web-accessible address to determine the server capabilities.
-* Conformance.version - Populate with a timestamp to indicate when it was created.
-* Conformance.status - This will always be "active" for implementations.
-* Conformance.date - Update this whenever the resource instance changes.
-* Conformance.publisher - Organization publishing this conformance instance.
-* Conformance.kind - This will always be "instance" for implementations.
-* Conformance.implementation.url - Populate with the same value as the Conformance.url
-* Conformance.implementation.description - Populate with the same description as Conformance.description
-* Conformance.fhirVersion - Populate with "STU3".
-* Conformance.format - Populate two entries (one with "xml" and other with "json")
-* Conformance.profile - Declare the list of profiles supported by the instantiation. For DAF Data Mart this would be DAF-Conformance, DAF-Task, DAF-Provenance, DAF-OperationDefinition at a minimum.
-* Conformance.rest.mode - Populate with "Server"
+* CapabilityStatement.url provides the unique identifier for the Resource. The URL is a web-accessible address to determine the server capabilities.
+* CapabilityStatement.version - Populate with a timestamp to indicate when it was created.
+* CapabilityStatement.status - This will always be "active" for implementations.
+* CapabilityStatement.date - Update this whenever the resource instance changes.
+* CapabilityStatement.publisher - Organization publishing this conformance instance.
+* CapabilityStatement.kind - This will always be "instance" for implementations.
+* CapabilityStatement.implementation.url - Populate with the same value as the CapabilityStatement.url
+* CapabilityStatement.implementation.description - Populate with the same description as CapabilityStatement.description
+* CapabilityStatement.fhirVersion - Populate with "STU3".
+* CapabilityStatement.format - Populate two entries (one with "xml" and other with "json")
+* CapabilityStatement.profile - Declare the list of profiles supported by the instantiation. For DAF Data Mart this would be DAF-Task, DAF-Provenance, DAF-OperationDefinition at a minimum.
+* CapabilityStatement.rest.mode - Populate with "Server"
 
-* For each Resource supported by the Server populate the Conformance.rest segment with
+* For each Resource supported by the Server populate the CapabilityStatement.rest segment with
 
 1. Resource Type (e.g Task)
 2. Resource Profile (DAF specific profiles, e.g DAF-Task)
@@ -174,15 +174,15 @@ For the DAF Data Mart actor the following data is expected to be present within 
 6. Operation.definition points back to the instance of the Operation Definitions that the Server supports.
 
 For each Operation that is supported by the Server, a DAF-OperationDefinition instance should be created with the appropriate data
-and then the Conformance.Operation.defintion should point to the instance that has been created.
+and then the CapabilityStatement.Operation.definition should point to the instance that has been created.
 
-The following extensions should be populated for the Conformance resource instance
+The following extensions should be populated for the CapabilityStatement resource instance
 *  PCORnet Data Mart Active Flag - This indicates if the Data Mart is still active and is accepting queries.
 
 #### Guidance for instantiating a DAF-OperationDefintion
 
 The DAF-OperationDefinition profile has been created to help servers declare conformance to the various DAF-Research operations.
-In order to declare support for various operations, an implementation would create an instance of DAF-OperationDefinition and then point to it by the Conformance.rest.operation part of the Conformance resource.
+In order to declare support for various operations, an implementation would create an instance of DAF-OperationDefinition and then point to it by the CapabilityStatement.rest.operation part of the CapabilityStatement resource.
 
 The following data elements are expected to be populated for each DAF-OperationDefinition that is instantiated.
 
@@ -199,12 +199,12 @@ The following Extensions have to be populated as part of the OperationDefinition
 * Extension (daf-query-format-version) - Identify the version of the query-format that is supported by this instance. This should be part of the extension within the daf-query-formats.
 
 
-### C2: Step 2. Population and Updation of the Conformance profile
+### C2: Step 2. Population and Updation of the CapabilityStatement
 
-The Conformance profile once published gets updated less frequently as compared to other clinical resources.
-However updates to the Conformance profile will be performed due to changes in the following data elements
+The CapabilityStatement once published gets updated less frequently as compared to other clinical resources.
+However updates to the CapabilityStatement will be performed due to changes in the following data elements
 
-* URL of the overall conformance resource
+* URL of the overall CapabilityStatement resource
 * List of Operations that are supported change
 * List of Resources that are supported change
 * List of research data models and query formats supported change
@@ -212,13 +212,13 @@ However updates to the Conformance profile will be performed due to changes in t
 * Changes to Security protocols.
 
 
-### C2: Step 3. Making the Conformance profile available to Researchers
+### C2: Step 3. Making the CapabilityStatement available to Researchers
 
-The Conformance resource just like other FHIR resources can be queried by researchers.
-Conformance resources should be available for querying without requiring additional authorization.
-The Conformance resource will be published at the well known FHIR URL <base URL>/Conformance.
-There can only be one instance of the Conformance resource per server implementation.
-Conformance resource should support the historical version (vREAD) retrieval to identify the changes over a period of time.
+The CapabilityStatement resource just like other FHIR resources can be queried by researchers.
+CapabilityStatement resources should be available for querying without requiring additional authorization.
+The CapabilityStatement resource will be published at the well known FHIR URL <base URL>/CapabilityStatement.
+There can only be one instance of the CapabilityStatement resource per server implementation.
+CapabilityStatement resource should support the historical version (vREAD) retrieval to identify the changes over a period of time.
 
 
 
@@ -381,6 +381,7 @@ These results would then be made available for the Researcher for further analys
 [DAF-Provenance]: StructureDefinition-daf-provenance.html
 [DAF-OperationDefinition]: StructureDefinition-daf-operationdefinition.html
 [DAF-Conformance]: StructureDefinition-daf-capabilitystatement.html
+[CapabilityStatement]: http://build.fhir.org/capabilitystatement.html
 [DAF-QueryResults]: StructureDefinition-daf-queryresults.html
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM

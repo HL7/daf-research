@@ -21,8 +21,8 @@
     <use value="in"/>
     <min value="1"/>
     <max value="1"/>
-    <documentation value="This is the reference time based on which the extraction program will retrieve data for only those patients whose records have been created/updated after the reference time."/>
-    <type value="dateTime"/>
+    <documentation value="This is the reference time based on which the extraction program will retrieve data for only those patients whose records have been created/updated based on the reference time. If only start is provided as part of the Period, then all records created/updated after the start time are extracted. If both start and end are provided, then only those records which have been created/updated between the start and end times of the Period are extracted."/>
+    <type value="Period"/>
   </parameter>
   <parameter>
     <name value="group"/>
