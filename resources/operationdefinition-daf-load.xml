@@ -7,7 +7,8 @@
   <status value="draft"/>
   <kind value="operation"/>
   <date value="2016-07-24"/>
-  <description value="Enable Loading data extracted from data sources into data marts."/>
+  <description value="The purpose of this operation is to enable loading of extracted data from data sources into data marts.
+  The extracted data will be de-identified and mapped from FHIR to the destination data model and then loaded into the data mart according to the local work flows. The work flow information is captured as part of the task which executes the load-data operation. Please refer to the Implementation Guidance for further information on how to use the task and load-data operation together for research work flows."/>
   <code value="load-data"/>
   <comment value="Pilots underway in PCORNet"/>
   <base>

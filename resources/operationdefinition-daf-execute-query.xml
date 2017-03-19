@@ -7,7 +7,7 @@
   <status value="draft"/>
   <kind value="operation"/>
   <date value="2016-07-24"/>
-  <description value="Enable composition and execution of a query."/>
+  <description value="The purpose of this operation is to enable composition and execution of a query in a research setting.Please refer to the Implementation Guidance for further information on how to use the task and execute-query operation together for querying research research data marts."/>
   <code value="execute-query"/>
   <comment value="Pilots underway in PCORNet"/>
   <base>

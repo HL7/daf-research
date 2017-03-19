@@ -3,7 +3,7 @@
 ## {{ page.title }}
 
 
-DAF-Research IG will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). While DAF-Research IG can be applied to multiple use cases, the current requirements have been drawn heavily from PCORnet use cases and implementations. The capabilities described as part of the IG are intended to be leveraged to build our nation's data infrastructure for a Learning Health System.
+DAF-Research IG will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). While DAF-Research IG can be applied to multiple use cases, the current requirements have been drawn heavily from [PCORnet] use cases and implementations and are described on the [DAF] website. The capabilities described as part of the IG are intended to be leveraged to build our nation's data infrastructure for a Learning Health System.
 DAF-Research will leverage the US-Core IG and profiles for the resources that overlap with US-Core. In addition DAF-Research will create additional profiles necessary for DAF-Research purposes which do not exist in US-Core. The US-Core has been created with substantial feedback from the Argonaut project.
 
 # Guidance to the Reader
@@ -15,7 +15,7 @@ The following table will provide a roadmap for the reader.
 |Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://build.fhir.org/ig/Healthedata1/US-Core//guidance.html)|
 |DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](background.html)|
 |Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](index.html#capabilities-actors-and-conformance-requirements)|
-|Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to PCORnet CDM and OMOP CDM.|[Profile List](profiles.html)|
+|Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to [PCORnet CDM] and [OMOP CDM].|[Profile List](profiles.html)|
 |Developer Guidance|The artifact contains data mapping spreadsheets, deployment options, examples that will help implementers of DAF-Research IG.|[Implementation Guidance](guidance.html)|
 
 # Capabilities, Actors and Conformance Requirements

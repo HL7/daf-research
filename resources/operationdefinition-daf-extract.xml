@@ -7,7 +7,7 @@
   <status value="draft"/>
   <kind value="operation"/>
   <date value="2016-07-24"/>
-  <description value="Enable data extraction from Clinical Data Sources (e.g EMRs) for Research Purposes"/>
+  <description value="The purpose of this operation is to enable data extraction from Clinical Data Sources (e.g EMRs) for Research Purposes. The extracted data will be de-identified and mapped from FHIR to the destination data model and then loaded into the data mart according to the local work flows. The work flow information is captured as part of the task which executes the extract operation. Please refer to the Implementation Guidance for further information on how to use the task and extract operation together for research work flows."/>
   <code value="extract-operation"/>
   <comment value="Pilots underway in PCORNet"/>
   <base>
@@ -25,11 +25,19 @@
     <type value="dateTime"/>
   </parameter>
   <parameter>
+    <name value="group"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="When a Group is specified, the extraction program needs to only extract the data for the patients that are part of the cohort group.Either the Group or an individual patient has to be specified for data extraction."/>
+    <type value="Reference"/>
+  </parameter>
+  <parameter>
     <name value="patient"/>
     <use value="in"/>
     <min value="0"/>
     <max value="1"/>
-    <documentation value="When a Patient is specified, the extraction program needs to only extract the data for a specific patient.If not specified, the extraction program will evaluate all consented patient records based on the reference time to identify the ones that have changed and need to be extracted."/>
+    <documentation value="When a Patient is specified, the extraction program needs to only extract the data for a specific patient.Either the Group or an individual patient has to be specified for data extraction."/>
     <type value="Reference"/>
   </parameter>
   <parameter>

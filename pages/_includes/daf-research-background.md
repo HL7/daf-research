@@ -4,7 +4,7 @@ source pages/_include/{{page.md_filename}}.md  file
 {:.no_toc}
 
 
-The nation is reaching a critical mass of HealthIT systems (EHRs, Data Warehouses etc) that comply with data and vocabulary standards. The wide deployment of HealthIT systems has created unique opportunities for providers, provider support teams, healthcare professionals and organizations etc. to access and use the patient data that is already collected during clinical workflows. [DAF] initiative has developed multiple implementation guides to enable and access the structured patient data collected as part of existing clinical workflows.
+The nation is reaching a critical mass of Health IT systems (EHRs, Data Warehouses etc) that comply with data and vocabulary standards. The wide deployment of Health IT systems has created unique opportunities for providers, provider support teams, healthcare professionals and organizations etc. to access and use the patient data that is already collected during clinical workflows. [DAF] initiative has developed multiple implementation guides to enable and access the structured patient data collected as part of existing clinical workflows.
 
 [US-Core] IG focuses on specifying standard Application Programming Interfaces (APIs) for accessing data about individual patients for treatment and payment purposes. The [Argonaut] project has been invaluable in providing feedback on implementing FHIR in the real-world and the use of DAF profiles that were balloted as part of DSTU2. This feedback is now incorporated into US Core and the profiles that were previously balloted are now updated based on the Argonaut feedback.
 
@@ -68,7 +68,7 @@ Each of these capabilities have been identified based on discussions with PCORne
 In addition to the above C1 through C4 capabilities, C5 and C6 have been identified as part of the future work, but have been delayed waiting to learn from the pilot implementations of C1 through C4.
 
 * C5 capability deals with standardizing the query result structure and semantics for patient level data to be returned to researchers. This will reuse in large part the capabilities already developed by US-Core.
-* C6 capability deals with standardizing the query semantics (query language) for research based queries. This is an area which is evolving and is not mature enough for us to standardize at this point.
+* C6 capability deals with standardizing the query semantics (query language) for research based queries. This is an area which is evolving and is not mature enough for us to standardize at this point. This capability could use CQL as a mechanism to define the query semantics.
 
 <br />
 

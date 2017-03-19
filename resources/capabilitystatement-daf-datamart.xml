@@ -112,7 +112,7 @@
 							<a href="StructureDefinition-daf-operationdefinition.html">DAF-OperationDefinition</a>
 						</th>
 						<td>
-							<a title="Allows discovery of DAF-OperationDefinition resources based on different search criteria">SHALL</a>
+							<p title="Allows discovery of DAF-OperationDefinition resources based on different search criteria">SHALL</p>
 						</td>
 						<td>
 							<p title="Allows retrieval of a specific DAF-OperationDefinition by resource id">SHALL</p>
@@ -154,14 +154,14 @@
 				</li>
 			</ul>
 			<p>Data Marts SHALL support the following search contexts defined within the
-        <a href="http://build.fhir.org/search.html#Introduction">FHIR</a>specification.
+        <a href="http://build.fhir.org/search.html#introduction">FHIR</a> specification.
       </p>
 			<ul>
 				<li>Search context by specifying a particular resource type</li>
 			</ul>
 			<p>Data Marts SHALL support
-        <a href="http://build.fhir.org/search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters. Data Marts SHALL also support
-        <a href="http://build.fhir.org/search.html#Composite Search Parameters">Composite Search Parameters</a> as defined in the FHIR specification.
+        <a href="http://build.fhir.org/search.html#modifiers">Modifiers</a> as applicable to the data types of the search parameters. Data Marts SHALL also support
+        <a href="http://build.fhir.org/search.html#composite">Composite Search Parameters</a> as defined in the FHIR specification.
       </p>
 			<table class="grid">
 				<thead>
@@ -192,20 +192,20 @@
                   <a href="http://build.fhir.org/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">parent</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">part-of</a> - Search based on Task this Task is part of (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">owner</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">owner</a> - Search based on Task owner (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">performer</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">performer</a> - Search based on Task performer type (
+                  <a href="http://build.fhir.org/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">requester</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">requester</a> - Search based on Task requester (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 							</ul>
 						</td>
@@ -215,16 +215,16 @@
 						<td>
 							<ul>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">target</a> - Search based on Provenance target (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/provenance.html#search">target</a> - Search based on Provenance target (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">start</a> - Search based on Provenance start time (
-                  <a href="http://build.fhir.org/search.html#token">date</a>)
+									<a href="http://build.fhir.org/provenance.html#search">start</a> - Search based on Provenance start time (
+                  <a href="http://build.fhir.org/search.html#date">date</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">end</a> - Search based on Provenance end time (
-                  <a href="http://build.fhir.org/search.html#token">date</a>)
+									<a href="http://build.fhir.org/provenance.html#search">end</a> - Search based on Provenance end time (
+                  <a href="http://build.fhir.org/search.html#date">date</a>)
                 </li>
 							</ul>
 						</td>
@@ -340,7 +340,7 @@
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
 				</extension>
-				<name value="parent"/>
+				<name value="part-of"/>
 				<type value="reference"/>
 			</searchParam>
 			<searchParam>

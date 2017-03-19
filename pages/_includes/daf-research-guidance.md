@@ -26,7 +26,7 @@ Implementing C1 capability involves four steps.
 3. Instantiation of a Task for loading of data at the Data Mart
 4. Execution of the Task to load data into the Data Mart
 
-Note: Data Source actor can be implemented by system like an EMR natively or alternately it can be implemented as a layer (additional software module) on top of an EMR system.
+Note: Data Source actor can be implemented by system like an EMR natively or alternately it can be implemented as a layer (additional software module) on top of an EMR system. The partitioning of what resources, profiles and capability statements are implemented by an EMR natively versus an external module is left to the implementers.
 In either case the implementation has to meet the [Data Source Conformance] requirements.
 The next few paragraphs will provide details for each step above.
 
@@ -61,7 +61,7 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 2. Extract data for each patient using the Patient/$everything operation if the vendor system supports it.
 3. Extract data for each patient using a native API or query if available.
 
-NOTE: Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
+NOTE: These extraction tasks could be inefficient and the initial extraction may take a long time. Implementers have to be aware of these inefficiencies in extracting data especially if they choose to use extraction of the data one patient at a time. Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
 
 
 NOTE: Also in the case of mappings from one data model to another such as FHIR to PCORnet CDM or FHIR to OMOP etc, there is always a potential for data loss. In these cases where there is not an exact mapping between local codes and standardized codes the extraction process is encouraged to include the actual raw values as part of the coding element.
@@ -78,6 +78,8 @@ The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a 
 However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
 The [DAF-Research profile] page provides the necessary mapping between FHIR Resources and PCORnet CDM.
+
+Note: As is the case in all data mapping exercises, there could be data loss in the mapping. There is a large amount of legacy data already captured and hence the mapping problem will persist. In addition to existing data, systems capturing data are not do not use standards for data capture and hence this problem will persist. Researchers should be made aware of the existence of these data losses so that they have an idea of the data quality.
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
