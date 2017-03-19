@@ -274,7 +274,7 @@ Optionally the query can indicate the type of data expected as part of the resul
 
 ### C3: Step 2: Submitting the query to multiple Data Marts
 
-In order for the Researcher to execute the query against multiple Data Marts, the Research Query Composer system has to create an instance of the Root Task created in Step 1 for
+In order for the Researcher to execute the query against multiple Data Marts, the Research Query Requester system has to create an instance of the Root Task created in Step 1 for
 each Data Mart. In order to make Tasks specific to a Data Mart, the following Task data elements would be set.
 
 * Task.owner - Should be populated with the organization that owns the query. This is normally a person, organization or a device belonging to the CDRN.
@@ -354,7 +354,7 @@ These execution specific Task instances are now available for retrieval by the R
 ### C4: Step 3: Retrieving query results from multiple Data Marts
 
 In order for a Researcher to get a complete picture of the population based on their query submitted, the query results from multiple Data Marts have to be retrieved.
-For this purpose the Research Query Composer, has to query each of the Data Marts for execution specific Task instances with the parent set to the Data Mart specific Task that was created during the initiation of the query.
+For this purpose the Research Query Requester, has to query each of the Data Marts for execution specific Task instances with the parent set to the Data Mart specific Task that was created during the initiation of the query.
 Once these task instances are retrieved then the Task.output would contain the result of each query execution for each Data Mart.
 These results would then be made available for the Researcher for further analysis.
 
