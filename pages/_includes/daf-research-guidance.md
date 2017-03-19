@@ -61,7 +61,7 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 2. Extract data for each patient using the Patient/$everything operation if the vendor system supports it.
 3. Extract data for each patient using a native API or query if available.
 
-NOTE: These extraction tasks could be inefficient and the initial extraction may take a long time. Implementers have to be aware of these inefficiencies in extracting data especially if they choose to use extraction of the data one patient at a time. Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below.
+NOTE: These extraction tasks could be inefficient and the initial extraction may take a long time. Implementers have to be aware of these inefficiencies in extracting data especially if they choose to use extraction of the data one patient at a time. Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below and has to be accomplished prior to loading and using the data.
 
 
 NOTE: Also in the case of mappings from one data model to another such as FHIR to PCORnet CDM or FHIR to OMOP etc, there is always a potential for data loss. In these cases where there is not an exact mapping between local codes and standardized codes the extraction process is encouraged to include the actual raw values as part of the coding element.
@@ -358,7 +358,7 @@ For this purpose the Research Query Requester, has to query each of the Data Mar
 Once these task instances are retrieved then the Task.output would contain the result of each query execution for each Data Mart.
 These results would then be made available for the Researcher for further analysis.
 
-
+For more examples of the various resources implemented by DAF-Pilots, please refer to the [DAF-Pilots] presentations.
 
 
 [US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
@@ -367,6 +367,7 @@ These results would then be made available for the Researcher for further analys
 [ONC]: http://www.healthit.gov/newsroom/about-onc
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[DAF-Pilots] : https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Pilots
 [PCORI]:  http://www.pcori.org
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page*
