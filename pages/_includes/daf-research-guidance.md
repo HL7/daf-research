@@ -26,7 +26,7 @@ Implementing C1 capability involves four steps.
 3. Instantiation of a Task for loading of data at the Data Mart
 4. Execution of the Task to load data into the Data Mart
 
-Note: Data Source actor can be implemented by system like an EMR natively or alternately it can be implemented as a layer (additional software module) on top of an EMR system.
+Note: Data Source actor can be implemented by system like an EMR natively or alternately it can be implemented as a layer (additional software module) on top of an EMR system. The partitioning of what resources, profiles and capability statements are implemented by an EMR natively versus an external module is left to the implementers.
 In either case the implementation has to meet the [Data Source Conformance] requirements.
 The next few paragraphs will provide details for each step above.
 

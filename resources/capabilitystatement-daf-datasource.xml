@@ -27,7 +27,7 @@
 				</tbody>
 			</table>
 			<h2>REST  behavior</h2>
-			<p>The Data Source SHALL implement REST behavior according to the <a href="http://build.fhir.org/http.html">FHIR</a> specification. The Data Source SHALL use either US-Core or DAF-Research profiles as needed to extract data. The Data Source SHALL support both json and xml resource formats for all DAF interactions. The Data Source SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Source SHALL declare a Capability statement and identify the list of profiles, operations, search parameter supported.
+			<p>For the resources and operations supported by the Data Source, the RESTful behavior SHALL conform to the <a href="http://build.fhir.org/http.html">FHIR </a> specification. The Data Source SHOULD use either US-Core or DAF-Research profiles as needed to extract data. The Data Source SHOULD support both json and xml resource formats for all DAF interactions. The Data Source SHOULD identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Source SHOULD declare a Capability statement and identify the list of profiles, operations, search parameter supported.
       </p>
 			<p>
 				<b>Security:</b>
@@ -66,22 +66,22 @@
 							<a href="StructureDefinition-daf-task.html">DAF-Task</a>
 						</th>
 						<td>
-							<a title="Allows discovery of DAF-Task resources based on different search criteria" href="#DAFTaskSearch">SHALL</a>
+							<a title="Allows discovery of DAF-Task resources based on different search criteria" href="#DAFTaskSearch">SHOULD</a>
 						</td>
 						<td>
-							<p title="Allows retrieval of a specific DAF-Task by resource id">SHALL</p>
+							<p title="Allows retrieval of a specific DAF-Task by resource id">SHOULD</p>
 						</td>
 						<td>
-							<p title="Allows retrieval of a historical version of a DAF-Task">SHALL</p>
+							<p title="Allows retrieval of a historical version of a DAF-Task">SHOULD</p>
 						</td>
 						<td>
-							<p title="Allows review of changes to DAF-Task over time">SHALL</p>
+							<p title="Allows review of changes to DAF-Task over time">SHOULD</p>
 						</td>
 						<td>
-							<p title="Allows creation of DAF-Task">SHALL</p>
+							<p title="Allows creation of DAF-Task">SHOULD</p>
 						</td>
 						<td>
-							<p title="Allows updates to DAF-Task">SHALL</p>
+							<p title="Allows updates to DAF-Task">SHOULD</p>
 						</td>
 					</tr>
 					<tr>
@@ -89,10 +89,10 @@
 							<a href="http://build.fhir.org/ig/Healthedata1/US-Core">US-Core profiles</a>
 						</th>
 						<td>
-							<p title="Allows discovery of US-Core resources based on different search criteria">SHALL</p>
+							<p title="Allows discovery of US-Core resources based on different search criteria">SHOULD</p>
 						</td>
 						<td>
-							<p title="Allows retrieval of a specific US-Core resources by resource id">SHALL</p>
+							<p title="Allows retrieval of a specific US-Core resources by resource id">SHOULD</p>
 						</td>
 						<td>
 							<p title="Allows retrieval of a historical version of a US-Core">SHOULD</p>
@@ -112,7 +112,7 @@
 			<br/>
 			<br/>
 			<h3>Data Source Search Parameters</h3>
-			<p>Data Sources SHALL support the following common parameters as part of queries related to DAF-Research profiles:</p>
+			<p>Data Sources SHOULD support the following common parameters as part of queries related to DAF-Research profiles:</p>
 			<ul>
 				<li>
 					<a href="http://build.fhir.org/search.html#id">_id</a>
@@ -130,16 +130,12 @@
 					<a href="http://build.fhir.org/search.html#include">_include</a>
 				</li>
 			</ul>
-			<p>Data Sources SHALL support the following search contexts defined within the
-        <a href="http://build.fhir.org/search.html#Introduction">FHIR</a>specification.
+			<p>Data Sources SHOULD support the following search contexts defined within the
+        <a href="http://build.fhir.org/search.html#introduction">FHIR</a> specification.
       </p>
 			<ul>
 				<li>Search context by specifying a particular resource type</li>
 			</ul>
-			<p>Data Sources SHALL support
-        <a href="http://build.fhir.org/search.html#Modifiers">Modifiers</a> as applicable to the data types of the search parameters. Data Sources SHALL also support
-        <a href="http://build.fhir.org/search.html#Composite Search Parameters">Composite Search Parameters</a> as defined in the FHIR specification.
-      </p>
 			<table class="grid">
 				<thead>
 					<tr>
@@ -165,20 +161,20 @@
                   <a href="http://build.fhir.org/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">parent</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">part-of</a> - Search based on Task this Task is part of (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">owner</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">owner</a> - Search based on Task owner (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">performer</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">performer</a> - Search based on Task performer type (
+                  <a href="http://build.fhir.org/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">requester</a> - Search based on Task parent (
-                  <a href="http://build.fhir.org/search.html#token">reference</a>)
+									<a href="http://build.fhir.org/task.html#search">requester</a> - Search based on Task requester (
+                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
                 </li>
 							</ul>
 						</td>
@@ -196,7 +192,7 @@
 				</tbody>
 			</table>
 			<h3>DAF-Research Specific Operations</h3>
-			<p>Data Sources SHALL support <a href="http://hl7.org/fhir/patient-operations.html#everything">Patient/$everything</a> operation using the US-Core profiles.</p>
+			<p>Data Sources SHOULD support <a href="http://hl7.org/fhir/patient-operations.html#everything">Patient/$everything</a> operation using the US-Core profiles.</p>
 			<p>Data Sources SHALL support <a href="http://hl7.org/fhir/current/daf/OperationDefinition-daf-extract-operation.html">daf-extract-operation</a> on the ROOT URL of the system.</p>
 			<p>Data Marts SHALL publish their Capability statement using the DAF-Capability profile and identify the specific operations supported.</p>
 		</div>
@@ -344,7 +340,7 @@
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
 				</extension>
-				<name value="parent"/>
+				<name value="part-of"/>
 				<type value="reference"/>
 			</searchParam>
 			<searchParam>
@@ -359,7 +355,7 @@
 					<valueCode value="SHALL"/>
 				</extension>
 				<name value="performer"/>
-				<type value="reference"/>
+				<type value="token"/>
 			</searchParam>
 			<searchParam>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">

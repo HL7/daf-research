@@ -4,7 +4,7 @@ source pages/_include/{{page.md_filename}}.md  file
 {:.no_toc}
 
 
-The nation is reaching a critical mass of HealthIT systems (EHRs, Data Warehouses etc) that comply with data and vocabulary standards. The wide deployment of HealthIT systems has created unique opportunities for providers, provider support teams, healthcare professionals and organizations etc. to access and use the patient data that is already collected during clinical workflows. [DAF] initiative has developed multiple implementation guides to enable and access the structured patient data collected as part of existing clinical workflows.
+The nation is reaching a critical mass of Health IT systems (EHRs, Data Warehouses etc) that comply with data and vocabulary standards. The wide deployment of Health IT systems has created unique opportunities for providers, provider support teams, healthcare professionals and organizations etc. to access and use the patient data that is already collected during clinical workflows. [DAF] initiative has developed multiple implementation guides to enable and access the structured patient data collected as part of existing clinical workflows.
 
 [US-Core] IG focuses on specifying standard Application Programming Interfaces (APIs) for accessing data about individual patients for treatment and payment purposes. The [Argonaut] project has been invaluable in providing feedback on implementing FHIR in the real-world and the use of DAF profiles that were balloted as part of DSTU2. This feedback is now incorporated into US Core and the profiles that were previously balloted are now updated based on the Argonaut feedback.
 
