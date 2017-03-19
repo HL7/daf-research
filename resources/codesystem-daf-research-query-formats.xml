@@ -10,10 +10,18 @@
 	<valueSet value="http://hl7.org/fhir/us/daf-research/ValueSet/daf-research-query-formats"/>
 	<content value="complete"/>
 			<concept>
+				<code value="CQL"/>
+				<display value="CQL Queries"/>
+		<definition value="Queries are created using the Clinical Quality Language (CQL) language"/>
+	</concept>
+	
+	
+			<concept>
 				<code value="SAS"/>
 				<display value="SAS Queries"/>
 		<definition value="Queries are created using the SAS language"/>
-	</concept>
+	</concept>	
+	
 			<concept>
 				<code value="SQL"/>
 				<display value="SQL Queries"/>
