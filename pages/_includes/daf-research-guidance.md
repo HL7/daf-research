@@ -79,7 +79,7 @@ However data extraction programs have to be aware that vendors may be supporting
 
 The [DAF-Research profile] page provides the necessary mapping between FHIR Resources and PCORnet CDM.
 
-Note: As is the case in all mapping exercises, there could be data loss in the mapping. However since there is a large amount of legacy data already present and systems capturing data are not capturing according the standards being used for extractions and/or exchange this problem will persist and the and the researchers should be made aware of the existence of these data losses.
+Note: As is the case in all data mapping exercises, there could be data loss in the mapping. There is a large amount of legacy data already captured and hence the mapping problem will persist. In addition to existing data, systems capturing data are not do not use standards for data capture and hence this problem will persist. Researchers should be made aware of the existence of these data losses so that they have an idea of the data quality.
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
