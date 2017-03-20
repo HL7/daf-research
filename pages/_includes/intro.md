@@ -6,7 +6,7 @@
 
 
 DAF-Research IG will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). While DAF-Research IG can be applied to multiple use cases, the current requirements have been drawn heavily from [PCORnet] use cases and implementations and are described on the [DAF] website. The capabilities described as part of the IG are intended to be leveraged to build our nation's data infrastructure for a Learning Health System.
-DAF-Research will leverage the US-Core IG and profiles for the resources that overlap with US-Core. In addition DAF-Research will create additional profiles necessary for DAF-Research purposes which do not exist in US-Core. The US-Core has been created with substantial feedback from the Argonaut project.
+DAF-Research will leverage the US-Core IG and profiles for the resources that overlap with US-Core. In addition DAF-Research will create additional profiles necessary for DAF-Research purposes which do not exist in US-Core. The US-Core has been created with substantial feedback from the Argonaut project.  For more background on DAF, US Core and, DAF Research see the [DAF Research change notes](dafr-change-notes.html).
 
 # Guidance to the Reader
 The following table will provide a roadmap for the reader.
