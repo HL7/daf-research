@@ -254,13 +254,13 @@
 	<format value="xml"/>
 	<format value="json"/>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-task.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-task"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-provenance.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-provenance"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-operationdefinition.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-operationdefinition"/>
 	</profile>
 	<rest>
 		<mode value="server"/>
@@ -271,7 +271,8 @@
 		<resource>
 			<type value="Task"/>
 			<profile>
-				<reference value="http://hl7.org/fhir/current/daf/daf-task.html"/>
+				<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-task
+"/>
 			</profile>
 			<interaction>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -371,7 +372,7 @@
 				<reference value="http://hl7.org/fhir/current/daf/daf-provenance.html"/>
 			</profile>
 			<interaction>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+				<extension url="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-provenance">
 					<valueCode value="SHALL"/>
 				</extension>
 				<code value="search-type"/>
@@ -437,7 +438,7 @@
 		<operation>
 			<name value="daf-load-operation"/>
 			<definition>
-				<reference value="http://hl7.org/fhir/current/daf/OperationDefinition-daf-load-operation.html"/>
+				<reference value="http://hl7.org/fhir/us/daf-research/OperationDefinition/daf-load"/>
 			</definition>
 		</operation>
 	</rest>
