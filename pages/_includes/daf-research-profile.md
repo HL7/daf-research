@@ -22,17 +22,17 @@ This paragraph identifies a list of profiles from US-Core that are reused by DAF
 In addition a few of the FHIR Resources are used without profiling currently. These resources may be profiled in the future depending on feedback obtained from DAF-Research pilots.
 
 ### US-Core profiles used by DAF-Research
-* [Condition](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-condition.html)
-* [DiagnosticReport-Results](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-diagnosticreport.html)
-* [Location](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-location.html)
-* [Medication](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medication.html)
-* [MedicationStatement](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medicationstatement.html)
-* [MedicationRequest](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medicationrequest.html)
-* [Observation](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-observationresults.html)
+* [Condition](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html)
+* [DiagnosticReport-Results](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html)
+* [Location](http://hl7.org/fhir/us/core/StructureDefinition-us-core-location.html)
+* [Medication](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medication.html)
+* [MedicationStatement](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationstatement.html)
+* [MedicationRequest](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)
+* [Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)
 * [Observation-Vitalsigns](http://build.fhir.org/observation-vitalsigns.html)
-* [Patient](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-patient.html)
-* [Practitioner](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-practitioner.html)
-* [Procedure](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-procedure.html)
+* [Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)
+* [Practitioner](http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html)
+* [Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)
 
 
 ### DAF-Research specific profiles of US-Core
@@ -56,19 +56,19 @@ NOTE: Mappings from one data model to another such as FHIR to PCORnet CDM or FHI
 
 |PCORnet CDM Table Name            |Recommended Profile/Resource for Data Extraction|
 |----------------------------------|----------------------------------------|
-|DIAGNOSIS, CONDITION|[Condition](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-condition.html)|
-|LAB_RESULT_CM|[DiagnosticReport-Results](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-diagnosticreport.html),[Observation](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-observationresults.html)|
+|DIAGNOSIS, CONDITION|[Condition](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html)|
+|LAB_RESULT_CM|[DiagnosticReport-Results](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport.html),[Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)|
 |ENCOUNTER|[Encounter](http://build.fhir.org/encounter.html)|
-|PRESCRIBING|[MedicationOrder](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medicationrequest.html)|
+|PRESCRIBING|[MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html)|
 |DISPENSING|[MedicationDispense](http://build.fhir.org/medicationdispense.html)|
 |VITALS|[Observation-Vitalsigns](http://build.fhir.org/observation-vitalsigns.html)|
-|DEMOGRAPHIC|[Patient](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-patient.html)|
-|PROCEDURES|[Procedure](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-procedure.html)|
+|DEMOGRAPHIC|[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)|
+|PROCEDURES|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|
 |PRO CM|[Questionaire](http://build.fhir.org/questionnaire.html),[Observation](http://build.fhir.org/observation.html)|
 |ENROLLMENT|[ResearchSubject](http://build.fhir.org/researchsubject.html)|
 |PCORNET_TRIAL|[ResearchStudy](http://build.fhir.org/researchstudy.html)
-|DEATH|[Patient](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-patient.html)|
-|DEATH_CAUSE|[Patient](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-patient.html)|
+|DEATH|[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)|
+|DEATH_CAUSE|[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)|
 |HARVEST|[DAF-CapabilityStatement]|
 
 
@@ -86,14 +86,14 @@ A detailed data element level mapping can be accessed here:
 |Concept_Relationship, Relationship|[ConceptMap](http://build.fhir.org/conceptmap.html)|
 |Cohort_Definition, Attribute_Definition|[Group](http://build.fhir.org/group.html)|
 |Specimen|[Specimen](http://build.fhir.org/specimen.html)|
-|Drug_Strength|[Medication](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medication.html)|
-|Procedure_Occurence|[Procedure](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-procedure.html)|
-|Drug_Exposure|[MedicationOrder](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medicationrequest.html),[MedicationStatement](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-medicationstatement.html),[Immunization](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-immunization.html)|
-|Device_Exposure|[Procedure](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-procedure.html),[Device](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-device.html)|
-|Measurement,Note,Observation|[Observation](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-observationresults.html)|
-|Person|[Patient](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-patient.html)|
+|Drug_Strength|[Medication](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medication.html)|
+|Procedure_Occurence|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html)|
+|Drug_Exposure|[MedicationOrder](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html),[MedicationStatement](http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationstatement.html),[Immunization](http://hl7.org/fhir/us/core/StructureDefinition-us-core-immunization.html)|
+|Device_Exposure|[Procedure](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html),[Device](http://hl7.org/fhir/us/core/StructureDefinition-us-core-device.html)|
+|Measurement,Note,Observation|[Observation](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observationresults.html)|
+|Person|[Patient](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html)|
 |Observation_Period, Visit_Occurence|[Encounter](http://build.fhir.org/encounter.html)|
-|Condition_Occurence|[Condition](http://build.fhir.org/ig/Healthedata1/US-Core//StructureDefinition-us-core-condition.html)|
+|Condition_Occurence|[Condition](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html)|
 
 A detailed data element level mapping can be accessed here:
 
@@ -102,7 +102,7 @@ A detailed data element level mapping can be accessed here:
 
 
 
-[US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
+[US-Core]: http://hl7.org/fhir/us/core/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc

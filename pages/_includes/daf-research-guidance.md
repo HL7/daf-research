@@ -364,7 +364,7 @@ For more examples of the various resources implemented by DAF-Pilots, please ref
 
 
 
-[US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
+[US-Core]: http://hl7.org/fhir/us/core/index.html
 [DAF-Research]: index.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc

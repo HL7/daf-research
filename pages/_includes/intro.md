@@ -2,6 +2,8 @@
 
 ## {{ page.title }}
 
+{% include publish-box.html %}
+
 
 DAF-Research IG will focus on enabling researchers to access data from multiple organizations in the context of Learning Health System (LHS). While DAF-Research IG can be applied to multiple use cases, the current requirements have been drawn heavily from [PCORnet] use cases and implementations and are described on the [DAF] website. The capabilities described as part of the IG are intended to be leveraged to build our nation's data infrastructure for a Learning Health System.
 DAF-Research will leverage the US-Core IG and profiles for the resources that overlap with US-Core. In addition DAF-Research will create additional profiles necessary for DAF-Research purposes which do not exist in US-Core. The US-Core has been created with substantial feedback from the Argonaut project.
@@ -11,8 +13,8 @@ The following table will provide a roadmap for the reader.
 
 |Topic of Interest|What it contains|Where can I find it|
 |--------------------|--------------------------|---------------------|
-|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core](http://build.fhir.org/ig/Healthedata1/US-Core//index.html)|
-|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://build.fhir.org/ig/Healthedata1/US-Core//guidance.html)|
+|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core](http://hl7.org/fhir/us/core/index.html)|
+|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://hl7.org/fhir/us/core/guidance.html)|
 |DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](background.html)|
 |Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](index.html#capabilities-actors-and-conformance-requirements)|
 |Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to [PCORnet CDM] and [OMOP CDM].|[Profile List](profiles.html)|
@@ -37,7 +39,7 @@ Secondary Authors: Grahame Grieve, Lloyd McKenzie
 
 
 
-[US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
+[US-Core]: http://hl7.org/fhir/us/core/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
