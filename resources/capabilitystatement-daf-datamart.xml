@@ -232,7 +232,7 @@
 				</tbody>
 			</table>
 			<h3>DAF-Research Specific Operations</h3>
-			<p>Data Marts SHALL support <a href="http://hl7.org/fhir/current/daf/OperationDefinition-daf-load-operation.html">daf-load-operation</a> on the ROOT URL of the system.</p>
+			<p>Data Marts SHALL support <a href="OperationDefinition-daf-load-operation.html">daf-load-operation</a> on the ROOT URL of the system.</p>
 			<p>Data Marts SHALL publish their Capability statement using the DAF-Capability profile and identify the specific operations supported.</p>
 		</div>
 	</text>
@@ -369,10 +369,10 @@
 		<resource>
 			<type value="Provenance"/>
 			<profile>
-				<reference value="http://hl7.org/fhir/current/daf/daf-provenance.html"/>
+				<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-provenance"/>
 			</profile>
 			<interaction>
-				<extension url="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-provenance">
+				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
 					<valueCode value="SHALL"/>
 				</extension>
 				<code value="search-type"/>

@@ -11,9 +11,11 @@
   The extracted data will be de-identified and mapped from FHIR to the destination data model and then loaded into the data mart according to the local work flows. The work flow information is captured as part of the task which executes the load-data operation. Please refer to the Implementation Guidance for further information on how to use the task and load-data operation together for research work flows."/>
   <code value="load-data"/>
   <comment value="Pilots underway in PCORNet"/>
+  <!--
   <base>
     <reference value="OperationDefinition/daf-load-operation"/>
   </base>
+-->
   <system value="true"/>
   <type value="false"/>
   <instance value="false"/>

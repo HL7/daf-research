@@ -254,7 +254,7 @@
 				</tbody>
 			</table>
 			<h3>DAF-Research Specific Operations</h3>
-			<p>Data Marts SHALL support <a href="http://hl7.org/fhir/current/daf/OperationDefinition-daf-execute-query.html">daf-execute-query</a> operation on the ROOT URL of the system.</p>
+			<p>Data Marts SHALL support <a href="OperationDefinition-daf-execute-query.html">daf-execute-query</a> operation on the ROOT URL of the system.</p>
 			<p>Data Marts SHALL publish their Capability statement using the DAF-Capability profile and identify the specific operations supported.</p>
 		</div>
 	</text>
@@ -277,16 +277,16 @@
 	<format value="xml"/>
 	<format value="json"/>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-task.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-task"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-provenance.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-provenance"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-operationdefinition.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-operationdefinition"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-queryresults.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-queryresults"/>
 	</profile>
 	<rest>
 		<mode value="server"/>
@@ -297,7 +297,7 @@
 		<resource>
 			<type value="Task"/>
 			<profile>
-				<reference value="http://hl7.org/fhir/current/daf/daf-task.html"/>
+				<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-task"/>
 			</profile>
 			<interaction>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -394,7 +394,7 @@
 		<resource>
 			<type value="Provenance"/>
 			<profile>
-				<reference value="http://hl7.org/fhir/current/daf/daf-provenance.html"/>
+				<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-provenance"/>
 			</profile>
 			<interaction>
 				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
@@ -463,7 +463,7 @@
 		<operation>
 			<name value="daf-execute-query"/>
 			<definition>
-				<reference value="http://hl7.org/fhir/current/daf/OperationDefinition-daf-execute-query.html"/>
+				<reference value="http://hl7.org/fhir/us/daf-research/OperationDefinition/daf-execute-query"/>
 			</definition>
 		</operation>
 	</rest>
