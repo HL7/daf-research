@@ -24,7 +24,7 @@ dir='/Users/ehaas/Documents/FHIR/DAF-Research/'
 
 # the ig.json file template as dict
 
-igpy = {"paths":{"temp":"temp","specification":"http://build.fhir.org","qa":"qa","txCache":"txCache","output":"output","pages":"pages","resources":["resources","examples"]},"version":"3.0.0","extraTemplates":["mappings"],"defaults":{"StructureDefinition":{"template-base":"sd.html","template-defns":"sd-definitions.html","template-mappings":"sd-mappings.html"},"CapabilityStatement":{"template-base":"capsys.html"},"CodeSystem":{"template-base":"codesys.html"},"ConceptMap":{"template-base":"cm.html"},"Any":{"template-format":"format.html","template-base":"base.html"},"ValueSet":{"template-base":"vs.html"}},"source":"ig.xml","canonicalBase":"http://hl7.org/fhir/us/daf-research","tool":"jekyll","sct-edition":"http://snomed.info/sct/731000124108","dependencyList":[{"name":"uscore","location":"http://build.fhir.org/ig/Healthedata1/US-Core/","source":"resources"}],"spreadsheets":[],"resources":{}}
+igpy = {"paths":{"temp":"temp","specification":"http://build.fhir.org","qa":"qa","txCache":"txCache","output":"output","pages":"pages","resources":["resources","examples"]},"version":"3.0.0","extraTemplates":["mappings"],"defaults":{"StructureDefinition":{"template-base":"sd.html","template-defns":"sd-definitions.html","template-mappings":"sd-mappings.html"},"CapabilityStatement":{"template-base":"capst.html"},"CodeSystem":{"template-base":"codesys.html"},"ConceptMap":{"template-base":"cm.html"},"Any":{"template-format":"format.html","template-base":"base.html"},"ValueSet":{"template-base":"vs.html"}},"source":"ig.xml","canonicalBase":"http://hl7.org/fhir/us/daf-research","tool":"jekyll","sct-edition":"http://snomed.info/sct/731000124108","dependencyList":[{"name":"uscore","location":"http://build.fhir.org/ig/Healthedata1/US-Core/","source":"resources"}],"spreadsheets":[],"resources":{}}
 
 # the ig.xml file template as string
 
@@ -32,7 +32,7 @@ igxml ='''<?xml version="1.0" encoding="UTF-8"?><!--Hidden IG for de facto IG pu
 
 # extension in spreadsheet - these need to be manually listed here needs to be named same as SD files ( eg: daf-[id])
 
-extensions = ['daf-data-models', 'daf-query-formats']
+extensions = ['daf-data-model', 'daf-query-format']
 
 # operation in spreadsheet - these need to be manually listed here
 

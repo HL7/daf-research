@@ -12,10 +12,10 @@ These definitions should be the first choice whenever generating any implementat
 
 
 - [daf-capabilitystatement](daf-capabilitystatement.sch)
-- [daf-data-models](daf-data-models.sch)
+- [daf-data-models](daf-data-model.sch)
 - [daf-encounter](daf-encounter.sch)
 - [daf-operationdefinition](daf-operationdefinition.sch)
 - [daf-provenance](daf-provenance.sch)
-- [daf-query-formats](daf-query-formats.sch)
+- [daf-query-formats](daf-query-format.sch)
 - [daf-queryresults](daf-queryresults.sch)
 - [daf-task](daf-task.sch)
