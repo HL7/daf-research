@@ -12,21 +12,21 @@
       /
       <a class="breadcrumb-item" href="profiles.html">Profiles, Operations, and Mappings</a>
       /
-      <span class="breadcrumb-item active">{{page.path}}</span>
+      <span class="breadcrumb-item active">{{page.path | remove: '.html'}}</span>
     {% endif %}
     {% if page.active == 'capstatements' and  page.level == 2 %}
       <a class="breadcrumb-item" href="index.html">Home</a>
       /
       <a class="breadcrumb-item" href="capabilitystatements.html">Capability Statements</a>
       /
-      <span class="breadcrumb-item active">{{page.path}}</span>
+      <span class="breadcrumb-item active">{{page.path | remove: '.html'}}</span>
     {% endif %}
     {% if page.active == 'terminology' and  page.level == 2 %}
       <a class="breadcrumb-item" href="index.html">Home</a>
       /
       <a class="breadcrumb-item" href="terminology.html">Terminology</a>
       /
-      <span class="breadcrumb-item active">{{page.path}}</span>
+      <span class="breadcrumb-item active">{{ page.path | remove: '.html'}}</span>
     {% endif %}
 
 </nav>
