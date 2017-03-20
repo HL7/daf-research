@@ -39,9 +39,9 @@ The Data Source actor has to support the creation of a [DAF-Task] resource insta
 * Task.code - Should be populated with the daf-extract-operation
 * Task.fulfillment - Should be setup according to the frequency at which this is expected to run
 * Task.input.type - dateTime (This corresponds to the timereference parameter in the daf-extract-operation)
-* Task.input.valuedateTime - Value from when the extract has to be performed. (For e.g 20160812050000)
+* Task.input.valuedateTime - Value from when the extract has to be performed. (For example, 20160812050000)
 * Task.input.type - Reference (This corresponds to the patient parameter in the daf-extract-operation)
-* Task.input.valueReference - This parameter is typically used for incremental extraction and is not used when a bulk extraction is performed. In cases where the parameter is used, it provides the ability to specify one or more Patient(s) for whom data has to be extracted. (For e.g Patient/134234, This is an identifier/reference that is known to the Data Source implementing the FHIR API). In the case of bulk extraction, the data for all consented patients would be extracted.
+* Task.input.valueReference - This parameter is typically used for incremental extraction and is not used when a bulk extraction is performed. In cases where the parameter is used, it provides the ability to specify one or more Patient(s) for whom data has to be extracted. (For example, Patient/134234, This is an identifier/reference that is known to the Data Source implementing the FHIR API). In the case of bulk extraction, the data for all consented patients would be extracted.
 
 This Task instance would then be persisted for execution. The actual execution of the task can be controlled using a scheduled timer or a manual kick off.
 Note: If this is a task that is set up to repeat at a regular frequency, this step can be skipped after the first time.
@@ -64,7 +64,7 @@ The Task created earlier is Step 1 is executed at some point of time automatical
 NOTE: These extraction tasks could be inefficient and the initial extraction may take a long time. Implementers have to be aware of these inefficiencies in extracting data especially if they choose to use extraction of the data one patient at a time. Extraction tasks may return identifiable patient information or de-identified patient information. The task to load the Data Mart supporting PCORnet CDM has to appropriately address de-identification requirements prior to loading the data. This is further discussed in Step 4 below and has to be accomplished prior to loading and using the data.
 
 
-NOTE: Also in the case of mappings from one data model to another such as FHIR to PCORnet CDM or FHIR to OMOP etc, there is always a potential for data loss. In these cases where there is not an exact mapping between local codes and standardized codes the extraction process is encouraged to include the actual raw values as part of the coding element.
+NOTE: Also in the case of mappings from one data model to another such as FHIR to PCORnet CDM or FHIR to OMOP etc., there is always a potential for data loss. In these cases where there is not an exact mapping between local codes and standardized codes the extraction process is encouraged to include the actual raw values as part of the coding element.
 
 * Add the data for all consented patients in the case of bulk extraction or for each patient in the case of incremental extraction to a Bundle which contains the extracted data along with the linkages.
 * Set Task.output.type - Reference. (This is the bundle that contains the data for a desired number of patients)
@@ -83,7 +83,7 @@ Note: As is the case in all data mapping exercises, there could be data loss in 
 
 #### Guidance on the profiles to be used to map OMOP to FHIR Resources
 
-Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below. For PCORnet further enhancing the OMOP mapping will bring in additional data sources to contribute data to the network along with analytical tools that may be also provided by the various OMOP implementers. 
+Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e., FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below. For PCORnet further enhancing the OMOP mapping will bring in additional data sources to contribute data to the network along with analytical tools that may be also provided by the various OMOP implementers.
 
 
 ### C1: Step 3: Instantiation of a Task for loading of data at the Data Mart
@@ -109,7 +109,7 @@ A Bundle returned from Step 2 will conform to FHIR and US-Core or other specific
 
 ##### De-Identification of data
 
-In cases where the data extracted from a Data Source contains identifiable patient information, an external process has to de-identify the data prior to loading the data mart with the extracted data.It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API.Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
+In cases where the data extracted from a Data Source contains identifiable patient information, an external process has to de-identify the data prior to loading the data mart with the extracted data. It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API. Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
 
 ##### Mapping to be used
 
@@ -166,11 +166,11 @@ For the DAF Data Mart actor the following data is expected to be present within 
 
 * For each Resource supported by the Server populate the CapabilityStatement.rest segment with
 
-1. Resource Type (e.g Task)
-2. Resource Profile (DAF specific profiles, e.g DAF-Task)
+1. Resource Type (for example, Task)
+2. Resource Profile (DAF specific profiles, for example, DAF-Task)
 3. Search Param Name for each search parameter supported
-4. Interaction.code (Multiple interactions would be supported typically, for e.g READ, SEARCH, vREAD, POST )
-5. Operation.name for each operation supported by the Data Mart (These include daf-load-operation, daf-execute-query etc)
+4. Interaction.code (Multiple interactions would be supported typically, for example, READ, SEARCH, vREAD, POST )
+5. Operation.name for each operation supported by the Data Mart (These include daf-load-operation, daf-execute-query etc.)
 6. Operation.definition points back to the instance of the Operation Definitions that the Server supports.
 
 For each Operation that is supported by the Server, a DAF-OperationDefinition instance should be created with the appropriate data
@@ -267,7 +267,7 @@ The following are the list of inputs to the daf-execute-query operation which wo
 * Task.input.valueString - Instructions for execution of the query
 * Task.input.name - queryPackage
 * Task.input.type - string
-* Task.input.valueString - Value which contains the actual query composed using SAS/SQL/Json etc.
+* Task.input.valueString - Value which contains the actual query composed using SAS/SQL/JSON etc.
 
 Optionally the query can indicate the type of data expected as part of the results as part of the queryResultsPhiDisclosureLevel.
 
@@ -340,7 +340,7 @@ The second occurrence of Observation.component needs to repeated multiple times,
         ]
       },
 
-* Observation.component.code - Set this to the actual property being measured. (For e.g Height, Weight, Patient etc)
+* Observation.component.code - Set this to the actual property being measured. (For example, Height, Weight, Patient etc.)
 * Observation.component.value - Set this to the aggregate value or the value corresponding to the filter/stratifier code.
 * Observation.component.interpretation - Set this to Count, Average etc for the first occurrence and "None" for the second occurrence.
 * Observation.component.referenceRange - Set this to the Low and High values that are the boundaries used for value calculation.
@@ -392,4 +392,4 @@ For more examples of the various resources implemented by DAF-Pilots, please ref
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 [DAF-Research profile]: profiles.html
 [DAF-Research Mappings]: profiles.html
-[DAF-Pilots] : (https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Pilots) 
+[DAF-Pilots] : (https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Pilots)

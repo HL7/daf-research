@@ -1,6 +1,6 @@
 ## Downloads
 
-**Definitions:** All the value sets, profiles, extensions etc defined as part of the this Implementation Guides:
+**Definitions:** All the value sets, profiles, extensions etc. defined as part of the this Implementation Guides:
 
 - [XML](definitions.xml.zip)
 - [JSON](definitions.json.zip)

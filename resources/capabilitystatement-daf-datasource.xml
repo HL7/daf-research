@@ -215,52 +215,52 @@
 	<format value="xml"/>
 	<format value="json"/>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-task.html"/>
+		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-task"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-allergyintolerance.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-careplan.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-condition.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-device.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-goal.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-immunization.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-diagnosticreport.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-resultobs.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-bservationresults"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-location.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-medication.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-medicationrequest.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-vitalsigns.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-vitalsigns"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-patient.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-pract.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/current/daf/daf-core-procedure.html"/>
+		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
 	</profile>
 	<rest>
 		<mode value="server"/>
