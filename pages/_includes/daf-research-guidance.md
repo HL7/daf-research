@@ -77,7 +77,7 @@ NOTE: Also in the case of mappings from one data model to another such as FHIR t
 The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated.
 However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
 
-The [DAF-Research profile] page provides the necessary mapping between FHIR Resources and PCORnet CDM.
+The Profiles,Operations and Mappings page provides the necessary mapping between FHIR Resources and PCORnet CDM.
 
 Note: As is the case in all data mapping exercises, there could be data loss in the mapping. There is a large amount of legacy data already captured and hence the mapping problem will persist. In addition to existing data, systems capturing data are not do not use standards for data capture and hence this problem will persist. Researchers should be made aware of the existence of these data losses so that they have an idea of the data quality.
 
@@ -361,13 +361,15 @@ These results would then be made available for the Researcher for further analys
 For more examples of the various resources implemented by DAF-Pilots, please refer to the [DAF-Pilots] presentations.
 
 
+
+
+
 [US-Core]: http://build.fhir.org/ig/Healthedata1/US-Core//index.html
 [DAF-Research]: index.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DAF]: http://wiki.siframework.org/Data+Access+Framework+Homepage
-[DAF-Pilots] : https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Pilots
 [PCORI]:  http://www.pcori.org
 [PCORnet]: http://www.pcornet.org/
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page*
@@ -390,3 +392,4 @@ For more examples of the various resources implemented by DAF-Pilots, please ref
 [HHS de-identification guidance]: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/
 [DAF-Research profile]: profiles.html
 [DAF-Research Mappings]: profiles.html
+[DAF-Pilots] : (https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Pilots) 
