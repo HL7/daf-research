@@ -197,7 +197,7 @@
 			<p>Data Marts SHALL publish their Capability statement using the DAF-Capability profile and identify the specific operations supported.</p>
 		</div>
 	</text>
-	<url value="http://hl7.org/fhir/us/daf-research/CapabilityStatement/daf-datasource"/>
+	<url value="http://hl7.org/fhir/us/daf-research/CapabilityStatement/daf-datasource"/> <version value="1.0.0"/>
 	<name value="Data Source"/>
 	<status value="draft"/>
 	<date value="2016-08-10"/>
@@ -210,7 +210,7 @@
 	</contact>
 	<description value="This profile defines the expected capabilities of the Data Source actor when conforming to the DAF-Research IG."/>
 	<kind value="requirements"/>
-	<fhirVersion value="1.0.0"/>
+	<fhirVersion value="3.0.0"/>
 	<acceptUnknown value="extensions"/>
 	<format value="xml"/>
 	<format value="json"/>
