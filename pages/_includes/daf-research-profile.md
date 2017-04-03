@@ -1,5 +1,12 @@
 ## {{ page.title }}
 
+<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+
+* Do not remove this line (it will not be displayed)
+{:toc}
+
+<!-- end TOC -->
+
 The next few sections identify the profiles used by DAF-Research and capability statements specific to DAF-Research along with resource/data element mappings between FHIR and PCORnet CDM and between FHIR and OMOP CDM.
 
 

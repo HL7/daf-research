@@ -1,23 +1,17 @@
 ## {{ page.title }}
 {:.no_toc}
 
-[DAF-Research] IG describes four capabilities C1, C2, C3, C4, each one of which is intended to help improve the data infrastructure for PCORnet and in the larger context a Learning Health System.
-This part of the IG provides additional guidance for the implementation of each of the four capabilities. This section is not normative and is only intended to provide guidance to implementers.
-
----
-
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
-**Contents**
 
 * Do not remove this line (it will not be displayed)
 {:toc}
 
----
-
 <!-- end TOC -->
 
+[DAF-Research] IG describes four capabilities C1, C2, C3, C4, each one of which is intended to help improve the data infrastructure for PCORnet and in the larger context a Learning Health System.
+This part of the IG provides additional guidance for the implementation of each of the four capabilities. This section is not normative and is only intended to provide guidance to implementers.
 
-## Capability C1: Extracting data from a Data Source and population of a Data Mart
+### Capability C1: Extracting data from a Data Source and population of a Data Mart
 
 Implementing C1 capability involves four steps.
 
@@ -31,7 +25,9 @@ In either case the implementation has to meet the [Data Source Conformance] requ
 The next few paragraphs will provide details for each step above.
 
 
-### C1:Step 1: Instantiation of a Task for extraction at the Data Source
+#### C1:Step 1
+
+**Instantiation of a Task for extraction at the Data Source**
 
 The Data Source actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using the POST operation specified by FHIR.  This task instance has to have the following data:
 
@@ -47,7 +43,9 @@ This Task instance would then be persisted for execution. The actual execution o
 Note: If this is a task that is set up to repeat at a regular frequency, this step can be skipped after the first time.
 
 
-### C1:Step 2: Execution of the Task to extract data from the Data Source
+#### C1:Step 2
+
+**Execution of the Task to extract data from the Data Source**
 
 The Task created earlier is Step 1 is executed at some point of time automatically or manually and the following actions are expected to happen.
 
@@ -72,7 +70,8 @@ NOTE: Also in the case of mappings from one data model to another such as FHIR t
 * Set Task.status as completed if everything completes normally.
 * In case of exception, Set Task.status as Failed and Set Task.output.type as Reference but Task.output.valueReference will point to the OperationOutcome resource instance.
 
-#### Guidance on the profiles to be used to map FHIR Resources to PCORnet CDM
+##### Guidance on the profiles to be used to map FHIR Resources to PCORnet CDM
+{:.no_toc}
 
 The [PCORnet CDM] is a consensus artifact that has been adopted by PCORnet as a model for Data Marts which can then be queried by Researchers. Since this is a different data model than FHIR the following guidance can be used to extract data so that PCORnet CDM can be appropriately populated.
 However data extraction programs have to be aware that vendors may be supporting just US-Core or a subset of US-Core for their initial implementation and hence may not have all the PCORnet CDM data elements available. Implementers should prepare for significant heterogeneity in source data and budget time and resources accordingly not only for data extraction, but for transformation and loading depending on approaches used for extraction.
@@ -81,12 +80,15 @@ The Profiles,Operations and Mappings page provides the necessary mapping between
 
 Note: As is the case in all data mapping exercises, there could be data loss in the mapping. There is a large amount of legacy data already captured and hence the mapping problem will persist. In addition to existing data, systems capturing data are not do not use standards for data capture and hence this problem will persist. Researchers should be made aware of the existence of these data losses so that they have an idea of the data quality.
 
-#### Guidance on the profiles to be used to map OMOP to FHIR Resources
+##### Guidance on the profiles to be used to map OMOP to FHIR Resources
+{:.no_toc}
 
 Some PCORnet sites are using [OMOP CDM] as a source or destination and hence a mapping between FHIR and [OMOP CDM] would be useful for these sites. The following is a mapping that was developed by the DAF pilot sites and can be a starting point for the implementation of C1 capability. Please note that this mapping is not bi-directional, (i.e., FHIR to OMOP) but it could be a good starting point for such a mapping. Profiles which are not US-Core are annotated accordingly in the table below. For PCORnet further enhancing the OMOP mapping will bring in additional data sources to contribute data to the network along with analytical tools that may be also provided by the various OMOP implementers.
 
 
-### C1: Step 3: Instantiation of a Task for loading of data at the Data Mart
+#### C1:Step 3
+
+**Instantiation of a Task for loading of data at the Data Mart**
 
 The Data Mart actor has to support the creation of a [DAF-Task] resource instance. This can be achieved using a FHIR API using the POST operation or using a graphical user interface which allows
 an end user to create the Task instance. This task instance has to have the following data:
@@ -101,17 +103,23 @@ This Task instance would then be persisted for execution. The actual execution o
 Note: If this is a task that is set up to repeat at a regular frequency, this step can be skipped after the first time.
 
 
-### C1:Step 4: Population of the Data Mart with the extracted data
+#### C1:Step 4
 
-#### Pre-Processing the Bundle returned from the extract operation
+**Population of the Data Mart with the extracted data**
+
+
+##### Pre-Processing the Bundle returned from the extract operation
+{:.no_toc}
 
 A Bundle returned from Step 2 will conform to FHIR and US-Core or other specific IG requirements. This Bundle may have to go through additional transformations, mappings and other processing before it is loaded into a destination Data Mart.  These additional actions may include de-identifying the data discussed next as well as other steps beyond the scope of this IG, such as pseudo anonymization, data standardization and patient matching as needed. Also implementers need to be aware that the data extraction task must have been completed for the data loading to start to ensure integrity of the data extracted. The status of the Task instance can be used to verify if a Task has been completed or if it is pending.
 
-##### De-Identification of data
+###### De-Identification of data
+{:.no_toc}
 
 In cases where the data extracted from a Data Source contains identifiable patient information, an external process has to de-identify the data prior to loading the data mart with the extracted data. It is expected that most vendors supporting the ONC 2015 Edition CCDS API's or the Patient/$everything operation would be returning identifiable patient information as part of the API. Since PCORnet requires de-identified data the de-identification has to be performed subsequently. Implementations can choose internally approved mechanisms or [HHS de-identification guidance] for de-identifying the data and populating the PCORnet CDM.
 
-##### Mapping to be used
+###### Mapping to be used
+{:.no_toc}
 
 One of the value propositions of the data extract standardization is the need to eliminate mappings from each Data Source. As long as a Data Source has performed the right mapping to its FHIR Resources and profiles, the extracted data can be directly mapped to a destination model of choice such as the PCORnet CDM. Conformance of a Data Source to US-Core can be verified by using automated open source automated test tools and the US-Core conformance statements. The [FHIR wiki] provides a listing of many of these tools.
 
@@ -133,7 +141,7 @@ Using the above mapping the task to load the data would be executed as follows.
 
 
 
-## C2: Publishing Data Mart Meta data
+### Capability C2: Publishing Data Mart Meta data
 
 Implementing C2 capability involves three steps.
 
@@ -144,7 +152,9 @@ Implementing C2 capability involves three steps.
 The next few paragraphs will provide details for each step above.
 
 
-### C2:Step 1: Instantiation of the CapabilityStatement
+#### C2:Step 1
+
+**Instantiation of the CapabilityStatement**
 
 The Data Mart has to instantiate a CapabilityStatement Resource instance to declare its characteristics that would help a Researcher to compose queries.
 In addition the CapabilityStatement Resource should also help a Data Mart administrator to manage the data within the Data Mart.
@@ -179,7 +189,8 @@ and then the CapabilityStatement.Operation.definition should point to the instan
 The following extensions should be populated for the CapabilityStatement resource instance
 *  PCORnet Data Mart Active Flag - This indicates if the Data Mart is still active and is accepting queries.
 
-#### Guidance for instantiating a DAF-OperationDefintion
+##### Guidance for instantiating a DAF-OperationDefintion
+{:.no_toc}
 
 The DAF-OperationDefinition profile has been created to help servers declare conformance to the various DAF-Research operations.
 In order to declare support for various operations, an implementation would create an instance of DAF-OperationDefinition and then point to it by the CapabilityStatement.rest.operation part of the CapabilityStatement resource.
@@ -199,7 +210,9 @@ The following Extensions have to be populated as part of the OperationDefinition
 * Extension (daf-query-format-version) - Identify the version of the query-format that is supported by this instance. This should be part of the extension within the daf-query-formats.
 
 
-### C2: Step 2. Population and Updation of the CapabilityStatement
+#### C2:Step 2
+
+**Population and Updation of the CapabilityStatement**
 
 The CapabilityStatement once published gets updated less frequently as compared to other clinical resources.
 However updates to the CapabilityStatement will be performed due to changes in the following data elements
@@ -212,7 +225,9 @@ However updates to the CapabilityStatement will be performed due to changes in t
 * Changes to Security protocols.
 
 
-### C2: Step 3. Making the CapabilityStatement available to Researchers
+#### C2:Step 3
+
+**Making the CapabilityStatement available to Researchers**
 
 The CapabilityStatement resource just like other FHIR resources can be queried by researchers.
 CapabilityStatement resources should be available for querying without requiring additional authorization.
@@ -222,7 +237,7 @@ CapabilityStatement resource should support the historical version (vREAD) retri
 
 
 
-## C3: Composing a Query and submitting it to multiple Data Marts
+### Capability C3: Composing a Query and submitting it to multiple Data Marts
 
 Capability C3 implementation involves two steps
 
@@ -230,7 +245,9 @@ Capability C3 implementation involves two steps
 2. Submitting the query to multiple Data Marts
 
 
-### C3: Step 1: Instantiation of a Task for executing a query
+#### C3:Step 1
+
+**Instantiation of a Task for executing a query**
 
 In PCORnet and most research environments, queries submitted to access data are asynchronous in nature, repeated frequently and may involve humans in the work flow performing approvals, rejections etc.
 In order to support these requirements an instantiation of a Task is performed. In order to track the Tasks across multiple Data Marts and states the following Task hierarchy is implemented.
@@ -272,7 +289,9 @@ The following are the list of inputs to the daf-execute-query operation which wo
 Optionally the query can indicate the type of data expected as part of the results as part of the queryResultsPhiDisclosureLevel.
 
 
-### C3: Step 2: Submitting the query to multiple Data Marts
+#### C3:Step 2
+
+**Submitting the query to multiple Data Marts**
 
 In order for the Researcher to execute the query against multiple Data Marts, the Research Query Requester system has to create an instance of the Root Task created in Step 1 for
 each Data Mart. In order to make Tasks specific to a Data Mart, the following Task data elements would be set.
@@ -285,7 +304,7 @@ Once the Data Mart specific Tasks are created, Research Query Responders can acc
 
 
 
-## C4: Execution of the Query, Creation of query results and returning the resulting data
+### Capability C4: Execution of the Query, Creation of query results and returning the resulting data
 
 Implementing C4 capability involves the following three steps
 
@@ -294,7 +313,9 @@ Implementing C4 capability involves the following three steps
 3. Retrieving query results from multiple Data Marts
 
 
-### C4: Step 1: Retrieving the query specific to the Data Mart
+#### C4:Step 1
+
+**Retrieving the query specific to the Data Mart**
 
 Each Research Query Responder can access the queries that it needs to execute by performing a GET on the Task where Task.owner would be itself.
 This GET operation on the Task resource may cross firewall boundaries and might require appropriate authorization before the resources can be accessed.
@@ -303,7 +324,9 @@ The Research Query Responder would then duplicate the task with all the data for
 The Research Query Responder would set the Task.status to "Received", "Accepted" and "Ready" as appropriate.
 
 
-### C4: Step 2: Executing the query and returning the query results
+#### C4:Step 2
+
+**Executing the query and returning the query results**
 
 The Research Query Responder would start the execution specific Task instance by updating the Task.status to "In-Progress".
 The Research Query Responder would then translate the incoming query to native execution language based on the following parameters
@@ -351,7 +374,9 @@ In case of failures the data is returned as part of the OperationOutcome element
 These execution specific Task instances are now available for retrieval by the Researcher.
 
 
-### C4: Step 3: Retrieving query results from multiple Data Marts
+#### C4:Step 3
+
+**Retrieving query results from multiple Data Marts**
 
 In order for a Researcher to get a complete picture of the population based on their query submitted, the query results from multiple Data Marts have to be retrieved.
 For this purpose the Research Query Requester, has to query each of the Data Marts for execution specific Task instances with the parent set to the Data Mart specific Task that was created during the initiation of the query.

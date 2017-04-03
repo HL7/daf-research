@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="daf-research-query-formats"/>
-	<url value="http://build.fhir.org/ig/Healthedata1/US-Core/CodeSystem/daf-research-query-formats"/> <version value="1.0.0"/>
+	<url value="http://hl7.org/fhir/us/daf-research/CodeSystem/daf-research-query-formats"/> <version value="1.0.0"/>
 	<name value="DAF Research Query Formats"/>
 	<status value="draft"/>
 	<publisher value="HL7 (FHIR Project)"/>
@@ -14,14 +14,14 @@
 				<display value="CQL Queries"/>
 		<definition value="Queries are created using the Clinical Quality Language (CQL) language"/>
 	</concept>
-	
-	
+
+
 			<concept>
 				<code value="SAS"/>
 				<display value="SAS Queries"/>
 		<definition value="Queries are created using the SAS language"/>
-	</concept>	
-	
+	</concept>
+
 			<concept>
 				<code value="SQL"/>
 				<display value="SQL Queries"/>
