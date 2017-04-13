@@ -20,7 +20,7 @@
 	<description value="Research Data Models that are in use widely in the industry currently"/>
 	<compose>
 		<include>
-			<system value="http://build.fhir.org/ig/Healthedata1/US-Core/CodeSystem/daf-research-data-models"/>
+			<system value="http://hl7.org/fhir/us/daf-research/CodeSystem/daf-research-data-models"/>
 		</include>
 	</compose>
 </ValueSet>
