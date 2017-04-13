@@ -7,7 +7,7 @@ echo "================================================================="
 sleep 1
 git status
 sleep 3
-python3 daf-research.py
+python3 definitions.py
 sleep 3
 git status
 java -jar /Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar -ig ${path}ig.json

@@ -1,7 +1,7 @@
 ---
 # jekyll header
-active: profiles
 level: 2
+active: profiles
 ---
 {% include header.html %}
 
@@ -13,17 +13,19 @@ level: 2
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h2>{{[title]}}</h2>
+<h2>Example: {{[type]}}-{{[id]}}</h2>
 
+<p>
+Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
+</p>
+<p>
 Raw <a href="{{[type]}}-{{[id]}}.{{[fmt]}}" download>{{[fmt]}}</a>
-<p></p>
+</p>
 
 {% include {{[type]}}-{{[name]}}.xhtml %}
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
 {% include container-end.html %}
-
-
 
 {% include footer.html %}

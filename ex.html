@@ -1,7 +1,8 @@
 ---
 # jekyll header
-active: profiles
 level: 2
+active: profiles
+
 ---
 {% include header.html %}
 
@@ -12,13 +13,12 @@ level: 2
 
 {% include breadcrumbs.html %}
 
-
   <!-- ============CONTENT CONTENT=============== -->
 
 <h2>Example: {{[type]}}-{{[id]}}</h2>
 
 <p>
-Formats: <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
+Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{{[id]}}.xml.html">XML</a>, <a href="{{[type]}}-{{[id]}}.json.html">JSON</a>, <a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a>
 </p>
 
 {% include {{[type]}}-{{[name]}}.xhtml %}
