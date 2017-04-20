@@ -75,7 +75,7 @@ In addition to the above C1 through C4 capabilities, C5 and C6 have been identif
 
 
 
-[US-Core]: http://hl7.org/fhir/us/core/index.html
+[US-Core]: {{ site.data.fhir.uscore }}/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc

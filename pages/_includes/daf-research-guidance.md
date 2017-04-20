@@ -389,7 +389,7 @@ For more examples of the various resources implemented by DAF-Pilots, please ref
 
 
 
-[US-Core]: http://hl7.org/fhir/us/core/index.html
+[US-Core]: {{ site.data.fhir.uscore }}/index.html
 [DAF-Research]: index.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc
@@ -409,7 +409,7 @@ For more examples of the various resources implemented by DAF-Pilots, please ref
 [DAF-Provenance]: StructureDefinition-daf-provenance.html
 [DAF-OperationDefinition]: StructureDefinition-daf-operationdefinition.html
 [DAF-Conformance]: StructureDefinition-daf-capabilitystatement.html
-[CapabilityStatement]: http://build.fhir.org/capabilitystatement.html
+[CapabilityStatement]: {{ site.data.fhir.path }}/capabilitystatement.html
 [DAF-QueryResults]: StructureDefinition-daf-queryresults.html
 [PCORnet CDM]: http://pcornet.org/pcornet-common-data-model/
 [OMOP CDM]: http://omop.org/CDM

@@ -13,8 +13,8 @@ The following table will provide a roadmap for the reader.
 
 |Topic of Interest|What it contains|Where can I find it|
 |--------------------|--------------------------|---------------------|
-|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core](http://hl7.org/fhir/us/core/index.html)|
-|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions](http://hl7.org/fhir/us/core/guidance.html)|
+|US-Core IG|A core set of FHIR profiles expected to be supported widely by vendors in the US.|[US-Core]({{ site.data.fhir.uscore }}/index.html)|
+|Basic Definitions|The set of definitions applicable to the IG such as "Supported".|[US-Core Definitions]({{ site.data.fhir.uscore }}/guidance.html)|
 |DAF-Research IG Background|The artifact provides background on LHS, PCORI and PCORnet activities.|[Background](background.html)|
 |Capabilities and Actors|The artifact defines the various capabilities and actors that make up the DAF-Research IG.|[Capabilities and Actors](index.html#capabilities-actors-and-conformance-requirements)|
 |Profiles and Data Element Mappings|The artifact provides a complete list of profiles used by DAF-Research and resource/data mappings to [PCORnet CDM] and [OMOP CDM].|[Profile List](profiles.html)|
@@ -39,7 +39,7 @@ Secondary Authors: Grahame Grieve, Lloyd McKenzie
 
 
 
-[US-Core]: http://hl7.org/fhir/us/core/index.html
+[US-Core]: {{ site.data.fhir.uscore }}/index.html
 [DAF-Research]: daf-research.html
 [Office of the National Coordinator (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC]: http://www.healthit.gov/newsroom/about-onc

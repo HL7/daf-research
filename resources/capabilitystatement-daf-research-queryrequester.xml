@@ -27,7 +27,7 @@
 				</tbody>
 			</table>
 			<h2>REST  behavior</h2>
-			<p>The Research Query Requester SHALL implement REST behavior according to the <a href="http://build.fhir.org/http.html">FHIR</a> specification.  The Research Query Requester SHALL support both json and xml resource formats for all DAF interactions. The Research Query Requester SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Research Query Requester SHALL declare a Capability statement and identify the list of profiles, operations, search parameters supported.
+			<p>The Research Query Requester SHALL implement REST behavior according to the <a href="{{ site.data.fhir.path }}/http.html">FHIR</a> specification.  The Research Query Requester SHALL support both json and xml resource formats for all DAF interactions. The Research Query Requester SHALL identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Research Query Requester SHALL declare a Capability statement and identify the list of profiles, operations, search parameters supported.
       </p>
 			<p>
 				<b>Security:</b>
@@ -160,30 +160,30 @@
 			<p>Research Query Requester SHALL support the following common parameters as part of queries related to DAF-Research profiles:</p>
 			<ul>
 				<li>
-					<a href="http://build.fhir.org/search.html#id">_id</a>
+					<a href="{{ site.data.fhir.path }}/search.html#id">_id</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#lastUpdated">_lastUpdated</a>
+					<a href="{{ site.data.fhir.path }}/search.html#lastUpdated">_lastUpdated</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#profile">_profile</a>
+					<a href="{{ site.data.fhir.path }}/search.html#profile">_profile</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#count">_count</a>
+					<a href="{{ site.data.fhir.path }}/search.html#count">_count</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#include">_include</a>
+					<a href="{{ site.data.fhir.path }}/search.html#include">_include</a>
 				</li>
 			</ul>
 			<p>Research Query Requester SHALL support the following search contexts defined within the
-        <a href="http://build.fhir.org/search.html#introduction">FHIR</a> specification.
+        <a href="{{ site.data.fhir.path }}/search.html#introduction">FHIR</a> specification.
       </p>
 			<ul>
 				<li>Search context by specifying a particular resource type</li>
 			</ul>
 			<p>Research Query Requesters SHALL support
-        <a href="http://build.fhir.org/search.html#modifiers">Modifiers</a> as applicable to the data types of the search parameters. Research Query Requester SHALL also support
-        <a href="http://build.fhir.org/search.html#composite">Composite Search Parameters</a> as defined in the FHIR specification.
+        <a href="{{ site.data.fhir.path }}/search.html#modifiers">Modifiers</a> as applicable to the data types of the search parameters. Research Query Requester SHALL also support
+        <a href="{{ site.data.fhir.path }}/search.html#composite">Composite Search Parameters</a> as defined in the FHIR specification.
       </p>
 			<table class="grid">
 				<thead>
@@ -198,36 +198,36 @@
 						<td>
 							<ul>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">id</a> - Search based on resource id (
-                  <a href="http://build.fhir.org/search.html#string">string</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">id</a> - Search based on resource id (
+                  <a href="{{ site.data.fhir.path }}/search.html#string">string</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">identifier</a> - Search based on Task identifier (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">identifier</a> - Search based on Task identifier (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">code</a> - Search based on Task code (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">code</a> - Search based on Task code (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">status</a> - Search based on Task status (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">status</a> - Search based on Task status (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">part-of</a> - Search based on Task this Task is part of (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">part-of</a> - Search based on Task this Task is part of (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">owner</a> - Search based on Task owner (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">owner</a> - Search based on Task owner (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">performer</a> - Search based on Task performer type (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">performer</a> - Search based on Task performer type (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">requester</a> - Search based on Task requester (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">requester</a> - Search based on Task requester (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 							</ul>
 						</td>
@@ -237,16 +237,16 @@
 						<td>
 							<ul>
 								<li>
-									<a href="http://build.fhir.org/provenance.html#search">target</a> - Search based on Provenance target (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/provenance.html#search">target</a> - Search based on Provenance target (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/provenance.html#search">start</a> - Search based on Provenance start time (
-                  <a href="http://build.fhir.org/search.html#date">date</a>)
+									<a href="{{ site.data.fhir.path }}/provenance.html#search">start</a> - Search based on Provenance start time (
+                  <a href="{{ site.data.fhir.path }}/search.html#date">date</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/provenance.html#search">end</a> - Search based on Provenance end time (
-                  <a href="http://build.fhir.org/search.html#date">date</a>)
+									<a href="{{ site.data.fhir.path }}/provenance.html#search">end</a> - Search based on Provenance end time (
+                  <a href="{{ site.data.fhir.path }}/search.html#date">date</a>)
                 </li>
 							</ul>
 						</td>

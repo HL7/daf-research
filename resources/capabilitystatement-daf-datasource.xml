@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir {{ site.data.fhir.path }}/device.xsd">
 	<id value="daf-datasource"/>
 	<text>
 		<status value="generated"/>
@@ -27,7 +27,7 @@
 				</tbody>
 			</table>
 			<h2>REST  behavior</h2>
-			<p>For the resources and operations supported by the Data Source, the RESTful behavior SHALL conform to the <a href="http://build.fhir.org/http.html">FHIR </a> specification. The Data Source SHOULD use either US-Core or DAF-Research profiles as needed to extract data. The Data Source SHOULD support both json and xml resource formats for all DAF interactions. The Data Source SHOULD identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Source SHOULD declare a Capability statement and identify the list of profiles, operations, search parameter supported.
+			<p>For the resources and operations supported by the Data Source, the RESTful behavior SHALL conform to the <a href="{{ site.data.fhir.path }}/http.html">FHIR </a> specification. The Data Source SHOULD use either US-Core or DAF-Research profiles as needed to extract data. The Data Source SHOULD support both json and xml resource formats for all DAF interactions. The Data Source SHOULD identify the DAF profile(s) supported as part of the FHIR BaseResource.Meta.profile attribute for each instance. The Data Source SHOULD declare a Capability statement and identify the list of profiles, operations, search parameter supported.
       </p>
 			<p>
 				<b>Security:</b>
@@ -86,7 +86,7 @@
 					</tr>
 					<tr>
 						<th>
-							<a href="http://build.fhir.org/ig/Healthedata1/US-Core">US-Core profiles</a>
+							<a href="{{ site.data.fhir.path }}/ig/Healthedata1/US-Core">US-Core profiles</a>
 						</th>
 						<td>
 							<p title="Allows discovery of US-Core resources based on different search criteria">SHOULD</p>
@@ -115,23 +115,23 @@
 			<p>Data Sources SHOULD support the following common parameters as part of queries related to DAF-Research profiles:</p>
 			<ul>
 				<li>
-					<a href="http://build.fhir.org/search.html#id">_id</a>
+					<a href="{{ site.data.fhir.path }}/search.html#id">_id</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#lastUpdated">_lastUpdated</a>
+					<a href="{{ site.data.fhir.path }}/search.html#lastUpdated">_lastUpdated</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#profile">_profile</a>
+					<a href="{{ site.data.fhir.path }}/search.html#profile">_profile</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#count">_count</a>
+					<a href="{{ site.data.fhir.path }}/search.html#count">_count</a>
 				</li>
 				<li>
-					<a href="http://build.fhir.org/search.html#include">_include</a>
+					<a href="{{ site.data.fhir.path }}/search.html#include">_include</a>
 				</li>
 			</ul>
 			<p>Data Sources SHOULD support the following search contexts defined within the
-        <a href="http://build.fhir.org/search.html#introduction">FHIR</a> specification.
+        <a href="{{ site.data.fhir.path }}/search.html#introduction">FHIR</a> specification.
       </p>
 			<ul>
 				<li>Search context by specifying a particular resource type</li>
@@ -149,32 +149,32 @@
 						<td>
 							<ul>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">identifier</a> - Search based on Task identifier (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">identifier</a> - Search based on Task identifier (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">code</a> - Search based on Task code (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">code</a> - Search based on Task code (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">status</a> - Search based on Task status (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">status</a> - Search based on Task status (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">part-of</a> - Search based on Task this Task is part of (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">part-of</a> - Search based on Task this Task is part of (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">owner</a> - Search based on Task owner (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">owner</a> - Search based on Task owner (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">performer</a> - Search based on Task performer type (
-                  <a href="http://build.fhir.org/search.html#token">token</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">performer</a> - Search based on Task performer type (
+                  <a href="{{ site.data.fhir.path }}/search.html#token">token</a>)
                 </li>
 								<li>
-									<a href="http://build.fhir.org/task.html#search">requester</a> - Search based on Task requester (
-                  <a href="http://build.fhir.org/search.html#reference">reference</a>)
+									<a href="{{ site.data.fhir.path }}/task.html#search">requester</a> - Search based on Task requester (
+                  <a href="{{ site.data.fhir.path }}/search.html#reference">reference</a>)
                 </li>
 							</ul>
 						</td>
@@ -218,49 +218,49 @@
 		<reference value="http://hl7.org/fhir/us/daf-research/StructureDefinition/daf-task"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-allergyintolerance"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-careplan"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-condition"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-device"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-goal"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-immunization"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-diagnosticreport"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-observationresults"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-location"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-medication"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-medicationrequest"/>
 	</profile>
 	<profile>
 		<reference value="http://hl7.org/fhir/StructureDefinition/vitalsigns"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-patient"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-practitioner"/>
 	</profile>
 	<profile>
-		<reference value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+		<reference value="{{ site.data.fhir.uscore }}/StructureDefinition/us-core-procedure"/>
 	</profile>
 	<rest>
 		<mode value="server"/>
