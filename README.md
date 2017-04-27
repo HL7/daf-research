@@ -18,7 +18,7 @@ http://build.fhir.org/ig/Healthedata1/daf-research
 
 ### Find debugging info about the build
 
-http://build.fhir.org/ig/Healthedata1/daf-research/debug.tgz
+http://build.fhir.org/ig/Healthedata1/daf-research/build.log
 
 ------
 
