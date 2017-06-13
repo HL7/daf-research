@@ -18,7 +18,7 @@ http://build.fhir.org/ig/HL7/daf-research/index.html
 
 ### Find debugging info about the build
 
-http://build.fhir.org/ig/hl7/daf-research/build.log
+http://build.fhir.org/ig/HL7/daf-research/build.log
 
 ------
 
