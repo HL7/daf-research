@@ -14,11 +14,11 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-http://build.fhir.org/ig/Healthedata1/daf-research
+http://build.fhir.org/ig/hl7/daf-research
 
 ### Find debugging info about the build
 
-http://build.fhir.org/ig/Healthedata1/daf-research/build.log
+http://build.fhir.org/ig/hl7/daf-research/build.log
 
 ------
 
