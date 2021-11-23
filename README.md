@@ -14,7 +14,7 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-http://build.fhir.org/ig/HL7/daf-research/index.html
+http://hl7.org/fhir/us/daf/history.html
 
 ### Find debugging info about the build
 
